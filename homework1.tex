@@ -20,7 +20,26 @@
                     \\
                     Since $n^2$ will always produce a positive number and dividing a positive number with a positive number will never produce a negative number. Therefore $0\leq\frac{1}{2}n^2$ for all $n\geq 0$
                     \\
-                    Need to show that $\frac{1}{2}n^2\leq n^2-3n-20$
+                    Need to show that $\frac{1}{2}n^2\leq n^2-3n-20$\\
+                    Base case: $n=10$
+                    \begin{align*}
+                        \frac{1}{2}(10)^2 &\leq (10)^2-3(10)-20\\
+                        \frac{100}{2} &\leq 100-30-20\\
+                        50 &= 50
+                    \end{align*}
+                    \\
+                    IH: Assume $\frac{1}{2}k^2 \leq k^2-3k-20$, $k\geq 10$\\
+                    Prove true for $k+1$.
+                    \begin{align*}
+                        \frac{1}{2}(k+1)^2 &\leq (k+1)^2-3(k+1)-20\\
+                        \frac{1}{2}(k+1)^2 &\leq k^2+2k+1-3k-3-20\\
+                        \frac{1}{2}(k+1)^2 &\leq k^2-k-22 \\
+                        \frac{1}{2}(k+1)^2 &\leq k^2-k-22-2k+2k+2-2 \\
+                        \frac{1}{2}(k+1)^2 &\leq k^2-3k-20+2k-2 \\
+                        \frac{1}{2}(k+1)^2 &\leq \frac{1}{2}k^2+2k-2 \\
+                        \frac{1}{2}k^2 + k +\frac{1}{2} &\leq \frac{1}{2}k^2+2k-2 \\ 
+                        \frac{1}{2} &< k-2
+                    \end{align*}
                 \end{proof}
             \item Question
         \end{enumerate}
