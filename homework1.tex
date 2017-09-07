@@ -1,5 +1,27 @@
-\documentclass[12pt]{article}
+\documentclass{article}
+\usepackage{amsthm, amsmath}
+\usepackage[margin=1in]{geometry}
     \begin{document}
-        stuff
-        stuff 2
+        \noindent\textbf{CS 375 Homework 1}\hfill Anchu A. Lee
+        \\\\“I have done this assignment completely on my own. I have not copied it, nor have I given my solution to anyone else. I understand that if I am involved in plagiarism or cheating I will have to sign an official form that I have cheated and that this form will be stored in my official university record. I also understand that I will receive a grade of 0 for the involved assignment for my first offense and that I will receive a grade of “F” for the course for any additional offense.” 
+        \\\\
+        \begin{enumerate}
+            \item Let $f(n)$ and $g(n)$ be asymptotically positive functions. Prove or show a counter example for each of the following conjectures.
+                \begin{enumerate}
+                    \item $f(n)\in O(g(n))$ implies $2^{f(n)}\in O(2^{g(n)})$
+                    \item $f(n)\in O(g(n))$ implies $g(n)\in\Omega(f(n))$
+                \end{enumerate}
+            \item Prove $n^2-3n-20\in\Theta(n^2)$ using the original definition of $\Theta$
+                \begin{proof}
+                    By definition of $\Theta$, \\$\Theta(n^2) = \{n^2-3n-20 \text{ : there exist positive constants } c_1 \text{, } c_2 \text{, } n_0 \text{ such that: }\\ 
+                        \text{\hspace{1.5cm}}0\leq c_1(n^2)\leq n^2-3n-20\leq c_2(n^2), \forall n\geq n_0\}$
+                    \\\\
+                    Let's assume $c_1=\frac{1}{2}$, Need to show that $0\leq\frac{1}{2}n^2$
+                    \\
+                    Since $n^2$ will always produce a positive number and dividing a positive number with a positive number will never produce a negative number. Therefore $0\leq\frac{1}{2}n^2$ for all $n\geq 0$
+                    \\
+                    Need to show that $\frac{1}{2}n^2\leq n^2-3n-20$
+                \end{proof}
+            \item Question
+        \end{enumerate}
     \end{document}
