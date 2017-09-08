@@ -16,18 +16,14 @@
                     By definition of $\Theta$, \\$\Theta(n^2) = \{n^2-3n-20 \text{ : there exist positive constants } c_1 \text{, } c_2 \text{, } n_0 \text{ such that: }\\ 
                         \text{\hspace{1.5cm}}0\leq c_1(n^2)\leq n^2-3n-20\leq c_2(n^2), \forall n\geq n_0\}$
                     \\\\
-                    Let's assume $c_1=\frac{1}{2}$, Need to show that $0\leq\frac{1}{2}n^2$
-                    \\
-                    Since $n^2$ will always produce a positive number and dividing a positive number with a positive number will never produce a negative number. Therefore $0\leq\frac{1}{2}n^2$ for all $n\geq 0$
-                    \\
-                    Need to show that $\frac{1}{2}n^2\leq n^2-3n-20$\\
+                    Let $c_1 = \frac{1}{2}$, $c_2 = 1$ for all $n \geq 10$.
+                    First, need to show that $\frac{1}{2}n^2\leq n^2-3n-20$\\
                     Base case: $n=10$
                     \begin{align*}
                         \frac{1}{2}(10)^2 &\leq (10)^2-3(10)-20\\
                         \frac{100}{2} &\leq 100-30-20\\
                         50 &= 50
                     \end{align*}
-                    \\
                     IH: Assume $\frac{1}{2}k^2 \leq k^2-3k-20$, $k\geq 10$\\
                     Prove true for $k+1$.
                     \begin{align*}
@@ -36,11 +32,51 @@
                         \frac{1}{2}(k+1)^2 &\leq k^2-k-22 \\
                         \frac{1}{2}(k+1)^2 &\leq k^2-k-22-2k+2k+2-2 \\
                         \frac{1}{2}(k+1)^2 &\leq k^2-3k-20+2k-2 \\
-                        \frac{1}{2}(k+1)^2 &\leq \frac{1}{2}k^2+2k-2 \\
+                        \frac{1}{2}(k+1)^2 &\leq \frac{1}{2}k^2+2k-2 &&\text{Induction step}\\
                         \frac{1}{2}k^2 + k +\frac{1}{2} &\leq \frac{1}{2}k^2+2k-2 \\ 
                         \frac{1}{2} &< k-2
                     \end{align*}
+                    Now, show that $n^2-3n-20\leq n^2$\\
+                    Base case: $n=10$
+                    \begin{align*}
+                        (10)^2-3(10)-20 &\leq (10)^2 \\
+                        100-30-20 &\leq 100\\
+                        50 &\leq 100
+                    \end{align*}
+                    IH: Assume $k^2-3k-20\leq k^2$ for $k\geq 10$\\
+                    Prove true for $k+1$.
+                    \begin{align*}
+                        (k+1)^2-3(k+1)-20 &\leq (k+1)^2 \\
+                        k^2+2k+1-3k-3-20 &\leq (k+1)^2 \\
+                        k^2-k-22 &\leq (k+1)^2 \\
+                        k^2-k-22-2k+2k+2-2 &\leq (k+1)^2 \\
+                        k^2-3k-20+2k-2 &\leq (k+1)^2 \\
+                        k^2+2k-2 &\leq (k+1)^2 &&\text{Induction step}\\
+                        k^2+2k-2 &\leq k^2+2k+1 \\
+                        -2 &\leq 1
+                    \end{align*}
+                    This shows that $n^2-3n-20\in\Theta(n^2)$ is true with $c_1 = \frac{1}{2}$, $c_2 = 1$ for all $n \geq 10$
                 \end{proof}
-            \item Question
+            \item Disprove $n^3\in O(n^2)$ using the original definition of $O$.
+            \begin{proof}
+                By definition of $O$,\\$O(n^2) = \{n^3 \text{ : there exist positive constants } c \text{, } n_0 \text{ such that: }\\ 
+                \text{\hspace{1.5cm}}0\leq n^3\leq c(n^2), \forall n\geq n_0\}$\\
+                Need to show that $n^3\leq c(n^2)$ is never true. Let c be any constant number.
+                \begin{align*}
+                    n^3 &\leq c(n^2)\\
+                    1 &\leq \frac{c}{n} \\
+                    n &\leq c
+                \end{align*}
+                As $n$ approaches infinity it cannot be bounded by a constant. Thus $n^3\not\in O(n^2)$.
+            \end{proof}
+            \item Prove $n=\omega($lg$n^2)$ using limit.
+            \begin{proof}
+                If $n=\omega($lg$n^2)$, then the limit $\lim_{n\to\infty}\frac{n}{lgn^2}$ approaches $\infty$.\\
+                \begin{align*}
+                    \lim_{n\to\infty}\frac{n}{\text{lg}n^2}&\\
+                    \lim_{n\to\infty}\frac{1}{\frac{2}{n}}&\\
+                    \lim_{n\to\infty}\frac{n}{2}& \Rightarrow \infty
+                \end{align*}
+            \end{proof}
         \end{enumerate}
     \end{document}
