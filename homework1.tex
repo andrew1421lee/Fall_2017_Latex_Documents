@@ -8,7 +8,8 @@
         \begin{enumerate}
             \item Let $f(n)$ and $g(n)$ be asymptotically positive functions. Prove or show a counter example for each of the following conjectures.
                 \begin{enumerate}
-                    \item $f(n)\in O(g(n))$ implies $2^{f(n)}\in O(2^{g(n)})$
+                    \item $f(n)\in O(g(n))$ implies $2^{f(n)}\in O(2^{g(n)})$\\
+                        False.
                         \begin{proof}
                             Consider $f(n) = 2n$ and $g(n) = n$.
                             $2n \in O(n)$\\
@@ -21,7 +22,14 @@
                             \end{align*}                      
                             As $c$ is constant, as $n$ approaches $\infty$ the LHS will become greater than the RHS. Therefore the implication is not true.
                         \end{proof}
-                    \item $f(n)\in O(g(n))$ implies $g(n)\in\Omega(f(n))$
+                    \item $f(n)\in O(g(n))$ implies $g(n)\in\Omega(f(n))$\\
+                        True.
+                        \begin{proof}
+                            The definition of $f(n)\in O(g(n))$ says there must exist a constant $c$ such that $0\leq f(n)\leq c\cdot g(n)$.\\
+                            The definition of $g(n)\in\Omega(f(n))$ says there must exist a constant $c$ such that $0\leq c\cdot f(n)\leq g(n)$.\\
+                            Therefore $f(n)\in O(g(n)) \Leftrightarrow g(n)\in\Omega(f(n))$
+
+                        \end{proof}
                 \end{enumerate}
             \item Prove $n^2-3n-20\in\Theta(n^2)$ using the original definition of $\Theta$
                 \begin{proof}
