@@ -38,19 +38,24 @@
                         $f(n)$ & $g(n)$ & $f(n)=O(g(n))$ & $f(n)=\Omega(g(n))$ & $f(n)=\Theta(g(n))$\\
                         \hline
                         \hline
-                        $n^{2.125}$ & $n^2\text{lg}n$ & Yes\\
+                        $n^{2.125}$ & $n^2\text{lg}n$ & No & Yes & No\\
                         \hline
-                        $\sqrt{n}$ & $n$ & Yes\\
+                        $\sqrt{n}$ & $n$ & Yes & No & No\\
                         \hline
-                        $n!$ & $(n+1)!$ & No\\
+                        $n!$ & $(n+1)!$ & Yes & No & No\\
                         \hline
-                        $2^{n/2}$ & $2^2$ & Yes\\
+                        $2^{n/2}$ & $2^n$ & Yes & No & No\\
                         \hline
-                        $\sum_{i=1}^{n}i= \frac{n^2+n}{2}$ & $n^2$\\
+                        $\sum_{i=1}^{n}i= \frac{n^2+n}{2}$ & $n^2$ & Yes & Yes & Yes\\
                         \hline
-                        $\sum_{i=0}^{n-1}4^i=$ & $n4^{n-1}$\\
+                        $\sum_{i=0}^{n-1}4^i=\frac{1}{3}(4^n-1)$ & $n4^{n-1}$ & No & Yes & No\\
                         \hline
                     \end{tabular}
+                \end{center}
+            \item Order the functions below by increasing growth rate.
+                \begin{center}
+                    $n^n$, $n$ln$n$, $n^\epsilon (0<\epsilon<1)$, $2^{\text{ln}n}$, $\text{ln}n$, $10$, $n!$, $2^n$\\
+                    $10$, ln$n$, $2^{\text{ln}n}$, $n^\epsilon (0<\epsilon<1)$, $n$ln$n$, $2^n$, $n^n$, $n!$
                 \end{center}
             \item Let $f(n)$ and $g(n)$ be asymptotically positive functions. Prove or show a counter example for each of the following conjectures.
                 \begin{enumerate}
