@@ -6,6 +6,52 @@
         \\\\“I have done this assignment completely on my own. I have not copied it, nor have I given my solution to anyone else. I understand that if I am involved in plagiarism or cheating I will have to sign an official form that I have cheated and that this form will be stored in my official university record. I also understand that I will receive a grade of 0 for the involved assignment for my first offense and that I will receive a grade of “F” for the course for any additional offense.” 
         \\\\
         \begin{enumerate}
+            \item Given the pseudo code below for bubble sort:
+                \begin{enumerate}
+                    \item Let \verb|length[A] = n|. What is the count for \verb|BubbleSort(A)|? Show the steps necessary to derive your final answer. 
+                        \begin{center}
+                            \begin{tabular}{|c c c|}
+                                \hline
+                                Line & Cost & Times\\[0.5ex]
+                                \hline\hline
+                                1 & $c_1$ & n\\
+                                \hline
+                                2 & $c_2$ & $\sum_{i+1}^{n}t_i$\\
+                                \hline
+                                3 & $c_3$ & $\sum_{i+1}^{n}(t_i-1)$\\
+                                \hline
+                                4 & $c_4$ & 0 (best), $\sum_{i+1}^{n}(t_i-1)$ (worst) \\
+                                \hline
+                            \end{tabular}
+                        \end{center}
+                        $\sum_{line}^4($times $line$ executed$) = \text{instruction count}$\\
+                    \item Show the worst case and best case time complexity in term of instruction counts.\\
+                    Worst case scenario:\\
+                    $n + \sum_{i+1}^{n}t_i + \sum_{i+1}^{n}(t_i-1) + \sum_{i+1}^{n}(t_i-1)$\\
+                    Best case scenario:\\
+                    $n + \sum_{i+1}^{n}t_i + \sum_{i+1}^{n}(t_i-1)$
+                \end{enumerate}
+            \item Fill in all the missing values.
+                \begin{center}
+                    \begin{tabular}{|c | c | c | c | c|}
+                        \hline
+                        $f(n)$ & $g(n)$ & $f(n)=O(g(n))$ & $f(n)=\Omega(g(n))$ & $f(n)=\Theta(g(n))$\\
+                        \hline
+                        \hline
+                        $n^{2.125}$ & $n^2\text{lg}n$ & Yes\\
+                        \hline
+                        $\sqrt{n}$ & $n$ & Yes\\
+                        \hline
+                        $n!$ & $(n+1)!$ & No\\
+                        \hline
+                        $2^{n/2}$ & $2^2$ & Yes\\
+                        \hline
+                        $\sum_{i=1}^{n}i= \frac{n^2+n}{2}$ & $n^2$\\
+                        \hline
+                        $\sum_{i=0}^{n-1}4^i=$ & $n4^{n-1}$\\
+                        \hline
+                    \end{tabular}
+                \end{center}
             \item Let $f(n)$ and $g(n)$ be asymptotically positive functions. Prove or show a counter example for each of the following conjectures.
                 \begin{enumerate}
                     \item $f(n)\in O(g(n))$ implies $2^{f(n)}\in O(2^{g(n)})$\\
