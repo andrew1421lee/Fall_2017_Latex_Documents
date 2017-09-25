@@ -1,0 +1,27 @@
+\documentclass{article}
+\usepackage{amsthm, amsmath}
+\usepackage[margin=1in]{geometry}
+\begin{document}
+    \noindent\textbf{CS 375 Homework 1}\hfill Anchu A. Lee
+    \\\\“I have done this assignment completely on my own. I have not copied it, nor have I given my solution to anyone else. I understand that if I am involved in plagiarism or cheating I will have to sign an official form that I have cheated and that this form will be stored in my official university record. I also understand that I will receive a grade of 0 for the involved assignment for my first offense and that I will receive a grade of “F” for the course for any additional offense.” 
+    \\\\
+    \begin{enumerate}
+        \item Use the Master theorem to solve the following recurrences.
+            \begin{enumerate}
+                \item $T(n)=3T(n/4)+n$
+                \item $T(n)=2T(n/4)+\sqrt{n}lg(n)$
+                \item $T(n)=5T(n/2)+n^2$
+            \end{enumerate}
+        \item Solve the recurrence 
+            \[
+                T(n) = 
+                \begin{cases}
+                    \Theta(1) & \text{for $n\leq 1$}\\
+                    T(n/4)+T(3n/4)+n & \text{otherwise}
+                \end{cases}
+            \]
+            using the recursion tree method. Draw the recursion tree and show the aggregate instruction counts for the following levels (0th, 1st, and last levels), and derive the Θ growth class for T(n) with justifications.
+        \item Use the substitution method to prove that $T(n)=T(n-1)+n\in O(n^2)$
+
+    \end{enumerate}
+\end{document}
