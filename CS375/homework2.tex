@@ -9,9 +9,21 @@
     \begin{enumerate}
         \item Use the Master theorem to solve the following recurrences.
             \begin{enumerate}
-                \item $T(n)=3T(n/4)+n$
-                \item $T(n)=2T(n/4)+\sqrt{n}lg(n)$
-                \item $T(n)=5T(n/2)+n^2$
+                \item $T(n)=3T(n/4)+n$\\
+                    $a = 3$, $b = 4$, $f(n) = n$\\
+                    Case 3: $f(n) = \Theta(n^c)$ if $c=1$. \\
+                    $log_{4}3 = 0.79248 < c$\\
+                    $T(n) = \Theta(f(n)) = \Theta(n)$
+                \item $T(n)=2T(n/4)+\sqrt{n}$log$(n)$\\
+                    $a = 2$, $b = 4$, $f(n) = \sqrt{n}$log$(n)$\\
+                    Case 2: $f(n)=\Theta(n^c$log$^kn)$ if $c= \frac{1}{2}$ and $k=0$\\
+                    log$_{4}2 = 0.5$ so $c =$log$_ba$\\
+                    $T(n)=\Theta(n^{0.5}$log$^1n = \Theta(\sqrt{n}$log$(n))$
+                \item $T(n)=5T(n/2)+n^2$\\
+                    $a = 5$, $b = 2$, $f(n) = n^2$\\
+                    Case 1: $f(n) = \Theta(n^c)$ if $c = 2$\\
+                    log$_{2}5=2.3219... > c$\\
+                    $T(n) = \Theta(n^{log_{2}5}) = \Theta(n^{2.3218...})$
             \end{enumerate}
         \item Solve the recurrence 
             \[
@@ -22,6 +34,7 @@
                 \end{cases}
             \]
             using the recursion tree method. Draw the recursion tree and show the aggregate instruction counts for the following levels (0th, 1st, and last levels), and derive the Θ growth class for T(n) with justifications.
+            \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
         \item Use the substitution method to prove that $T(n)=T(n-1)+n\in O(n^2)$
         \item Assume that you are given an array of $n(n\geq 1)$ elements sorted in non-descending order. Design a \textit{ternary} search function that searches the array for a given element $x$ by applying the divide and conquer strategy.
         \item Develop a divide-and-conquer approach to selection (and hence a solution for the finding median problem). Hint: for any number $v$, imagine splitting list $S$ into three categories: elements smaller than $v$, those equal to $v$ (there might be duplicates), and those greater than $v$. 
