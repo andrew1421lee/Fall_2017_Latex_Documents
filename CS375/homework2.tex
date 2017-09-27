@@ -33,11 +33,19 @@
                     T(n/4)+T(3n/4)+n & \text{otherwise}
                 \end{cases}
             \]
-            using the recursion tree method. Draw the recursion tree and show the aggregate instruction counts for the following levels (0th, 1st, and last levels), and derive the Θ growth class for T(n) with justifications.
+            using the recursion tree method. Draw the recursion tree and show the aggregate instruction counts for the following levels (0th, 1st, and last levels), and derive the $\Theta$ growth class for $T(n)$ with justifications.
             \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-        \item Use the substitution method to prove that $T(n)=T(n-1)+n\in O(n^2)$\\
+        \item Use the substitution method to prove that $T(n)=T(n-1)+n\in O(n^2)$
             \begin{proof}
-                Assume that $T(n)$
+                Assume that $T(n)=O(n^2)$. So then $T(n)\leq c\cdot n^2$ for some constant $c$.\\
+                Assume $T(k)\leq ck^2$ for $k<n$. Prove $T(n)\leq cn^2$ by induction.
+                \begin{align*}
+                    T(n) = T(n-1)+n &\leq c\cdot(n-1)^2+n\\
+                         &\leq c\cdot(n-1)(n-1)+n\\
+                         &\leq c\cdot (n^2-2n+1) + n\\
+                         &\leq cn^2-cn+c\leq cn^2
+                \end{align*}
+                Which holds provided $cn+c\geq 0$. Which is $cn\geq -c$. So $T(n)$ is in $O(n^2)$ as long as $c\geq 0$ and $n\geq 0$.
             \end{proof}
         \item Assume that you are given an array of $n(n\geq 1)$ elements sorted in non-descending order. Design a \textit{ternary} search function that searches the array for a given element $x$ by applying the divide and conquer strategy.
         \item Develop a divide-and-conquer approach to selection (and hence a solution for the finding median problem). Hint: for any number $v$, imagine splitting list $S$ into three categories: elements smaller than $v$, those equal to $v$ (there might be duplicates), and those greater than $v$. 
