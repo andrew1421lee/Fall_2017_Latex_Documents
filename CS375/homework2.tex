@@ -79,7 +79,7 @@
             \begin{itemize}
                 \item \textbf{Divide:} For a number $v$ which is an random element of $S$, split the list into sublists with numbers larger than $v$, smaller than $v$, and equal to $v$.
                 \item \textbf{Conquer:} Using the number of elements in each list, we can determine which sublist the $k$th element must reside in. For example, if $k=6$ and the number of elements smaller than $v$ is $3$, the number of elements the same as $v$ is $1$ and the number of elements larger than $v$ is $5$, then we know that the desired number is the smallest element in the sublist containing elements larger than $v$. Repeat this process until $k$ is bounded below by the number of elements less than $v$ and bounded above by the number of elements less than $v$ added with the number of elements equal to $v$. In that case return $v$.
-                \item \textbf{Combine:} Each time requires the list to be interated (linear).
+                \item \textbf{Combine:} Each time requires the list to be iterated (linear).
             \end{itemize}
             \begin{lstlisting}
     function selection(S, k)
