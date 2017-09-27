@@ -1,5 +1,5 @@
 \documentclass{article}
-\usepackage{amsthm, amsmath}
+\usepackage{amsthm, amsmath, listings}
 \usepackage[margin=1in]{geometry}
 \begin{document}
     \noindent\textbf{CS 375 Homework 1}\hfill Anchu A. Lee\\
@@ -53,6 +53,24 @@
                 \item \textbf{Conquer:} If the element $x$ is less than $A[a_1]$ then it must be in the subarray $A[0$ to $a_1]$. Otherwise if $x$ is greater than $A[a_1]$ and less than $A[a_2]$ then it must be in the subarray $A[a_1$ to $a_2]$ Lastly if $x$ is greater than $A[a_2]$ then it must be in the subarray $A[a_2$ to $n]$. Then recusievly search the subarray until $x$ is the value of $A[a_1]$ or $A[a_2]$.
                 \item \textbf{Combine:} The final answer is the index found when the recursive function returns.
             \end{itemize}
+            \begin{lstlisting}
+                function ternarySearch(x, A, left, right) 
+                    a_1 = 1/3 * (right-left)  // first index
+                    a_2 = 2/3 * (right-left)  // second index
+                    if A[a_1] == x return a_1   // found x
+                    if A[a_2] == x return a_2
+
+                    // check left subarray
+                    if A[a_1] > x return ternarySearch(x, A, left, a_1-1)
+
+                    // check right subarray
+                    else if A[a_2] < x return ternarySearch(x, A, a_2+1, right)
+                    
+                    // check middle subarray
+                    else return ternarySearch(x, A, a_1+1, a_2-1)
+            \end{lstlisting}
+            The recursive time complexity of ternarySearch would be $T(n)=T(n/3)+\Theta(1)$. $n/3$ because the size of the array that needs to be searched is divided by three. Other functions of ternarySearch is trivial so happens over $\Theta(1)$\\
+            
         \item Develop a divide-and-conquer approach to selection (and hence a solution for the finding median problem). Hint: for any number $v$, imagine splitting list $S$ into three categories: elements smaller than $v$, those equal to $v$ (there might be duplicates), and those greater than $v$. 
     \end{enumerate}
 \end{document}
