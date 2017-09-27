@@ -76,5 +76,23 @@
             log$_31 =0= c$ so case 2 condition satisfied.\\
             Thus $T(n)=\Theta(n^0$log$^{k+1}n) = \Theta($log$n)$
         \item Develop a divide-and-conquer approach to selection (and hence a solution for the finding median problem). Hint: for any number $v$, imagine splitting list $S$ into three categories: elements smaller than $v$, those equal to $v$ (there might be duplicates), and those greater than $v$. 
+            \begin{itemize}
+                \item \textbf{Divide:} For a number $v$ which is an random element of $S$, split the list into sublists with numbers larger than $v$, smaller than $v$, and equal to $v$.
+                \item \textbf{Conquer:} Using the number of elements in each list, we can determine which sublist the $k$th element must reside in. For example, if $k=6$ and the number of elements smaller than $v$ is $3$, the number of elements the same as $v$ is $1$ and the number of elements larger than $v$ is $5$, then we know that the desired number is the smallest element in the sublist containing elements larger than $v$. Repeat this process until $k$ is bounded below by the number of elements less than $v$ and bounded above by the number of elements less than $v$ added with the number of elements equal to $v$. In that case return $v$.
+                \item \textbf{Combine:} Each time requires the list to be interated (linear).
+            \end{itemize}
+            \begin{lstlisting}
+    function selection(S, k)
+        s_ls, s_gr, s_eq
+        v = S[random]
+        for each i in S:
+            if i < v s_ls.add(v)
+            else if i > v s_gr.add(v)
+            else s_eq.add(v)
+        if s_ls.size >= k return selection(s_ls,k)
+        else if s_ls.size + s_eq.size < k return selection(s_gr, k)
+        else if s_ls.size < k and k <= s_ls.size + s_eq.size return v
+            \end{lstlisting}
+        \item Use the recursion tree method to solve $T(n) = 2T(n/2)+1/$log$n$ Draw the recursion tree and show the aggregate instruction counts for the following levels (0th, 1st, and last levels), and derive the $\Theta$ growth class for $T(n)$ with justifications.
     \end{enumerate}
 \end{document}
