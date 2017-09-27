@@ -93,6 +93,11 @@
         else if s_ls.size + s_eq.size < k return selection(s_gr, k)
         else if s_ls.size < k and k <= s_ls.size + s_eq.size return v
             \end{lstlisting}
+            Worst case situation for this function would be if it picked the largest or smallest element in the list every time. 
+            \begin{align*}
+                n+(n-1)+(n-2)+(n-3)+...+\frac{n}{2} = \Theta(n^2)
+            \end{align*}
+            Best case situation would be if the exact middle was chosen randomly every time. That would mean the solution is found after the first iteration of the list. $O(n)$
         \item Use the recursion tree method to solve $T(n) = 2T(n/2)+1/$log$n$ Draw the recursion tree and show the aggregate instruction counts for the following levels (0th, 1st, and last levels), and derive the $\Theta$ growth class for $T(n)$ with justifications.
     \end{enumerate}
 \end{document}
