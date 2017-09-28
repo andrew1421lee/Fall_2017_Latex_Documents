@@ -27,18 +27,37 @@
     \textbf{Question 4.14}\\
         $E(X) = \int_0^1\frac{x\cdot 2(x+2)}{5}dx = \frac{8}{15}$\\\\
     \textbf{Question 4.18}\\
-        $E(X^2) = \sum_{x=0}^{3}x^2\cdot f(x)= 0\cdot \frac{27}{64} + 1\cdot \frac{27}{64} + 4\cdot \frac{9}{64} + 9\cdot \frac{1}{64} = \frac{9}{8}$\\\\
+        $E(X^2) = \sum_{x=0}^{3}x^2\cdot f(x)dx= 0\cdot \frac{27}{64} + 1\cdot \frac{27}{64} + 4\cdot \frac{9}{64} + 9\cdot \frac{1}{64} = \frac{9}{8}$\\\\
     \textbf{Question 4.20}\\
-        $E(e^{2X/3}) = \int_{0}^{\infty}e^{2x/3}\cdot e^{-x} = 3$\\\\
+        $E(e^{2X/3}) = \int_{0}^{\infty}e^{2x/3}\cdot e^{-x}dx = 3$\\\\
     \textbf{Question 4.28}\\
         \begin{tikzpicture}
             \begin{axis}[xmax=26.25,ymax=1,ymin=0, samples=50]
                 \addplot coordinates { (23.75,.4) (26.25,.4) };
             \end{axis}
-        \end{tikzpicture}
+        \end{tikzpicture}\\
+        $E(X) = \int_{23.75}^{26.25}\frac{2}{5}xdx = 25$\\
+        Not suprised, this is the expected value as it is exactly in the middle of the interval.\\\\
     \textbf{Question 4.34}\\
+        $\mu_X = (-2)(0.3)+(3)(0.2)+(5)(0.5) = 2.5$\\
+        $\sigma_X^2 = \sum_{x}x^2f(x)-\mu_X^2$\\
+        $\sum_{x}x^2f(x) = (4)(0.3) + (9)(0.2) + (25)(0.5) = 15.5$\\
+        $\sigma_X^2 =15.5 - 2.5^2 = 9.25$\\
+        $\sigma = 3.04138...$
+        \\\\
     \textbf{Question 4.38}\\
+        $\mu_X = \frac{8}{15}$\\
+        $\sigma_X^2 = \int_{0}^{1}x^2\frac{2(x+2)}{5}dx-\mu_X^2$\\
+        $\int_{0}^{1}x^2\frac{2(x+2)}{5}dx = \frac{11}{30}$\\
+        $\sigma_X^2=\frac{11}{30} - (\frac{8}{15})^2 = \frac{37}{450}$
+        \\\\
     \textbf{Question 4.40}\\
+        $g(X) = 3X^2+4$\\
+        $\mu_{g(X)} = \int_{0}^{1}(3x^2+4)\frac{2(x+2)}{5}dx = 5.1$\\
+        $\sigma_{g(X)}^2 = \int_{0}^{1}(3x^2+4)^2\frac{2(x+2)}{5}dx-\mu_X^2$\\
+        $\int_{0}^{1}(3x^2+4)^2\frac{2(x+2)}{5}dx = \frac{671}{25}$\\
+        $\sigma_{g(X)}^2 = \frac{671}{25} - (5.1)^2 = 0.83$
+        \\\\
     \textbf{Question 4.46}\\
     \textbf{Question 4.58}\\
     \textbf{Question 4.60}\\
