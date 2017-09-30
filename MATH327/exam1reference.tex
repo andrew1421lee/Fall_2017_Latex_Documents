@@ -36,11 +36,14 @@
         \underline{Conditional Probability:} Probability of B given A is $P(B|A)=\frac{P(A\cap B)}{P(A)}$ provided $P(A) > 0$.
         \underline{Independent:} If $P(B|A) = P(B)$ then $A$ and $B$ are independent. If $P(A\cap B)=P(A)P(B)$
         \underline{Product Rules:} If $A$ and $B$ can both occur. $P(A\cap B) = P(A)P(B|A)$ provided $P(A)>0$. If $A_1,A_2...A_k$ can occur then $P(A_1\cap A_2\cap ... A_k) = P(A_1)P(A_2|A_1)P(A_3|A_1\cap A_2)...P(A_k|A_1\cap A_2\cap ... A_{k-1})$.
+        \underline{Theorem of Total Probability:} If the events $B_1, B_2,...,B_k$ are the partitions of the sample space $S$ such that $P(B_i)\not= 0$. then for any event $A$ of $S$, $P(A)=\sum_{i=1}^{k}P(B_i\cap A)=\sum_{i=1}^{k}P(B_i)P(A|B_i)$.
+        \underline{Bayes' Rule:} If the events $B_1, B_2,...,B_k$ are the partitions of the sample space $S$ such that $P(B_i)\not= 0$. then for any event $A$ of $S$, $P(B_r|A) = \frac{P(B_r\cap A)}{\sum_{i=1}^{k}P(B_i\cap A)} = \frac{P(B_r)P(A|B_r)}{\sum_{i=1}^{k}P(B_i)P(A|B_i)}$.
     \\
     \noindent\textbf{Chapter 3}
     \\
     \noindent\textbf{Chapter 4}
     \noindent\textbf{Example Questions} 
         Answering true-false (q)uestions = $2^{q}$.
-        Ordering (c)ouples who sit together = $c!\cdot 2^c$
+        Ordering (c)ouples who sit together = $c!\cdot 2^c$.
+        Find $P(B'\cap C) = P(A\cap B'\cap C)+P(A'\cap B'\cap C) = P(A)P(B'|A)P(C|A\cap B') + P(A')P(B'|A')P(C|A'\cap B')$.
 \end{document}
