@@ -4,24 +4,43 @@
 \newcommand*\mean[1]{\bar{#1}}
 \begin{document}
     \noindent\textbf{Chapter 1}
-    \underline{Sample Mean:} Add all elements and divide by number of elements. 
-    \underline{Sample Median:} Middle element of ordered list, or mean of middle two.
-    \underline{Trimmed Mean:} Eliminate largest and smallest percentage and then take the mean.
-    \underline{Sample Variance:} $s^2 = \sum_{i=1}^{n}=\frac{(x_i-\mean{x})^2}{n-1}$.
-    \underline{Degrees of Freedom:} $n-1$.
-    \underline{Sample Standard Deviation:} $s = \sqrt{s^2}$.
-    \underline{Continuous Data:} Value over a given range, countably infinite.
-    \underline{Discrete Data:} Particular value, countable.
-    \underline{Scatter Plot:} Just graph that shit.
-    \underline{Stem-and-Leaf Plot:} Split values into stems and leaves. Easy way would be the ten's place for the stems, and one's place for the leaves.
-    \underline{Reletive Frequency:} Divide the frequency (occurrences) by total number of elements.
-    \underline{Histogram:} Mate.
-    \underline{Box Plot:} Take the median of the entire data set (2nd quartile), then take the median of the set of data to the left (1st quartile), and the median of the set of data to the right (3rd quartile). Outliers are values outside the range of 1.5 times the IQR.
-    \underline{IQR:} The interquartile range is the 3rd quartile minus the 1st quartile.
+        \underline{Sample Mean:} Add all elements and divide by number of elements. 
+        \underline{Sample Median:} Middle element of ordered list, or mean of middle two.
+        \underline{Trimmed Mean:} Eliminate largest and smallest percentage and then take the mean.
+        \underline{Sample Variance:} $s^2 = \sum_{i=1}^{n}=\frac{(x_i-\mean{x})^2}{n-1}$.
+        \underline{Degrees of Freedom:} $n-1$.
+        \underline{Sample Standard Deviation:} $s = \sqrt{s^2}$.
+        \underline{Continuous Data:} Value over a given range, countably infinite.
+        \underline{Discrete Data:} Particular value, countable.
+        \underline{Scatter Plot:} Just graph that shit.
+        \underline{Stem-and-Leaf Plot:} Split values into stems and leaves. Easy way would be the ten's place for the stems, and one's place for the leaves.
+        \underline{Reletive Frequency:} Divide the frequency (occurrences) by total number of elements.
+        \underline{Histogram:} Mate.
+        \underline{Box Plot:} Take the median of the entire data set (2nd quartile), then take the median of the set of data to the left (1st quartile), and the median of the set of data to the right (3rd quartile). Outliers are values outside the range of 1.5 times the IQR.
+        \underline{IQR:} The interquartile range is the 3rd quartile minus the 1st quartile.
     \\
     \noindent\textbf{Chapter 2}
+        \underline{Sample Space:} Set of all possible outcomes.
+        \underline{Event:} Subset of the sample space.
+        \underline{Complement ($A'$):} Subset of all elements not in an event.
+        \underline{Intersection ($A\cap B$)} Event containing elements that exist in both events.
+        \underline{Mutually Exclusive:} Two events have no elements in common.
+        \underline{Union ($A\cup B$)} Event containing all elements from both events.
+        \underline{Multiplication Rule:} If something can be done $x$ ways, and for each way, something else can be done $y$ ways, both can be done $xy$ ways. This stacks for the generalized multiplication rule.
+        \underline{Permutations:} Different order means different set. The number of permutations of $n$ objects is $n!$. The number of permutations of $n$ objects but taking $r$ at a time ($_nP_r$) is $\frac{n!}{(n-r)!}$.
+        \underline{Circular Permutations:} Permutations for arranging objects in a circle. The number of permutations of $n$ objects in a circle is $(n-1)!$. 
+        \underline{Distinct Permutations:} Number of distinct permutations of $n$ things of which $n_1$ are of one kind, $n_2$ are another, and $n_k$ is the $k$th kind is $\frac{n!}{n_1!n_2!...n_k!}$.
+        \underline{Combinations:} Differen order means same set. The number of combinations of $n$ distinct objects raken $r$ at a time is $\binom{n}{r} = \frac{n!}{r!(n-r)!}$.
+        \underline{Probability:} Probability of an event is the sum of all weights of all sample points in the event. Probability of an event is the number of outcomes corresponding to the event divided by total outcomes.
+        \underline{Additive Rules:} If $A$ and $B$ are two events. $P(A\cup B) = P(A) + P(B) - P(A\cap B)$. $P(A\cup B\cup C) = P(A)+P(B)+P(C)-P(A\cap B) - P(A\cap C) - P(B\cap C) + P(A\cap B\cap C)$. If $A$ and $B$ are mutually exclusive, $P(A\cup B) = P(A) + P(B)$. The summation of all probabilities should equal 1. $P(A) + P(A') = 1$.
+        \underline{Conditional Probability:} Probability of B given A is $P(B|A)=\frac{P(A\cap B)}{P(A)}$ provided $P(A) > 0$.
+        \underline{Independent:} If $P(B|A) = P(B)$ then $A$ and $B$ are independent. If $P(A\cap B)=P(A)P(B)$
+        \underline{Product Rules:} If $A$ and $B$ can both occur. $P(A\cap B) = P(A)P(B|A)$ provided $P(A)>0$. If $A_1,A_2...A_k$ can occur then $P(A_1\cap A_2\cap ... A_k) = P(A_1)P(A_2|A_1)P(A_3|A_1\cap A_2)...P(A_k|A_1\cap A_2\cap ... A_{k-1})$.
     \\
     \noindent\textbf{Chapter 3}
     \\
     \noindent\textbf{Chapter 4}
+    \noindent\textbf{Example Questions} 
+        Answering true-false (q)uestions = $2^{q}$.
+        Ordering (c)ouples who sit together = $c!\cdot 2^c$
 \end{document}
