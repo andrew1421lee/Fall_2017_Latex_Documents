@@ -56,7 +56,16 @@
             \underline{Statistically Independent:} If and only if $f(x,y) = g(x)h(y)$. This will stack with any number of variables.
         \end{multicols}
     \noindent\textbf{Chapter 4} Mathematical Expectation
-    \\
+        \begin{multicols}{2}
+            \underline{Expected Value (Mean):} Discrete: $\mu=E(X) = \sum_xxf(x)$. Continous: $\mu=E(X)=\int_{-\infty}^{\infty}xf(x)dx$. This also works for $g(X)$ as $\mu_{g(X)} = E[g(X)] = \sum_xg(x)f(x)$. Also for joint probability: $\mu_{g(X,Y)}=E[g(X,Y)]=\sum_x\sum_yg(x,y)f(x,y)$. Same idea of continous. Also $E(ax+b) = aE(x)+b$\\
+            \underline{Variance and Standard Deviation:} Discrete: $\sigma_x^2=E(x^2)-\mu_x^2=\sum_xx^2f(x)-\mu_x^2$. Continuous: $\sigma_x^2=E(x^2)-\mu_x^2=\int_{-\infty}^{\infty}x^2f(x)dx-\mu_x^2$. Can replace $x$ with any other variable including $g(x)$.\\
+            \underline{Covariance:} $\sigma_{xy} = E[(X-\mu_X)(Y-\mu_Y)]=E(xy)-\mu_x\mu_y$. If $\sigma_{XY}>0$ then as $X$ increases $Y$ increases. If $\sigma_{XY}<0$ then as $X$ increases $Y$ decreases.
+            \underline{Correlation Coefficient:} $\rho_{XY}=\frac{\sigma_{XY}}{\sigma_X\sigma_Y}$.\\
+            \underline{Expected Value Sum:} $E[g(X)\pm h(Y)] = E[g(X)]\pm E[h(Y)]$. Same goes for $g(X,Y)$ and $h(X,Y)$.\\
+            \underline{Independent Expected:} $E(XY) = E(X)E(Y)$ if $X$ and $Y$ are independent. That also means $\sigma_{XY}=0$.\\
+            \underline{Sigma Stuff:} $\sigma_{aX+bY+c}^{2}=a^2\sigma_X^2+b^2\sigma_Y^2+2ab\sigma_{XY}$.
+            \underline{Chebyshev's Theorem:}
+        \end{multicols}
     \noindent\textbf{Example Questions} 
         \begin{multicols}{2}
             \noindent 1. Answering true-false (q)uestions = $2^{q}$.\\
