@@ -4,7 +4,7 @@
 \newcommand*\mean[1]{\bar{#1}}
 \setlength{\multicolsep}{2pt}
 \begin{document}
-    \noindent\textbf{Chapter 1}
+    \noindent\textbf{Chapter 1} Introduction to Statistics and Data Analysis
         \begin{multicols}{2}
             \noindent\underline{Sample Mean:} Add all elements and divide by number of elements.\\
             \underline{Sample Median:} Middle element of ordered list, or mean of middle two.\\
@@ -21,7 +21,7 @@
             \underline{Box Plot:} Take the median of the entire data set (2nd quartile), then take the median of the set of data to the left (1st quartile), and the median of the set of data to the right (3rd quartile). Outliers are values outside the range of 1.5 times the IQR.\\
             \underline{IQR:} The interquartile range is the 3rd quartile minus the 1st quartile.
         \end{multicols}
-    \noindent\textbf{Chapter 2}
+    \noindent\textbf{Chapter 2} Probability
         \begin{multicols}{2}
             \noindent\underline{Sample Space:} Set of all possible outcomes.\\
             \underline{Event:} Subset of the sample space.\\
@@ -33,7 +33,7 @@
             \underline{Permutations:} Different order means different set. The number of permutations of $n$ objects is $n!$. The number of permutations of $n$ objects but taking $r$ at a time ($_nP_r$) is $\frac{n!}{(n-r)!}$.\\
             \underline{Circular Permutations:} Permutations for arranging objects in a circle. The number of permutations of $n$ objects in a circle is $(n-1)!$.\\
             \underline{Distinct Permutations:} Number of distinct permutations of $n$ things of which $n_1$ are of one kind, $n_2$ are another, and $n_k$ is the $k$th kind is $\frac{n!}{n_1!n_2!...n_k!}$.\\
-            \underline{Combinations:} Differen order means same set. The number of combinations of $n$ distinct objects raken $r$ at a time is $\binom{n}{r} = \frac{n!}{r!(n-r)!}$.\\
+            \underline{Combinations:} Different order means same set. The number of combinations of $n$ distinct objects raken $r$ at a time is $\binom{n}{r} = \frac{n!}{r!(n-r)!}$.\\
             \underline{Probability:} Probability of an event is the sum of all weights of all sample points in the event. Probability of an event is the number of outcomes corresponding to the event divided by total outcomes.\\
             \underline{Additive Rules:} If $A$ and $B$ are two events. $P(A\cup B) = P(A) + P(B) - P(A\cap B)$. $P(A\cup B\cup C) = P(A)+P(B)+P(C)-P(A\cap B) - P(A\cap C) - P(B\cap C) + P(A\cap B\cap C)$. If $A$ and $B$ are mutually exclusive, $P(A\cup B) = P(A) + P(B)$. The summation of all probabilities should equal 1. $P(A) + P(A') = 1$.\\
             \underline{Conditional Probability:} Probability of B given A is $P(B|A)=\frac{P(A\cap B)}{P(A)}$ provided $P(A) > 0$.\\
@@ -42,11 +42,30 @@
             \underline{Theorem of Total Probability:} If the events $B_1, B_2,...,B_k$ are the partitions of the sample space $S$ such that $P(B_i)\not= 0$. then for any event $A$ of $S$, $P(A)=\sum_{i=1}^{k}P(B_i\cap A)=\sum_{i=1}^{k}P(B_i)P(A|B_i)$.\\
             \underline{Bayes' Rule:} If the events $B_1, B_2,...,B_k$ are the partitions of the sample space $S$ such that $P(B_i)\not= 0$. then for any event $A$ of $S$, $P(B_r|A) = \frac{P(B_r\cap A)}{\sum_{i=1}^{k}P(B_i\cap A)} = \frac{P(B_r)P(A|B_r)}{\sum_{i=1}^{k}P(B_i)P(A|B_i)}$.\\
         \end{multicols}
-    \noindent\textbf{Chapter 3}
+    \noindent\textbf{Chapter 3} Random Variables and Probability Distribution
+        \begin{multicols}{2}
+            \noindent\underline{Random Variable:} A function that associates a real number with each element in the sample space.\\
+            \underline{Discrete Sample Space:} Sample space contains finite possibilities or countably infinitly many elements. Discrete random variable.\\
+            \underline{Continuous Sample Space:} Sample space contains infinite possibilities. Continuous random variable.\\
+            \underline{Probability Mass Function:} $f(x)$ for discrete random variable $X$ if $f(x) \geq 0$; $\sum_xf(x) = 1$; $P(X=x) = f(x)$.\\
+            \underline{Probability Density Function:} $f(x)$ for continuous random variable $X$ if $f(x)\geq 0$ $\forall x\in R$; $\int_{-\infty}^{\infty}f(x)dx = 1$; $P(a<X<b) = \int_a^bf(x)dx$.
+            \underline{Cumulative Distribution Function:} Find the probability that $X$ will be less than or equal to a real number. Piece together in a piecewise function. Discrete: $F(x) = P(X\leq x) = \sum_{t\leq x}f(t)$. Continuous: $F(x) = P(X\leq x) = \int_{-\infty}^{x}f(t)dt$.\\
+            \underline{Joint Probability Distribution or Probability Mass Function:} Two random variables $X$ and $Y$. Discrete: $f(x,y)\geq 0$ $\forall(x,y)$; $\sum_x\sum_yf(x,y) = 1$; $P(X=x,Y=y)=f(x,y)$; For any region $A$ in the $xy$ plane: $P[(X,Y)\in A]=\sum\sum_af(x,y)$. Continous: $f(x,y)\geq 0$ $\forall(x,y)$; $\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}f(x,y)dxdy=1$; For any region $A$ in the $xy$ plane: $P[(X,Y)\in A]=\int\int_Af(x,y)dxdy$.\\
+            \underline{Marginal Distributions:} Discrete: $g(x) = \sum_yf(x,y)$ and $h(y)=\sum_xf(x,y)$. Continous: $g(x) = \int_{-\infty}^{\infty}f(x,y)dy$ and $h(y)=\int_{-\infty}^{\infty}f(x,y)dx$.\\
+            \underline{Conditional Distribution:} $f(y|x)=\frac{f(x,y)}{g(x)}$ or $f(x|y)=\frac{f(x,y)}{h(y)}$
+            \underline{Statistically Independent:} If and only if $f(x,y) = g(x)h(y)$. This will stack with any number of variables.
+        \end{multicols}
+    \noindent\textbf{Chapter 4} Mathematical Expectation
     \\
-    \noindent\textbf{Chapter 4}
     \noindent\textbf{Example Questions} 
-        Answering true-false (q)uestions = $2^{q}$.
-        Ordering (c)ouples who sit together = $c!\cdot 2^c$.
-        Find $P(B'\cap C) = P(A\cap B'\cap C)+P(A'\cap B'\cap C) = P(A)P(B'|A)P(C|A\cap B') + P(A')P(B'|A')P(C|A'\cap B')$.
+        \begin{multicols}{2}
+            \noindent 1. Answering true-false (q)uestions = $2^{q}$.\\
+            2. Ordering (c)ouples who sit together = $c!\cdot 2^c$.\\
+            3. Find $P(B'\cap C) = P(A\cap B'\cap C)+P(A'\cap B'\cap C) = P(A)P(B'|A)P(C|A\cap B') + P(A')P(B'|A')P(C|A'\cap B')$.\\
+            4. Probability of choosing $x$ defective from 20 computers and 3 defective = $P(X = x) = \frac{\binom{3}{x}\binom{17}{2-x}}{\binom{20}{2}}$
+        \end{multicols}
+    \noindent\textbf{Calculator Tips}
+        \begin{multicols}{2}
+            \noindent\textbf{EVAL problems:} 1. Turn off approx. mode for exact mode. The calculator will ask to move to approx. mode again and should function. 2. Make sure to use only fractions instead of decimals.
+        \end{multicols}
 \end{document}
