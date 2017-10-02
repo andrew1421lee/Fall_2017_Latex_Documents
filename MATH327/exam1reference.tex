@@ -59,22 +59,24 @@
         \begin{multicols}{2}
             \underline{Expected Value (Mean):} Discrete: $\mu=E(X) = \sum_xxf(x)$. Continous: $\mu=E(X)=\int_{-\infty}^{\infty}xf(x)dx$. This also works for $g(X)$ as $\mu_{g(X)} = E[g(X)] = \sum_xg(x)f(x)$. Also for joint probability: $\mu_{g(X,Y)}=E[g(X,Y)]=\sum_x\sum_yg(x,y)f(x,y)$. Same idea of continous. Also $E(ax+b) = aE(x)+b$\\
             \underline{Variance and Standard Deviation:} Discrete: $\sigma_x^2=E(x^2)-\mu_x^2=\sum_xx^2f(x)-\mu_x^2$. Continuous: $\sigma_x^2=E(x^2)-\mu_x^2=\int_{-\infty}^{\infty}x^2f(x)dx-\mu_x^2$. Can replace $x$ with any other variable including $g(x)$.\\
-            \underline{Covariance:} $\sigma_{xy} = E[(X-\mu_X)(Y-\mu_Y)]=E(xy)-\mu_x\mu_y$. If $\sigma_{XY}>0$ then as $X$ increases $Y$ increases. If $\sigma_{XY}<0$ then as $X$ increases $Y$ decreases.
+            \underline{Covariance:} $\sigma_{xy} = E[(X-\mu_X)(Y-\mu_Y)]=E(xy)-\mu_x\mu_y$. If $\sigma_{XY}>0$ then as $X$ increases $Y$ increases. If $\sigma_{XY}<0$ then as $X$ increases $Y$ decreases.\\
             \underline{Correlation Coefficient:} $\rho_{XY}=\frac{\sigma_{XY}}{\sigma_X\sigma_Y}$.\\
             \underline{Expected Value Sum:} $E[g(X)\pm h(Y)] = E[g(X)]\pm E[h(Y)]$. Same goes for $g(X,Y)$ and $h(X,Y)$.\\
             \underline{Independent Expected:} $E(XY) = E(X)E(Y)$ if $X$ and $Y$ are independent. That also means $\sigma_{XY}=0$.\\
-            \underline{Sigma Stuff:} $\sigma_{aX+bY+c}^{2}=a^2\sigma_X^2+b^2\sigma_Y^2+2ab\sigma_{XY}$.
-            \underline{Chebyshev's Theorem:}
+            \underline{Sigma Stuff:} $\sigma_{aX+bY+c}^{2}=a^2\sigma_X^2+b^2\sigma_Y^2+2ab\sigma_{XY}$.\\
+            \underline{Chebyshev's Theorem:} The probability that a random variable $X$ will be within $k$ standard deviations of the mean is $P(\mu - k\sigma<X<\mu +k\sigma)\geq 1 - \frac{1}{k^2y}$.
         \end{multicols}
     \noindent\textbf{Example Questions} 
         \begin{multicols}{2}
             \noindent 1. Answering true-false (q)uestions = $2^{q}$.\\
             2. Ordering (c)ouples who sit together = $c!\cdot 2^c$.\\
             3. Find $P(B'\cap C) = P(A\cap B'\cap C)+P(A'\cap B'\cap C) = P(A)P(B'|A)P(C|A\cap B') + P(A')P(B'|A')P(C|A'\cap B')$.\\
-            4. Probability of choosing $x$ defective from 20 computers and 3 defective = $P(X = x) = \frac{\binom{3}{x}\binom{17}{2-x}}{\binom{20}{2}}$
-        \end{multicols}
-    \noindent\textbf{Calculator Tips}
-        \begin{multicols}{2}
-            \noindent\textbf{EVAL problems:} 1. Turn off approx. mode for exact mode. The calculator will ask to move to approx. mode again and should function. 2. Make sure to use only fractions instead of decimals.
+            4. Probability of choosing $x$ defective from 20 computers and 3 defective = $P(X = x) = \frac{\binom{3}{x}\binom{17}{2-x}}{\binom{20}{2}}$\\
+            5. Discrete: $P(X>t)=1-P(X\leq t)$; $P(X\leq t)=F(t)$; $P(a<X\leq b)=P(X\leq b)-P(X\leq a)$; $P(X\leq A\mid X\geq b) = \frac{P(b\leq X\leq a)}{P(X\geq b)}$.\\
+            6. There are 5 independent components, each of which possesses an operational probability of 0.92. The system does not fail if 3 out of the 5 components are operational. What is the probability that the total system is operational?
+            $P(X\geq 3)=P(X=3)+P(X=4)+P(X=5)$; $P(X=3) = \binom{5}{3}(0.92)^3(1-0.92)^2 = 0.49836...$;
+            $P(X=4) = \binom{5}{4}(0.92)^4(1-0.92) = 0.28656...$;
+            $P(X=5) = \binom{5}{5}(0.92)^5 = 0.65908...$;
+            $P(X\geq 3)=0.99547$
         \end{multicols}
 \end{document}
