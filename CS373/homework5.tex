@@ -64,7 +64,32 @@
                       Assume that $C$ is a regular language, then let $p$ be the pumping length from the pumping lemma. Consider the word $s=1^p0^p1^p$. As $|xy|\leq p$, $x$ and $y$ must both only consist of 1s. Then $y=1^t$ for some $t>0$. Now consider $xy^iz$ for $i=0$ which would look like $1^{p-t}0^p1^p$. As $p-t<p$ the word is not in $C$ and violates the assumption that $C$ is a regular language.
                   \end{proof}
         \end{itemize}
-    \textbf{Show that $\{0^n1^m2^k\mid k$ divides $n+m\}$ is not regular.}\\
+    \textbf{Show that $\{0^n1^m2^k\mid k$ divides $n+m\}$ is not regular.}
+        \begin{proof}
+            Assume that the language ($L$) is regular. Then set $p$ to be the pumping length. Consider the word $0^p1^p2^p$. As $|xy|\leq p$, both $x$ and $y$ can only consist of only 0s. Then $y=0^k$ for some $k>0$. Now consider $xy^iz$ for $i=0$. That means the new word is $0^{p-k}1^p2^p$. $p$ cannot divide $(p-k) + p$ so therefore the assumption that $L$ is regular was false.
+        \end{proof}
     \textbf{Convert the following NFA to a DFA}:\\
-    \includegraphics[scale=0.75]{machine}
+    \includegraphics[scale=0.75]{machine}\\
+        \begin{tabular}{|c|c|c|}
+            \hline
+            State & 0 & 1\\
+            \hline
+            12 & 3 & X\\
+            \hline
+            3 & 5 & 246\\
+            \hline
+            5 & X & 24\\
+            \hline
+            246 & 34 & X\\
+            \hline
+            24 & 3 & X\\
+            \hline
+            34 & 35 & 46\\
+            \hline
+            35 & 5 & 246\\
+            \hline 
+            46 & 34 & X\\
+            \hline
+        \end{tabular}
+        \includegraphics[scale=0.75]{lastmachine}
 \end{document}
