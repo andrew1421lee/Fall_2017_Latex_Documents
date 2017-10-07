@@ -1,5 +1,5 @@
 \documentclass{article}
-\usepackage{amsthm, amsmath, graphicx, enumitem}
+\usepackage{amsthm, amsmath, graphicx, enumitem, tikz-qtree}
 \usepackage[margin=1in]{geometry}
 \begin{document}
     \noindent\textbf{CS 373 Homework 6}\hfill Anchu A. Lee\\
@@ -7,10 +7,24 @@
     \begin{enumerate}
         \item Exercise 2.1
             \begin{enumerate}[label =\alph*.]
-                \item 
-                \item 
-                \item 
-                \item 
+                \item $E\Rightarrow T \Rightarrow F \Rightarrow a$\\
+                    \begin{tikzpicture}[frontier/.style={distance from root=3cm}]
+                        \Tree[.E [.T [.F \textit{a} ]]]
+                    \end{tikzpicture}
+                \item $E \Rightarrow E+T \Rightarrow T+T \Rightarrow F+T \Rightarrow a+T \Rightarrow a+F \Rightarrow a+a$ \\
+                    \begin{tikzpicture}[frontier/.style={distance from root=4cm}]
+                        \Tree[.E [.E [.T [.F \textit{a} ]]] \text{$+$} [.T [.F \textit{a} ]]]
+                    \end{tikzpicture}
+                \item $E\Rightarrow E+T \Rightarrow E+T+T \Rightarrow T+T+T \Rightarrow T+T+F \Rightarrow T+F+F \Rightarrow F+F+F \Rightarrow F+F+a
+                      \Rightarrow F+a+a \Rightarrow a+a+a$\\
+                    \begin{tikzpicture}[frontier/.style={distance from root=5cm}]
+                        \Tree[.E [.E [.E [.T [.F \textit{a} ]]] \text{$+$} [.T [.F \textit{a} ]]] \text{$+$} [.T [.F \textit{a} ]]]
+                    \end{tikzpicture}
+                \item $E \Rightarrow T \Rightarrow F \Rightarrow (E) \Rightarrow (T) \Rightarrow (F) \Rightarrow ((E)) \Rightarrow ((T)) 
+                      \Rightarrow ((F)) \Rightarrow ((a))$\\
+                    \begin{tikzpicture}[frontier/.style={distance from root=10cm}]
+                        \Tree[.E [.T [.F \text{$($} [.E [.T [.F \text{$($} [.E [.T [.F \textit{a} ]]] \text{$)$} ]]] \text{$)$} ]]]
+                    \end{tikzpicture}
             \end{enumerate}
         
         \item Construct a pushdown automata that recognizes 
