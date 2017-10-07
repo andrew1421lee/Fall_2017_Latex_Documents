@@ -1,6 +1,7 @@
 \documentclass{article}
 \usepackage{amsthm, amsmath, graphicx, enumitem, tikz-qtree}
 \usepackage[margin=1in]{geometry}
+\graphicspath{ {6_img/} }
 \begin{document}
     \noindent\textbf{CS 373 Homework 6}\hfill Anchu A. Lee\\
     \noindent\today\\
@@ -22,16 +23,17 @@
                     \end{tikzpicture}
                 \item $E \Rightarrow T \Rightarrow F \Rightarrow (E) \Rightarrow (T) \Rightarrow (F) \Rightarrow ((E)) \Rightarrow ((T)) 
                       \Rightarrow ((F)) \Rightarrow ((a))$\\
-                    \begin{tikzpicture}[frontier/.style={distance from root=10cm}]
+                    \begin{tikzpicture}[frontier/.style={distance from root=9cm}]
                         \Tree[.E [.T [.F \text{$($} [.E [.T [.F \text{$($} [.E [.T [.F \textit{a} ]]] \text{$)$} ]]] \text{$)$} ]]]
                     \end{tikzpicture}
             \end{enumerate}
         
         \item Construct a pushdown automata that recognizes 
             \begin{center}
-                $\{w\mid w \in \{0,1\}^* $ s.t. the number of 0's in $ w = $ the number of 1's in $ w \}$
+                $\{w\mid w \in \{0,1\}^* $ s.t. the number of 0's in $ w $ is equal to the number of 1's in $ w \}$\\
+                
+                \includegraphics[scale=0.6]{machine1}                
             \end{center}
-        
         \item Exercise 2.2
 
         \item Exercise 2.4b
