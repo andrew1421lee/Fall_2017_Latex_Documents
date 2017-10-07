@@ -56,18 +56,34 @@
                 Since context-free languages are closed under union, then $A'\cup B'$ should also be a context-free language. By DeMorgan's law, $A'\cup B' = A\cap B$, 
                 however that is not the case as proved in part (b). By proof of contradition, context-free languages are not closed under complementation.  
             \end{enumerate}
-        \item Exercise 2.4b
-
+        \item Exercise 2.4b: Give context-free grammars that generate the following languages. In all parts, the alphabet $\Sigma$ is $\{0,1\}$.
+            \begin{center}
+                $\{w\mid w $ starts and ends with the same symbol$\}$
+            \end{center}
+            \begin{align*}
+                S &\rightarrow 0X0 \mid 1X1\\
+                X &\rightarrow 0X \mid 1X \mid \epsilon
+            \end{align*}
         \item Give a CFG for
             \begin{center}
                 $\{0^a1^b2^c3^d4^e5^f \mid $ such that $ a,b,c,d,e,f\geq 0 $ and $ a+b=d+e \}$
             \end{center}
+            \begin{align*}
+                S &\rightarrow TW\\
+                T &\rightarrow 0T4 \mid U\\
+                U &\rightarrow 1U3 \mid V\\
+                V &\rightarrow 2V \mid \epsilon\\
+                W &\rightarrow 5W \mid \epsilon
+            \end{align*}
         
         \item Exercise 2.4e: Give context-free grammars that generate the following languages. In all parts, the alphabet $\Sigma$ is $\{0,1\}$.
             \begin{center}
                 $\{w\mid w=w^R$, that is, $w$ is a palindrome$\}$
             \end{center}
-                
+            \begin{align*}
+                S \rightarrow 0S0 \mid 1S1 \mid 0\mid 1 \mid \epsilon
+            \end{align*}
+
         \item Put the rules following in Chomsky normal form (assume that $S$ is the new start variable)
             \begin{align*}
                 S&\rightarrow aAA \mid aBC \mid abc\\
