@@ -36,8 +36,25 @@
         \item Exercise 2.2
             \begin{enumerate}[label =\alph*.]
                 \item Use the languages $A=\{a^mb^nc^n \mid m,n\geq 0\}$ and $B=\{a^nb^nc^m\mid m,n \geq 0\}$ together with Example 2.36 to show that 
-                the class of context-free languages is not closed under intersection.
-                \item Use part (a) and DeMorgan's law (Theorem 0.20) to show that the class of context-free languages is not closed under complementation.
+                the class of context-free languages is not closed under intersection.\\\\
+                The language $A$ is context-free as there exists a CFG $G_1$:
+                    \begin{align*}
+                        S &\rightarrow XY\\
+                        X &\rightarrow aX\mid \epsilon\\
+                        Y &\rightarrow bYc\mid \epsilon
+                    \end{align*}
+                The language $B$ is context-free as there exists a CFG $G_2$:
+                    \begin{align*}
+                        S &\rightarrow XY\\
+                        X &\rightarrow aXb\mid \epsilon\\
+                        Y &\rightarrow cY\mid \epsilon
+                    \end{align*}
+                However $A\cap B$ is the language $\{a^nb^nc^n\}$ and Example 2.36 says that language is not context-free. Therefore by proof by 
+                contradiction, context-free languages are not closed under intersection.
+                \item Use part (a) and DeMorgan's law (Theorem 0.20) to show that the class of context-free languages is not closed under complementation.\\\\
+                Suppose that context-free languages are closed under complementation. Then the complement of $A$ and $B$, $A'$, $B'$ should also be context-free.
+                Since context-free languages are closed under union, then $A'\cup B'$ should also be a context-free language. By DeMorgan's law, $A'\cup B' = A\cap B$, 
+                however that is not the case as proved in part (b). By proof of contradition, context-free languages are not closed under complementation.  
             \end{enumerate}
         \item Exercise 2.4b
 
