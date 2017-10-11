@@ -1,33 +1,88 @@
 \documentclass{article}
-\usepackage{amsthm, amsmath, graphicx, enumitem}
+\usepackage{amsthm, amsmath, graphicx, enumitem, tikz-qtree}
 \usepackage[margin=1in]{geometry}
+\graphicspath{ {6_img/} }
 \begin{document}
     \noindent\textbf{CS 373 Homework 6}\hfill Anchu A. Lee\\
     \noindent\today\\
     \begin{enumerate}
         \item Exercise 2.1
             \begin{enumerate}[label =\alph*.]
-                \item 
-                \item 
-                \item 
-                \item 
+                \item $E\Rightarrow T \Rightarrow F \Rightarrow a$\\
+                    \begin{tikzpicture}[frontier/.style={distance from root=3cm}]
+                        \Tree[.E [.T [.F \textit{a} ]]]
+                    \end{tikzpicture}
+                \item $E \Rightarrow E+T \Rightarrow T+T \Rightarrow F+T \Rightarrow a+T \Rightarrow a+F \Rightarrow a+a$ \\
+                    \begin{tikzpicture}[frontier/.style={distance from root=4cm}]
+                        \Tree[.E [.E [.T [.F \textit{a} ]]] \text{$+$} [.T [.F \textit{a} ]]]
+                    \end{tikzpicture}
+                \item $E\Rightarrow E+T \Rightarrow E+T+T \Rightarrow T+T+T \Rightarrow T+T+F \Rightarrow T+F+F \Rightarrow F+F+F \Rightarrow F+F+a
+                      \Rightarrow F+a+a \Rightarrow a+a+a$\\
+                    \begin{tikzpicture}[frontier/.style={distance from root=5cm}]
+                        \Tree[.E [.E [.E [.T [.F \textit{a} ]]] \text{$+$} [.T [.F \textit{a} ]]] \text{$+$} [.T [.F \textit{a} ]]]
+                    \end{tikzpicture}
+                \item $E \Rightarrow T \Rightarrow F \Rightarrow (E) \Rightarrow (T) \Rightarrow (F) \Rightarrow ((E)) \Rightarrow ((T)) 
+                      \Rightarrow ((F)) \Rightarrow ((a))$\\
+                    \begin{tikzpicture}[frontier/.style={distance from root=9cm}]
+                        \Tree[.E [.T [.F \text{$($} [.E [.T [.F \text{$($} [.E [.T [.F \textit{a} ]]] \text{$)$} ]]] \text{$)$} ]]]
+                    \end{tikzpicture}
             \end{enumerate}
         
         \item Construct a pushdown automata that recognizes 
             \begin{center}
-                $\{w\mid w \in \{0,1\}^* $ s.t. the number of 0's in $ w = $ the number of 1's in $ w \}$
+                $\{w\mid w \in \{0,1\}^* $ s.t. the number of 0's in $ w $ is equal to the number of 1's in $ w \}$\\
+                \includegraphics[scale=0.6]{machine1}                
             \end{center}
-        
         \item Exercise 2.2
-
-        \item Exercise 2.4b
-
+            \begin{enumerate}[label =\alph*.]
+                \item Use the languages $A=\{a^mb^nc^n \mid m,n\geq 0\}$ and $B=\{a^nb^nc^m\mid m,n \geq 0\}$ together with Example 2.36 to show that 
+                the class of context-free languages is not closed under intersection.\\\\
+                The language $A$ is context-free as there exists a CFG $G_1$:
+                    \begin{align*}
+                        S &\rightarrow XY\\
+                        X &\rightarrow aX\mid \epsilon\\
+                        Y &\rightarrow bYc\mid \epsilon
+                    \end{align*}
+                The language $B$ is context-free as there exists a CFG $G_2$:
+                    \begin{align*}
+                        S &\rightarrow XY\\
+                        X &\rightarrow aXb\mid \epsilon\\
+                        Y &\rightarrow cY\mid \epsilon
+                    \end{align*}
+                However $A\cap B$ is the language $\{a^nb^nc^n\}$ and Example 2.36 says that language is not context-free. Therefore by proof by 
+                contradiction, context-free languages are not closed under intersection.
+                \item Use part (a) and DeMorgan's law (Theorem 0.20) to show that the class of context-free languages is not closed under complementation.\\\\
+                Suppose that context-free languages are closed under complementation. Then the complement of $A$ and $B$, $A'$, $B'$ should also be context-free.
+                Since context-free languages are closed under union, then $A'\cup B'$ should also be a context-free language. By DeMorgan's law, $A'\cup B' = A\cap B$, 
+                however that is not the case as proved in part (b). By proof of contradition, context-free languages are not closed under complementation.  
+            \end{enumerate}
+        \item Exercise 2.4b: Give context-free grammars that generate the following languages. In all parts, the alphabet $\Sigma$ is $\{0,1\}$.
+            \begin{center}
+                $\{w\mid w $ starts and ends with the same symbol$\}$
+            \end{center}
+            \begin{align*}
+                S &\rightarrow 0X0 \mid 1X1\\
+                X &\rightarrow 0X \mid 1X \mid \epsilon
+            \end{align*}
         \item Give a CFG for
             \begin{center}
                 $\{0^a1^b2^c3^d4^e5^f \mid $ such that $ a,b,c,d,e,f\geq 0 $ and $ a+b=d+e \}$
             \end{center}
+            \begin{align*}
+                S &\rightarrow TW\\
+                T &\rightarrow 0T4 \mid U\\
+                U &\rightarrow 1U3 \mid V\\
+                V &\rightarrow 2V \mid \epsilon\\
+                W &\rightarrow 5W \mid \epsilon
+            \end{align*}
         
-        \item Exercise 2.4e
+        \item Exercise 2.4e: Give context-free grammars that generate the following languages. In all parts, the alphabet $\Sigma$ is $\{0,1\}$.
+            \begin{center}
+                $\{w\mid w=w^R$, that is, $w$ is a palindrome$\}$
+            \end{center}
+            \begin{align*}
+                S \rightarrow 0S0 \mid 1S1 \mid 0\mid 1 \mid \epsilon
+            \end{align*}
 
         \item Put the rules following in Chomsky normal form (assume that $S$ is the new start variable)
             \begin{align*}
@@ -36,17 +91,39 @@
                 B&\rightarrow aaBC \mid BC\\
                 C&\rightarrow a\mid bc
             \end{align*}
-        
-        \item Exercise 2.15
+            \begin{align*}
+                S&\rightarrow DI \mid DH \mid DJ\\
+                A&\rightarrow AA \mid AD \mid DE\\
+                B&\rightarrow GH \mid BC\\
+                C&\rightarrow a \mid EF\\
+                D&\rightarrow a\\
+                E&\rightarrow b\\
+                F&\rightarrow c\\
+                G&\rightarrow DD\\
+                H&\rightarrow BC\\
+                I&\rightarrow AA\\
+                J&\rightarrow EF
+            \end{align*}
+        \item Exercise 2.15: Give a counterexample to show that the following construction fails to prove that the class of context-free languages
+            is closed under star. Let $A$ be a CFL that is generated by CFG $G=(V,\Sigma, R,S)$. Add the new rule $S\rightarrow SS$ and call the 
+            resulting grammar $G'$. This grammar is supposed to generate $A*$.\\\\
+            Suppose a context-free language $B$ with the corresponding grammar $G=\{\{S\}, \{(,)\}, \{S\rightarrow (S), S\rightarrow \epsilon\}, S\}$.
+            Following the construction, we add $S\rightarrow SS$ to the new grammar $G'$. However, $(()())$ is in $G'$ but is not in $B^*$. So the new 
+            grammar $G'$ does not generate $A^*$.
 
-        \item Show the following is context free using a CFG
+        \item Show the following is context-free using a CFG
             \begin{center}
                 $\{xy \mid x,y\in \{0,1\}^*$, $ |x|=|y|$, $ y\not= x^R\}$
             \end{center}
-
+            \begin{align*}
+                S&\rightarrow T\\
+                T&\rightarrow 0T1 \mid 1T0 \mid \epsilon
+            \end{align*}
         \item Construct a pushdown automata that recognizes
             \begin{center}
-                $\{w\mid w $ is an element of $\{a,b,c,d\}^* $ such that the number of a's in $w$ plus the number of b's in $w$ is equal to the number of c's in $w$ plus the number of d's in $w \}$
+                $\{w\mid w $ is an element of $\{a,b,c,d\}^* $ such that the number of a's in $w$ plus the number of b's in $w$ is equal to the number 
+                of c's in $w$ plus the number of d's in $w \}$\\
+                \includegraphics[scale=0.6]{machine2}
             \end{center}
     \end{enumerate}
 \end{document}
