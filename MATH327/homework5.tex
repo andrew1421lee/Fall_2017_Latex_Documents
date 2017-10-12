@@ -5,12 +5,21 @@
     \noindent\textbf{Math 327 Homework 5}\hfill Anchu A. Lee\\
     \noindent\today\\\\
     \textbf{Question 5.2}: Twelve people are given two identical speakers, which they are asked to listen to for differences, if any. 
-    Suppose that these people answer simply by guessing. Find the probability that three people claim to have heard a difference between the two speakers\\
+    Suppose that these people answer simply by guessing. Find the probability that three people claim to have heard a difference between the two speakers.\\\\
+        \indent $\binom{\text{\# of people}}{\text{\# of success}} \cdot \text{probability of success}^{\text{(\# of success})} \cdot \text{probability of failure}^{(\text{\# of fail})}$ \\
+        \indent $\binom{12}{3}(\frac{1}{2})^{3}(\frac{1}{2})^{9} = \frac{55}{1024} \approx 0.0537$
+        \\\\
     \textbf{Question 5.4}: In a certain city district, the need for money to buy drugs is stated as the reason for 75\% of all thefts. 
     Find the probability that among the next 5 theft cases reported in this district,
         \begin{enumerate}[label = (\alph*) ]
-            \item  exactly 2 resulted from the need for money to buy drugs;
-            \item  at most 3 resulted from the need for money to buy drugs.
+            \item  exactly 2 resulted from the need for money to buy drugs; \\
+                \indent $\binom{5}{2}(\frac{3}{4})^{2}(\frac{1}{4})^{3} = \frac{45}{512} \approx 0.08789$
+            \item  at most 3 resulted from the need for money to buy drugs. \\
+                \indent $\binom{5}{3}(\frac{3}{4})^{3}(\frac{1}{4})^{2} = \frac{135}{512}$\\
+                \indent $\binom{5}{2}(\frac{3}{4})^{2}(\frac{1}{4})^{3} = \frac{45}{512}$\\
+                \indent $\binom{5}{1}(\frac{3}{4})^{1}(\frac{1}{4})^{4} = \frac{15}{1024}$\\
+                \indent $\binom{5}{0}(\frac{3}{4})^{0}(\frac{1}{4})^{5} = \frac{1}{1024}$\\
+                \indent $\frac{135}{512} + \frac{45}{512} + \frac{15}{1024} + \frac{1}{1024} = \frac{47}{128} \approx 0.367$
         \end{enumerate}
     \textbf{Question 5.6}: According to a survey by the Administrative
     Management Society, one-half of U.S. companies give
@@ -20,8 +29,12 @@
     number that give employees 4 weeks of vacation after
     15 years of employment is
         \begin{enumerate}[label = (\alph*) ]
-            \item anywhere from 2 to 5;
-            \item fewer than 3.
+            \item anywhere from 2 to 5;\\
+                \indent $\binom{6}{2}(\frac{1}{2})^{2}(\frac{1}{2})^{4} + \binom{6}{3}(\frac{1}{2})^{3}(\frac{1}{2})^{3} + \binom{6}{4}(\frac{1}{2})^{4}(\frac{1}{2})^{2} + \binom{6}{5}(\frac{1}{2})^{5}(\frac{1}{2})^{1}$\\
+                \indent $\frac{15}{64} + \frac{20}{64} + \frac{15}{64} + \frac{6}{64} = \frac{56}{64} \approx 0.875$
+            \item fewer than 3.\\
+                \indent $\binom{6}{2}(\frac{1}{2})^{2}(\frac{1}{2})^{4} + \binom{6}{1}(\frac{1}{2})^{1}(\frac{1}{2})^{5} + \binom{6}{0}(\frac{1}{2})^{0}(\frac{1}{2})^{6}$\\
+                \indent $\frac{15}{64} + \frac{6}{64} + \frac{1}{64} = \frac{22}{64} \approx 0.34375$
         \end{enumerate}
     \textbf{Question 5.14}: The percentage of wins for the Chicago Bulls
     basketball team going into the playoffs for the 1996–97
