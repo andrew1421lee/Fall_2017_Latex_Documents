@@ -125,7 +125,7 @@
     gets
         \begin{enumerate}[label = (\alph*)]
             \item the third head on the seventh flip;\\
-                \indent $\binom{6}{2}(\frac{1}{2})^7 \approx 0.117$ 
+                \indent $\binom{6}{2}(\frac{1}{2})^7 \approx \textbf{0.117}$
             \item the first head on the fourth flip.\\
                 \indent $(\frac{1}{2})(\frac{1}{2})^3 = \frac{1}{16}$
         \end{enumerate}
@@ -200,10 +200,11 @@
     be approximately 20\%. A newspaper report indicates
     that 50 people were interviewed before the first refusal.
         \begin{enumerate}[label = (\alph*)]
-            \item Comment on the validity of the report. Use a probability 
-            in your argument.
+            \item Comment on the validity of the report. Use a probability in your argument.\\
+            $\sum_{x=51}^{\infty}(0.2)(1-0.2)^x \approx 0.0000114$. an extremely rare event, but not impossible.
             \item What is the expected number of people interviewed
-            before a refusal?
+            before a refusal?\\
+            $\mu = \frac{1}{0.20}-1 = \textbf{4}$
         \end{enumerate}
     \textbf{Question 5.78}: An automatic welding machine is being considered
     for use in a production process. It will be considered 
@@ -214,9 +215,10 @@
     manufacture if it misses no more than 3 welds.
         \begin{enumerate}[label = (\alph*)]
             \item What is the probability that a good machine will
-            be rejected?
-            \item What is the probability that an inefficient machine
-            with 95\% welding success will be accepted?
+            be rejected?\\
+            $1 - \sum_{x=0}^{3}\binom{100}{x}(0.01)^x(1-0.01)^{100-x} \approx \textbf{0.01837}$
+            \item What is the probability that an inefficient machine with 95\% welding success will be accepted?\\
+            $\sum_{x=0}^{3}\binom{100}{x}(0.05)^x(1-0.05)^{100-x} \approx \textbf{0.257839}$
         \end{enumerate}
     \textbf{Question 5.94}: A production process produces electronic component 
     parts. It is presumed that the probability of a
@@ -226,10 +228,15 @@
         \begin{enumerate}[label = (\alph*)]
             \item What is your response to the presumption that the
             process is 1\% defective? Be sure that a computed
-            probability accompanies your comment.
+            probability accompanies your comment.\\
+            $1 - \sum_{x=0}^{14}\binom{500}{x}(0.01)^x(0.99)^{500-x} \approx \textbf{0.000206}$\\
+            Extraordinarily rare event, so the presumption that the process defective rate is 0.01 is wrong.
             \item Under the presumption of a 1\% defective process,
             what is the probability that only 3 parts will be
-            found defective?
-            \item Do parts (a) and (b) again using the Poisson approximation.
+            found defective?\\
+            $\binom{500}{3}(0.01)^3(0.99)^497 \approx \textbf{0.14023}$
+            \item Do parts (a) and (b) again using the Poisson approximation.\\
+            (a) $\mu = 5$, $p = 0.01$, $r = 14$. $1 - 0.9998 = \textbf{0.0002}$\\
+            (b) $r = 3$ minus $r = 2$; $= 0.2650 - 0.1247 = \textbf{0.1403}$
         \end{enumerate}
 \end{document}
