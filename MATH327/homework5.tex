@@ -84,30 +84,38 @@
     selected, find appropriate numbers x and y such
     that
         \begin{enumerate}[label = (\alph*)]
-            \item the probability that at least x of them will require
-            repairs is less than 0.5;
-            \item  the probability that at least y of them will not require
-            repairs is greater than 0.8.
+            \item the probability that at least x of them will require repairs is less than 0.5;\\\\
+                \indent $n = 20$, $p = 0.20$, $P(X\geq x)\leq 0.5$ and $P(X<x)>0.5$ gives $x=3$
+            \item  the probability that at least y of them will not require repairs is greater than 0.8.\\\\
+                \indent $p=0.80$, $P(Y\geq y)\geq 0.8$ and $P(Y<y)<0.2)$ gives $y=15$
         \end{enumerate}
     \textbf{Question 5.30}: To avoid detection at customs, a traveler places
     6 narcotic tablets in a bottle containing 9 vitamin
     tablets that are similar in appearance. If the customs
     official selects 3 of the tablets at random for analysis,
     what is the probability that the traveler will be arrested
-    for illegal possession of narcotics?\\
+    for illegal possession of narcotics?\\\\
+        \indent $n=3$, $N = 15$, $k = 6$, $x=0$\\
+        \indent $1 - \frac{\binom{6}{0}\cdot \binom{9}{3}}{\binom{15}{3}} = \frac{53}{65} $\\\\
     \textbf{Question 5.32}: From a lot of 10 missiles, 4 are selected at random
     and fired. If the lot contains 3 defective missiles
     that will not fire, what is the probability that
         \begin{enumerate}[label = (\alph*)]
-            \item all 4 will fire?
-            \item at most 2 will not fire?
+            \item all 4 will fire?\\
+                \indent $x=4$, $N=10$, $n=4$, $k=7$\\
+                \indent $\frac{\binom{7}{4}\binom{3}{0}}{\binom{10}{4}} = \frac{1}{6}$
+            \item at most 2 will not fire?\\
+                \indent $k = 3$\\
+                \indent $\sum_{x=0}^{2}\frac{\binom{3}{x}\binom{7}{4-x}}{\binom{10}{4}} = \frac{29}{30}$
         \end{enumerate}
     \textbf{Question 5.38}: Among 150 IRS employees in a large city, only
     30 are women. If 10 of the employees are chosen at
     random to provide free tax assistance for the residents
     of this city, use the binomial approximation to the hypergeometric 
     distribution to find the probability that
-    at least 3 women are selected.\\
+    at least 3 women are selected.\\\\
+        \indent $p = \frac{30}{150} = 0.2$\\
+        \indent $1 - \sum_{x=0}^{2}\binom{10}{x}(0.2)^{x}(0.8)^{10-x} \approx \textbf{0.322}$\\\\
     \textbf{Question 5.44}: An urn contains 3 green balls, 2 blue balls, and
     4 red balls. In a random sample of 5 balls, find the
     probability that both blue balls and at least 1 red ball
