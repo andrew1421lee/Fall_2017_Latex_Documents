@@ -167,8 +167,10 @@
     of the spine) is known to be 0.004. Of the next 1875
     students at the school who are screened for scoliosis, find the probability that
         \begin{enumerate}[label = (\alph*)]
-            \item fewer than 5 fail the test;
-            \item 8, 9 , or 10 fail the test.
+            \item fewer than 5 fail the test;\\
+            $\mu = (1875)(0.004) = 7.5$, $r = 4$, $\approx \textbf{0.1321}$
+            \item 8, 9 , or 10 fail the test.\\
+            $\mu = 7.5$, $r = 10$ minus $r=7$ $\approx 0.8622 - 0.5246 = \textbf{0.3376}$
         \end{enumerate}
     \textbf{Question 5.70}: A company purchases large lots of a certain kind
     of electronic device. A method is used that rejects a
@@ -176,8 +178,10 @@
     sample of 100 units.
         \begin{enumerate}[label = (\alph*)]
             \item What is the mean number of defective units found
-            in a sample of 100 units if the lot is 1\% defective?
-            \item What is the variance?
+            in a sample of 100 units if the lot is 1\% defective?\\
+                $\mu = \textbf{1}$
+            \item What is the variance?\\
+                $\sigma^2 = \textbf{0.99}$
         \end{enumerate}
     \textbf{Question 5.72}:  Potholes on a highway can be a serious problem,
     and are in constant need of repair. With a particular
@@ -187,10 +191,10 @@
     that the Poisson process applies to the random variable 
     “number of potholes.”
         \begin{enumerate}[label = (\alph*)]
-            \item What is the probability that no more than one pothole 
-            will appear in a section of 1 mile?
-            \item What is the probability that no more than 4 potholes 
-            will occur in a given section of 5 miles?
+            \item What is the probability that no more than one pothole will appear in a section of 1 mile?\\
+            $\sum_{x=0}^{1}\frac{e^{-2}\cdot 2^x}{x!} \approx \textbf{0.406}$
+            \item What is the probability that no more than 4 potholes will occur in a given section of 5 miles?\\
+            $\mu = 2\cdot 5 = 10$ so $\sum_{x=0}^{4}\frac{e^{-10}\cdot 10^x}{x!} \approx \textbf{0.02925}$
         \end{enumerate}
     \textbf{Question 5.76}: The refusal rate for telephone polls is known to
     be approximately 20\%. A newspaper report indicates
