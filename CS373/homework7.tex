@@ -56,6 +56,9 @@
             \begin{proof}
                 $A\approx B$ must be accepted by a PDA if it is context-free. So let $C$ be a PDA that recognizes $A$ and $D$ be a PDA that recognizes $B$. Then let $G$ be a PDA that recognizes $A\approx B$. The start state of $G$ would simply push a \$ to the stack and transition to the start state of $C$. Every transition in $C$ also pushes a 0 onto the stack. Each accept state in $C$ $\epsilon$-transitions to the start state of $D$. Every transition in $D$ also pops a 0 off the stack. If $D$ reaches it's accept state and there are still 0's on the stack, then it transitions into the accept state of $G$. $G$ then will only accept words $a$ concatenate with $b$ so long as $a>b$.
             \end{proof}
-        \item Show $L = \{w\mid w $is an element of $\{a,b,c,d,e,f\}^*$ such that the number of a's + number of b's = number of c's + number of d's = number of e's + number of f's$ \}$ is not context-free.
+        \item Show $L = \{w\mid w $ is an element of $\{a,b,c,d,e,f\}^*$ such that the number of a's + number of b's = number of c's + number of d's = number of e's + number of f's$ \}$ is not context-free.
+            \begin{proof}
+                Assume $L$ is context-free, and $p$ is the pumping length. Choose $w = a^pb^pc^pd^pe^pf^p$, which follows $|w| \geq p$. No matter which substring used for $vxy$, it will fail either the language requirements as the count of one of the letters will cause a discrepency with the count of another letter or it will fail the requirement that $|vxy| \leq p$ and $|vy|>0$. Therefore the language fails the pumping-lemma and cannot be context-free.
+            \end{proof}
     \end{enumerate}
 \end{document}
