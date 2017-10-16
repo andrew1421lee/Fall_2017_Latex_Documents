@@ -45,7 +45,9 @@
                 A language is regular if a DFA accepts it, so $L(M)$ is a regular language. By Corollary 2.32, the language must also be context-free. In order for $L(M) = L(G)$, the construction of $G$ must be a direct translation of a DFA to GFA. $G$ converts the states of a DFA to variables, defines rules that function similarly to the transition functions and uses a rule that moves to $\epsilon$ instead of using accept states. This construction successfully translates a DFA into a CFG.
             \end{proof}
         \item Let $L=\{0^n1^m0^n1^m \mid n,m \geq 0\}$. Show $L$ is not context-free.
-            
+            \begin{proof}
+                Assume $L$ is context-free. Let $p$ be the pumping length. Let $w=0^p1^p0^p1^p$, which means the options for $vxy$ are $0^p$, $0^p1^p$, $1^p$, $1^p0^p$. Each option is really two options as the string is $0^p1^p$ twice. If $0^p$ is pumped up, then there will be too many characters in one of the zero's. If $0^p1^p$ is pumped up, then the left side of the word will be longer than the right side. If $1^p$ is pumped up then one of 1's will have too many characters than the other 1's. If $1^p0^p$ is pumped up then the middle two 1's and 0's will be larger than the outer 1's and 0's when they need to be equal. Since every case of $uvxyz0$ is not in $L$, the language cannot be context-free. 
+            \end{proof}
         \item Let $L=\{w\mid w $ is in $\{a,b,c,d\}^*$, with the number of a's = number of b's and the number of c's = the number of d's $\}$. Show $L$ is not context-free.
 
         \item Let $A$ and $B$ be languages. We define $A\approx B = \{ab \mid a $ is an element of $A$ and $b$ is an element of $B$ and $|a| > |b|$ $\}$. Show that if $A$ and $B$ are regular languages, then $A\approx B$ is a context free language.
