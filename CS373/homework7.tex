@@ -52,8 +52,10 @@
             \begin{proof}
                 Assume $L$ is a context-free language, let $p$ be the pumping length. Let $w=a^pb^pc^pd^p$, which means the options for $vxy$ are $a^p$, $a^pb^p$, $b^p$, $b^pc^p$, $c^p$, $c^pd^p$, $d^p$. If $a^p$ is pumped up, then the number of a's do not equal to the number of b's. If $b^p$ is pumped up, then the number of b's do not equal the number of a's. If $b^pc^p$ is pumped up, then the number of b's do not equal the number of a's and the number of c's do not equal the number of d's. If $c^p$ is pumped up then the number of c's do not equal the number of d's. If $d^p$ is pumped up then the number of d's do not equal the number of c's. That leaves only $a^pb^p$ and $c^pd^p$ that still remain in the language if pumped up. However, $|a^pb^p| \leq p$ which means $p$ must be equal to 0. However $|xy|$ must be greater than zero and contradicts the only value of $p$ that would make the first case of the pumping lemma true. The same is true for $c^pd^p$, so $L$ must not be context-free.
             \end{proof}
-        \item Let $A$ and $B$ be languages. We define $A\approx B = \{ab \mid a $ is an element of $A$ and $b$ is an element of $B$ and $|a| > |b|$ $\}$. Show that if $A$ and $B$ are regular languages, then $A\approx B$ is a context free language.
-
+        \item Let $A$ and $B$ be languages. We define $A\approx B = \{ab \mid a $ is an element of $A$ and $b$ is an element of $B$ and $|a| > |b|$ $\}$. Show that if $A$ and $B$ are regular languages, then $A\approx B$ is a context-free language.
+            \begin{proof}
+                $A\approx B$ must be accepted by a PDA if it is context-free. So let $C$ be a PDA that recognizes $A$ and $D$ be a PDA that recognizes $B$. Then let $G$ be a PDA that recognizes $A\approx B$. The start state of $G$ would simply push a \$ to the stack and transition to the start state of $C$. Every transition in $C$ also pushes a 0 onto the stack. Each accept state in $C$ $\epsilon$-transitions to the start state of $D$. Every transition in $D$ also pops a 0 off the stack. If $D$ reaches it's accept state and there are still 0's on the stack, then it transitions into the accept state of $G$. $G$ then will only accept words $a$ concatenate with $b$ so long as $a>b$.
+            \end{proof}
         \item Show $L = \{w\mid w $is an element of $\{a,b,c,d,e,f\}^*$ such that the number of a's + number of b's = number of c's + number of d's = number of e's + number of f's$ \}$ is not context-free.
     \end{enumerate}
 \end{document}
