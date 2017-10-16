@@ -41,9 +41,11 @@
                 \item $S=q_0$.
             \end{itemize}
             Prove $L(M) = L(G)$.
-
+            \begin{proof}
+                A language is regular if a DFA accepts it, so $L(M)$ is a regular language. By Corollary 2.32, the language must also be context-free. In order for $L(M) = L(G)$, the construction of $G$ must be a direct translation of a DFA to GFA. $G$ converts the states of a DFA to variables, defines rules that function similarly to the transition functions and uses a rule that moves to $\epsilon$ instead of using accept states. This construction successfully translates a DFA into a CFG.
+            \end{proof}
         \item Let $L=\{0^n1^m0^n1^m \mid n,m \geq 0\}$. Show $L$ is not context-free.
-
+            
         \item Let $L=\{w\mid w $ is in $\{a,b,c,d\}^*$, with the number of a's = number of b's and the number of c's = the number of d's $\}$. Show $L$ is not context-free.
 
         \item Let $A$ and $B$ be languages. We define $A\approx B = \{ab \mid a $ is an element of $A$ and $b$ is an element of $B$ and $|a| > |b|$ $\}$. Show that if $A$ and $B$ are regular languages, then $A\approx B$ is a context free language.
