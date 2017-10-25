@@ -189,7 +189,11 @@
     (in millions of liters) follows approximately a gamma distribution with 
     $\alpha = 2$ and $\beta = 3$. If the daily capacity of that city is 9 
     million liters of water, what is the probability that on any given day 
-    the water supply is inadequate?\\\\
+    the water supply is inadequate?
+        \begin{align*}
+            P(X>9) &= \frac{1}{9}\int_9^\infty xe^{-x/3}dx\\
+            &\approx 0.19915
+        \end{align*}
 
     \noindent\textbf{Question 6.42}: Suppose that the time, in hours, required to
     repair a heat pump is a random variable $X$ having a gamma distribution 
@@ -197,7 +201,15 @@
     that on the next service call
         \begin{enumerate}[label = (\alph*) ]
             \item at most 1 hour will be required to repair the heat pump?
+                \begin{align*}
+                    P(X<1) &= 4\int_0^1 xe^{-2x}dx\\
+                    &\approx 0.5940
+                \end{align*}
             \item at least 2 hours will be required to repair the heat pump?
+                \begin{align*}
+                    P(X>2) &= 4\int_2^\infty xe^{-2x}dx\\
+                    &\approx 0.0916
+                \end{align*}
         \end{enumerate}
 
     \noindent\textbf{Question 6.46}: The life, in years, of a certain type of electrical
