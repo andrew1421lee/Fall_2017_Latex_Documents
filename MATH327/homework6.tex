@@ -228,7 +228,12 @@
     requiring service during the first year of operation is a random variable having 
     a beta distribution with $\alpha = 3$ and $\beta = 2$, what is the probability 
     that at least 80\% of the new models of this brand sold this year will require
-    service during their first year of operation?\\\\
+    service during their first year of operation?
+        \begin{align*}
+            f(x) &= 12x^2(1-x) &&\text{for $0 < x < 1$}\\
+            P(X > 0.8) &= 12\int_{0.8}^1 x^2(1-x)dx\\
+            &\approx 0.1808
+        \end{align*}
     
     \noindent\textbf{Question 6.54}: The lifetime, in weeks, of a certain type of 
     transistor is known to follow a gamma distribution with mean 10 weeks and standard 
