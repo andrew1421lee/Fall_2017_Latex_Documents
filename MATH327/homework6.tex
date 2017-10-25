@@ -274,7 +274,22 @@
         \begin{enumerate}[label = (\alph*) ]
             \item What is the probability that more than 10 automobiles appear at the 
             intersection during any given minute of time?
+                \begin{align*}
+                    P(X>10)&= 1-P(X\leq 10)\\
+                    &= 1-0.9863 &&\text{by Table A.2}\\
+                    &= 0.0137
+                \end{align*}
             \item What is the probability that more than 2 minutes elapse before 10 
             cars arrive?
+                \begin{align*}
+                    P(X\leq2) &= \int_0^2 \frac{1}{\beta^\alpha}\cdot \frac{x^{\alpha-1}e^{-x/\beta}}{\Gamma(\alpha)}dx\\
+                    y&= \frac{x}{\beta}\\
+                    P(X\leq 2) &= P(Y\leq 10)\\
+                               &= \int_0^{10}\frac{y^{\alpha-1}e^{-y}}{\Gamma(\alpha)}dy\\
+                               &= \int_0^{10}\frac{y^{10-1}e^{-y}}{\Gamma(10)}dy\\
+                               &= 0.542 &&\text{by Table A.23}\\
+                    1 - P(X\leq 2) &= 1 - 0.542\\
+                                   &= 0.458
+                \end{align*}
         \end{enumerate}
 \end{document}
