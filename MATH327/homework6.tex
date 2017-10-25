@@ -215,7 +215,14 @@
     \noindent\textbf{Question 6.46}: The life, in years, of a certain type of electrical
     switch has an exponential distribution with an average life $\beta = 2$. If 100 of 
     these switches are installed in different systems, what is the probability that at 
-    most 30 fail during the first year?\\\\
+    most 30 fail during the first year?
+        \begin{align*}
+            P(X<1) = \frac{1}{2}\int_0^1 e^{-x/2}dx &\approx 0.39347\\
+            \mu = (100)(0.39347) &= 39.347\\
+            \sigma = \sqrt{(100)(0.39347)(0.6065)} &= 4.885\\
+            z = \frac{30.5-39.347}{4.885} &= -1.81\\
+            P(X\leq 30) = P(Z < -1.81) &= 0.0352 &&\text{by Table A.3}
+        \end{align*}
     
     \noindent\textbf{Question 6.50}: If the proportion of a brand of television set 
     requiring service during the first year of operation is a random variable having 
