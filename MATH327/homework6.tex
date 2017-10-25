@@ -118,7 +118,21 @@
     that the number of defectives
         \begin{enumerate}[label = (\alph*) ]
             \item exceeds 13?
+                \begin{align*}
+                    \mu = np = (100)(0.1) &= 10\\
+                    \sigma = \sqrt{(100)(0.1)(0.9)} &= 3\\
+                    z = \frac{13.5-10}{3} &= 1.17\\
+                    P(X>13.5) &= P(Z>1.17) &&\text{by Table A.3}\\
+                    &= 0.1210
+                \end{align*}
+            12.10\% number of defects exceeds 13.
             \item is less than 8?
+                \begin{align*}
+                    z = \frac{7.5 - 10}{3} &= -0.83\\
+                    P(X < 7.5) &= P(Z < -0.83)&&\text{by Table A.3} \\
+                    &= 0.2033
+                \end{align*}
+            20.33\% number of defects is below 8.
         \end{enumerate}
 
     \noindent\textbf{Question 6.30}: A drug manufacturer claims that a certain drug
