@@ -56,7 +56,7 @@
             z_1 = \frac{((\mu - 3\sigma) - \mu)}{\sigma} &= -3\\
             z_2 = \frac{((\mu + 3\sigma) - \mu)}{\sigma} &= 3 &&\text{So then:}\\ 
             P(\mu - 3\sigma < X < \mu + 3\sigma) &= P(-3 < Z < 3)\\
-                                                 &= 0.9987 - 0.0013\\
+                                                 &= 0.9987 - 0.0013 &&\text{by Table A.3}\\
                                                  &= 0.9974
         \end{align*}
     \textbf{Question 6.12}: The loaves of rye bread distributed to local
@@ -65,8 +65,27 @@
     are normally distributed, what percentage of the loaves are
         \begin{enumerate}[label = (\alph*) ]
             \item longer than 31.7 centimeters?
+                \begin{align*}
+                    z = \frac{31.7 - 30}{2} &= 0.85\\
+                    P(X > 31.7) = P(Z > 0.85) &= 0.1977 &&\text{by Table A.3}
+                \end{align*}
+                19.77\% of loaves are longer than 31.7 cm.
             \item between 29.3 and 33.5 centimeters in length?
+                \begin{align*}
+                    z_1 = \frac{29.3-30}{2} &= -0.35\\
+                    z_2 = \frac{33.5-30}{2} &= 1.75\\
+                    P(29.3 < X < 33.5) &= P(-0.35 < Z < 1.75)\\
+                                       &= 0.9599 - 0.3632 &&\text{by Table A.3}\\
+                                       &= 0.5967
+                \end{align*}
+                59.67\% of loaves are within 29.3 and 33.5 cm.
             \item shorter than 25.5 centimeters?
+                \begin{align*}
+                    z = \frac{25.5-30}{2} &= -2.25\\
+                    P(X < 25.5) &= P(Z < 2.25)\\
+                                &= 0.0122 &&\text{by Table A.3}
+                \end{align*}
+                1.22\% of loaves are shorter than 25.5 cm.
         \end{enumerate}
 
     \noindent\textbf{Question 6.22}: If a set of observations is normally distributed,
