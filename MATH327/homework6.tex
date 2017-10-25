@@ -261,7 +261,12 @@
     \noindent\textbf{Question 6.56}: Rate data often follow a lognormal distribution.
     Average power usage (dB per hour) for a particular company is studied and is known 
     to have a lognormal distribution with parameters $\mu = 4$ and $\sigma = 2$. What
-    is the probability that the company uses more than 270 dB during any particular hour?\\\\
+    is the probability that the company uses more than 270 dB during any particular hour?
+        \begin{align*}
+            P(X > 270) &= 1 - \Phi(\frac{ln(270)-4}{2})\\
+            &= 1 - \Phi(0.7992)\\
+            &= 0.2119
+        \end{align*}
     
     \noindent\textbf{Question 6.58}: The number of automobiles that arrive at a certain 
     intersection per minute has a Poisson distribution with a mean of 5. Interest centers 
