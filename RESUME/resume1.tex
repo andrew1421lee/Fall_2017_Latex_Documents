@@ -1,81 +1,93 @@
 \documentclass[11pt]{article}
+\usepackage{enumitem}
 \usepackage[margin=0.5in]{geometry}
 \newcommand{\Hrule}{\vspace{1mm}\hrule\vspace{1mm}}
+\newcommand{\Indent}{\indent\indent}
 \pagenumbering{gobble} 
 \begin{document}
     \noindent\Large\textbf{Anchu A. Lee}\hfill \small\today\\
     \noindent\small{189 West End Ave., Binghamton, NY 13905} \hfill \small{alee845@binghamton.edu}\\
     \noindent\small{+1 607-297-8847}\hfill\small{ github.com/andrew1421lee}
-    \vspace{2mm}\\
+    \vspace{2mm}
+    
     \noindent\large\textbf{Education}
     \Hrule
         \indent \small\textbf{Binghamton University (SUNY)} \hfill \small{Expected 2019}\indent\\
             \indent\indent\small{Bachelor of Science, Compuer Science \textbar \textbf{ GPA:} 3.48}\vspace{1mm}\\
         \indent \small\textbf{International Bilingual School at Tainan-science-park (IBST)} \hfill \small{2010-2015}\indent\\
-            \indent\indent \small{High School Diploma \textbar { Bilingual education }\textbar { WASC accredited school}} \hfill \small{Tainan, Taiwan}\indent\vspace{1mm}\\
+            \indent\indent \small{High School Diploma \textbar { Bilingual education }\textbar { WASC accredited school}} \hfill \small{Tainan, Taiwan}\indent\vspace{1mm}
+
     \noindent\large\textbf{Skills}
     \Hrule
         \indent \small\textbf{Programming Languagges: }\small{C/C++, C\# (Dotnet Core), Java, Python, Javascript, R}\vspace{0.5mm} \\
         \indent \small\textbf{Software: }\small{GNU/Linux, Microsoft Windows, Git, Visual Studio, Adobe (Photoshop, Indesign)}\vspace{0.5mm}\\
         \indent \small\textbf{Hardware: }\small{PC assembly, Arduino, Raspberry Pi, 3D printing, soldering}\vspace{0.5mm}\\
-        \indent \small\textbf{Additional: }\small{LaTeX, HTML/CSS, Chinese second language}\vspace{1mm}\\
+        \indent \small\textbf{Additional: }\small{LaTeX, HTML/CSS, Chinese second language}\vspace{1mm}
+
     \noindent\large\textbf{Projects}
     \Hrule
         \indent \small\textbf{C\# Projects}\\
-            \indent\indent \small\textit{DiscordApp ChatBot}\small{ (ShavisiBot)} \hfill \small{Fall 2016-Present}\indent\vspace{0.5mm}\\
-                \indent\indent\indent - \begin{minipage}{\dimexpr\textwidth-7cm}
-                    \small{ Creating a bot which communicates with DiscordApp servers and reacts to user commands to fetch information from third-party APIs}
-                \end{minipage}\vspace{1mm}\\
-                \indent\indent\indent - \begin{minipage}{\dimexpr\textwidth-7cm}
-                    \small{ APIs include YouTube, Wikipedia, and wikiHow}
-                \end{minipage}\vspace{0.2mm}\\
-                \indent\indent\indent - \begin{minipage}{\dimexpr\textwidth-7cm}
-                    \small{ Uses a NoSQL database solution to hold user information}
-                \end{minipage}\vspace{0.2mm}\\
-            \indent\indent \small\textit{Tool for Launching Video Game Replay Files}\small{ (ROFL-Player)} \hfill \small{Summer 2017}\indent\vspace{0.5mm}\\
-                \indent\indent\indent - \begin{minipage}{\dimexpr\textwidth-7cm}
-                    \small{ Creating a Windows Forms application which allows users to watch replays for a video game which does not support watching outside replays}
-                \end{minipage}\vspace{1mm}\\
+            \Indent \small\textit{DiscordApp ChatBot}\small{ (ShavisiReborn)} \hfill \small{Fall 2016-Present}\indent\\
+                \Indent\begin{minipage}{\dimexpr\textwidth-6cm}
+                    \begin{itemize}[noitemsep, topsep=0pt]
+                        \item[-] Creating a bot which communicates with DiscordApp servers and reacts to user commands to fetch information from third-party APIs
+                        \item[-] APIs include YouTube, Wikipedia, Reddit, and wikiHow
+                        \item[-] Uses NoSQL database solution to store user information
+                    \end{itemize}\vspace{0mm}
+                \end{minipage}\\
+            \Indent \small\textit{Tool for Launching Video Game Replay Files}\small{ (ROFL-Player)} \hfill \small{Summer 2017-Present}\indent\vspace{0.5mm}\\
+                \Indent\begin{minipage}{\dimexpr\textwidth-6cm}
+                    \begin{itemize}[noitemsep, topsep=0pt]
+                        \item[-] Creating a Windows Forms application which allows users to watch shared replays for a video game which does not support that functionality
+                    \end{itemize}\vspace{0mm}
+                \end{minipage}\\
         \indent \small\textbf{Java Projects}\\
-            \indent\indent \small\textit{Multiplayer Stradegy Game}\small{ (Five)} \hfill \small{Fall 2016}\indent\vspace{0.5mm}\\
-                \indent\indent\indent - \begin{minipage}{\dimexpr\textwidth-7cm}
-                    \small{ Designed and created a Java Swing game during 36 hour hackathon (Big Red Hacks)}
-                \end{minipage}\vspace{1mm}\\
-            \indent\indent \small\textit{Turing Machine Simulator} \hfill \small{Fall 2017}\indent\\
-                \indent\indent\indent - \begin{minipage}{\dimexpr\textwidth-7cm}
-                    \small{ Created a Java application which simulates the actions of a Turing Machine}
-                \end{minipage}\vspace{1mm}\\
+            \Indent \small\textit{Multiplayer Stradegy Game}\small{ (Five)} \hfill \small{Fall 2016}\indent\vspace{0.5mm}\\
+                \Indent\begin{minipage}{\dimexpr\textwidth-6cm}
+                    \begin{itemize}[noitemsep, topsep=0pt]
+                        \item[-] Designed and created a Java Swing game during 36 hour hackathon (Big Red Hacks)
+                    \end{itemize}\vspace{0mm}
+                \end{minipage}\\
+            \Indent \small\textit{Turing Machine Simulator} \hfill \small{Fall 2017}\indent\\
+                \Indent\begin{minipage}{\dimexpr\textwidth-6cm}
+                    \begin{itemize}[noitemsep, topsep=0pt]
+                        \item[-] Created a Java application which simulates the actions of a Turing Machine
+                    \end{itemize}\vspace{0mm}
+                \end{minipage}\\
         \indent \small\textbf{Javascript Projects}\\
-            \indent\indent \small\textit{Reddit Image Macro Investment Game}\small{ (Meme Economy)} \hfill \small{Spring 2017}\indent\vspace{0.5mm}\\
-                \indent\indent\indent - \begin{minipage}{\dimexpr\textwidth-7cm}
-                    \small{ Designed and wrote Google Chrome browser extension which allowed players to invest points in the future popularity of Reddit posts}
-                \end{minipage}\vspace{1mm}\\
-                \indent\indent\indent - \begin{minipage}{\dimexpr\textwidth-7cm}
-                    \small{ Awarded \textit{Second Place, Funniest Hack,} and \textit{Best Financial Tech Hack} at HackBU 2017}
-                \end{minipage}\vspace{2mm}\\
+            \Indent \small\textit{Reddit Image Macro Investment Game}\small{ (Meme Economy)} \hfill \small{Spring 2017}\indent\vspace{0.5mm}\\
+                \Indent\begin{minipage}{\dimexpr\textwidth-6cm}
+                    \begin{itemize}[noitemsep, topsep=0pt]
+                        \item[-] Designed and wrote Google Chrome browser extension which allowed users to invest points in the future popularity of Reddit posts
+                        \item[-] Awarded \textit{Second Place, Funniest Hack,} and \textit{Best Financial Tech Hack} at HackBU 2017
+                    \end{itemize}\vspace{0mm}
+                \end{minipage}\\
         \indent \small\textbf{Python Projects}\\
-            \indent\indent \small\textit{GroupMe Event Reminder Bot}\small{ (RemindMe)} \hfill \small{Spring 2016}\indent\vspace{0.5mm}\\
-                \indent\indent\indent - \begin{minipage}{\dimexpr\textwidth-7cm}
-                    \small{ Created a Python bot at HackBU 2016 to send scheduled event reminders to a college club officer's group chat}
-                \end{minipage}\vspace{1mm}\\
+            \Indent \small\textit{GroupMe Event Reminder Bot}\small{ (RemindMe)} \hfill \small{Spring 2016}\indent\vspace{0.5mm}\\
+                \Indent\begin{minipage}{\dimexpr\textwidth-6cm}
+                    \begin{itemize}[noitemsep, topsep=0pt]
+                        \item[-] Created a Python bot at HackBU 2016 to send scheduled event reminders to a college club officer's group chat
+                    \end{itemize}\vspace{0mm}
+                \end{minipage}
+
     \noindent\large\textbf{Experience}
-    \Hrule
-        \indent\small{\textbf{TASC Secretary} (Taiwanese American Student Coalition)} \hfill \small{Fall 2015-Spring 2016}\indent\vspace{0.5mm}\\
-            \indent\indent - \begin{minipage}{\dimexpr\textwidth-7cm}
-                \small{ Provided a positive environment through events where anybody could experience and learn about Taiwanese culture}
-            \end{minipage}\vspace{1mm}\\
-            \indent\indent - \begin{minipage}{\dimexpr\textwidth-7cm}
-                \small{ Managed club schedule, recorded meeting minutes, reserved locations, performed public relations, and composed emails for public listserv}
-            \end{minipage}\vspace{1mm}\\
+        \Hrule
+        \indent\small{\textbf{TASC Secretary and Multimedia Chair} (Taiwanese American Student Coalition)} \hfill \small{Fall 2015-Spring 2017}\indent\vspace{0.5mm}
+            \indent\begin{minipage}{\dimexpr\textwidth-6cm}
+                \begin{itemize}[noitemsep, topsep=0pt]
+                    \item[-] Managed club schedule, recorded meeting minutes, reserved locations, performed public relations, and composed emails for public listserv
+                \end{itemize}\vspace{0mm}
+            \end{minipage}\\
         \indent\small{\textbf{BULOL Co-President} (Binghamton University League of Legends)} \hfill \small{Fall 2017-Present}\indent\vspace{0.5mm}\\
-            \indent\indent - \begin{minipage}{\dimexpr\textwidth-7cm}
-                \small{ Maintaining DiscordApp community where local League of Legends players can socialize, share, and play with other players at the university}
-            \end{minipage}\vspace{1mm}\\
-            \indent\indent - \begin{minipage}{\dimexpr\textwidth-7cm}
-                \small{ Starting new club, managing club officers and duties, communicating with Riot Games for support, creating weekly agendas}
-            \end{minipage}\vspace{1mm}\\
+            \indent\begin{minipage}{\dimexpr\textwidth-6cm}
+                \begin{itemize}[noitemsep, topsep=0pt]
+                    \item[-] Starting new club, managing club officers and duties, communicating with Riot Games for support, creating weekly agendas
+                \end{itemize}\vspace{0mm}
+            \end{minipage}\\
         \indent\small{\textbf{Computer Science Course Assistant} (Operating Systems (CS311))} \hfill \small{Fall 2017-Present}\indent\vspace{0.5mm}\\
-            \indent\indent - \begin{minipage}{\dimexpr\textwidth-7cm}
-                \small{ Grading homeworks and projects, providing reviews at office hours, communicating with professor, and tracking hours worked on timesheets}
-            \end{minipage}\vspace{1mm}
+            \indent\begin{minipage}{\dimexpr\textwidth-6cm}
+                \begin{itemize}[noitemsep, topsep=0pt]
+                    \item[-] Grading homeworks and projects, providing reviews at office hours, communicating with professor, and tracking hours worked on timesheets                    
+                \end{itemize}\vspace{0mm}
+            \end{minipage}\\
 \end{document}
