@@ -241,8 +241,21 @@
         \begin{enumerate}[label = (\alph*) ]
             \item What is the probability that a transistor of this type will last at 
             most 50 weeks?
+                \begin{align*}
+                    \alpha\beta = 10\\
+                    \sigma = \sqrt{\alpha\beta^2} = \sqrt{50} = 7.07\\
+                    P(X\leq 50) &= \frac{1}{\beta^\alpha\Gamma(\alpha)}\int_0^{50}x^{\alpha-1}e^{-x/\beta}dx\\
+                                &= \frac{1}{25}\int_0^{50} xe^{-x/5}dx\\
+                                &\approx 0.9995
+                \end{align*}
             \item  What is the probability that a transistor of this type will not 
             survive the first 10 weeks?
+                \begin{align*}
+                    P(X<10) &= \frac{1}{\beta^\alpha\Gamma(\alpha)}\int_0^{10}x^{\alpha - 1}e^{-x/\beta}dx \\
+                    y &= \frac{x}{\beta}\\
+                    P(Y < 2) &= \int_0^2ye^{-y}dy\\
+                    &\approx 0.59399
+                \end{align*}
         \end{enumerate}
     
     \noindent\textbf{Question 6.56}: Rate data often follow a lognormal distribution.
