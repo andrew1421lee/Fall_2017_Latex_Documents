@@ -1,11 +1,12 @@
 \documentclass[11pt]{article}
-\usepackage{enumitem}
+\usepackage{enumitem, datetime}
 \usepackage[margin=0.5in]{geometry}
 \newcommand{\Hrule}{\vspace{1mm}\hrule\vspace{1mm}}
 \newcommand{\Indent}{\indent\indent}
+\newdateformat{monthyear}{\monthname[\THEMONTH], \THEYEAR}
 \pagenumbering{gobble} 
 \begin{document}
-    \noindent\Large\textbf{Anchu A. Lee}\hfill \small\today\\
+    \noindent\Large\textbf{Anchu A. Lee}\hfill \small\monthyear\today\\
     \noindent\small{189 West End Ave., Binghamton, NY 13905} \hfill \small{alee845@binghamton.edu}\\
     \noindent\small{+1 607-297-8847}\hfill\small{ github.com/andrew1421lee}
     \vspace{2mm}
@@ -20,7 +21,7 @@
     \noindent\large\textbf{Skills}
     \Hrule
         \indent \small\textbf{Programming Languagges: }\small{C/C++, C\# (Dotnet Core), Java, Python, Javascript, R}\vspace{0.5mm} \\
-        \indent \small\textbf{Software: }\small{GNU/Linux, Microsoft Windows, Git, Visual Studio, Adobe (Photoshop, Indesign)}\vspace{0.5mm}\\
+        \indent \small\textbf{Software: }\small{GNU/Linux, Microsoft Windows, Git, GDB, Visual Studio, Adobe (Photoshop, Indesign)}\vspace{0.5mm}\\
         \indent \small\textbf{Hardware: }\small{PC assembly, Arduino, Raspberry Pi, 3D printing, soldering}\vspace{0.5mm}\\
         \indent \small\textbf{Additional: }\small{LaTeX, HTML/CSS, Chinese second language}\vspace{1mm}
 
@@ -46,13 +47,13 @@
             \Indent \small\textit{Multiplayer Stradegy Game}\small{ (Five)} \hfill \small{Fall 2016}\indent\vspace{0.5mm}\\
                 \Indent\begin{minipage}{\dimexpr\textwidth-6cm}
                     \begin{itemize}[noitemsep, topsep=0pt]
-                        \item[-] Designed and created a Java Swing game during 36 hour hackathon (Big Red Hacks)
+                        \item[-] Designed and created Java Swing game during 36 hour hackathon: BigRedHacks
                     \end{itemize}\vspace{0mm}
                 \end{minipage}\\
             \Indent \small\textit{Turing Machine Simulator} \hfill \small{Fall 2017}\indent\\
                 \Indent\begin{minipage}{\dimexpr\textwidth-6cm}
                     \begin{itemize}[noitemsep, topsep=0pt]
-                        \item[-] Created a Java application which simulates the actions of a Turing Machine
+                        \item[-] Created Java application which simulates the actions of a Turing Machine
                     \end{itemize}\vspace{0mm}
                 \end{minipage}\\
         \indent \small\textbf{Javascript Projects}\\
