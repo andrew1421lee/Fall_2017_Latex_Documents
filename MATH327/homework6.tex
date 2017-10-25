@@ -142,8 +142,20 @@
         \begin{enumerate}[label = (\alph*) ]
             \item What is the probability that the claim will be rejected 
             when the cure probability is, in fact, 0.8?
+                \begin{align*}
+                    \mu = (100)(0.8) &= 80\\
+                    \sigma = \sqrt{(100)(0.8)(0.2)} &= 4\\
+                    z = \frac{74.5-80}{4} &= -1.38 &&\text{by Table A.3}\\
+                    &= 0.0838 && (8.38\%)
+                \end{align*}
             \item What is the probability that the claim will be accepted 
             by the government when the cure probability is as low as 0.7?
+                \begin{align*}
+                    \mu = (100)(0.7) &= 70\\
+                    \sigma = \sqrt{(100)(0.7)(0.3)} &= 4.583\\
+                    z = \frac{74.5-70}{4.583} &= 0.98 &&\text{by Table A.3}\\
+                    &= 1 - 0.8365 = 0.1635 && (16.35\%)
+                \end{align*}
         \end{enumerate}
 
     \noindent\textbf{Question 6.34}: A pair of dice is rolled 180 times. What is the
