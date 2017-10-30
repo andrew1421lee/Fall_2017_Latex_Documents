@@ -5,7 +5,7 @@
 \graphicspath{ {hw3_img/} }
 
 \begin{document}
-    \noindent\textbf{CS 375 Homework 1}\hfill Anchu A. Lee\\
+    \noindent\textbf{CS 375 Homework 3}\hfill Anchu A. Lee\\
     \noindent\today
     \\\\“I have done this assignment completely on my own. I have not copied it, nor have I given my solution to anyone else. I understand that if I am involved in plagiarism or cheating I will have to sign an official form that I have cheated and that this form will be stored in my official university record. I also understand that I will receive a grade of 0 for the involved assignment for my first offense and that I will receive a grade of “F” for the course for any additional offense.” 
     \\\\
@@ -68,6 +68,39 @@
         graph has a cycle (You may give a sketch of pseudo code and highlight 
         the lines that are different from the original DFS algorithm. Comment 
         your pseudo code to make it easy to understand).
+            \begin{lstlisting}[language=python]
+find_cycle(graph):
+    # set up the graph like DFS
+    for u in graph.vertices:
+        u.color = White
+        u.parent = None
+    time = 0
+    # run fine_cycle_helper on all vertices that are white
+    for u in graph.vertices:
+        if u.color == White:
+            return find_cycle_helper(graph, u)
+
+find_cycle_helper(graph, u):
+    # update vertex information like DFS
+    time = time + 1
+    u.d = time
+    # set color to gray - discovered
+    u.color = Gray
+    # for all adjacent vertices
+    for v in graph.adjacent[u]:
+        # if an adjacent vertex is gray, then there is a loop
+        if v.color == Gray:
+            return true
+        # if vertex is white, search the vertex
+        elif v.color == White:
+            v.parent = u
+            return find_cycle_helper(graph, v)
+    v.color = Black
+    time = time + 1
+    u.f = time
+    # otherwise no loop is found
+    return false
+            \end{lstlisting}
         \item In graph theory, a connected component of an undirected graph is 
         a subgraph in which any two vertices are reachable to each other 
         (i.e., connected by at least one path), but the subgraph is not 
