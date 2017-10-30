@@ -170,6 +170,11 @@ find_connected_helper(graph, node):
         algorithm that outputs for each node $u$ its $sDegree(u)$, and briefly 
         analyze the time complexity of your algorithm to justify it is 
         $O(|V|+|E|)$.
+            \begin{lstlisting}[language=python]
+print_adjacent(graph):
+    for u in graph.adj:
+        print(u[0] + u.length - 1)
+            \end{lstlisting}
         \item Consider a modification to the activity selection problem in 
         which each activity $a_i$ has, in addition to a start and finish time, 
         a value $v_i$. The objective is no longer to maximize the number of 
