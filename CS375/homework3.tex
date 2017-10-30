@@ -110,6 +110,26 @@ find_cycle_helper(graph, u):
         components in an undirected graph (You may give a sketch of pseudo 
         code and highlight the lines that are different from the original BFS 
         algorithm. Comment your pseudo code to make it easy to understand).
+            \begin{lstlisting}
+find_connected(graph, startnode):
+    for u in (graph.vertices).remove(startnode):
+        u.color = White
+        u.dist = -1
+        u.parent = None
+    startnode.color = Gray
+    startnode.dist = 0
+    startnode.parent = None
+    FifoQueue.add(startnone)
+    while Queue.size not 0:
+        u = Queue.pop()
+        for v in u.adjacent:
+            if v.color == White:
+                v.color = Gray
+                v.d = u.d + 1
+                v.parent = u
+                FifoQueue.add(v)
+        u.color = Black
+            \end{lstlisting}
         \item Enumerate the nodes in the following graph in (a) BFS order and 
         (b) DFS order, starting from node 1. 
             \begin{center}
