@@ -26,7 +26,16 @@
                 \hline
                 Value & $10$ & $8$ & $7$ & $6$ \\
                 \hline
-            \end{tabular}
+            \end{tabular} \\\\ 
+            Greedy algorithm, take as much of higher value items as possible.
+            Order items by value, if an item can fit entirely in the bag, take
+            all of it. Otherwise take the fraction of the item that can fit.
+            Add $item_1$ to the bag because it fits. Then add all of $item_4$
+            because it also fits. Now total weight is 15. The entirety of 
+            $item_2$ will not fit, so find the fraction: $(30 - 15)/20$ of 
+            $item_2$. Now the bag is full.\\
+            All of $item_1$, all of $item_4$, $0.75$ of $item_2$.\\
+            Total profit: $50 + 80 + (0.75)140 = 235$
         \item Find a longest common subsequence (LCS) between two strings 
         $X = APPLE$ and $Y = PLATE$ using the dynamic programming algorithm 
         discussed in class. Provide your solution steps in a table that 
