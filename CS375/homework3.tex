@@ -1,5 +1,6 @@
 \documentclass{article}
 \usepackage{amsthm, amsmath, listings, graphicx}
+\usepackage[table]{xcolor}
 \usepackage[margin=0.5in]{geometry}
 \graphicspath{ {hw3_img/} }
 
@@ -43,7 +44,25 @@
         arrows (diagonal, left, and up arrows) needed to find an LCS in the 
         end. Use the recursive method discussed in class to find an LCS based 
         on the information stored in the table. Note: show both an LCS and the 
-        path that leads to the LCS.
+        path that leads to the LCS.\\\\
+            \begin{tabular}{| c | c | c | c | c | c | c |}
+                \hline
+                 & y & P & L & A & T & E\\
+                \hline
+                x & 0 & 0 & 0 & 0 & 0 & 0\\
+                \hline
+                A & 0 & $\uparrow 0$ & $\uparrow 0$ & $\nwarrow 1$ & $\leftarrow 1$ & $\leftarrow 1$ \\
+                \hline
+                P & \cellcolor{green!25}0 & $\nwarrow 1$ & $\leftarrow 1$ & $\uparrow 1$ & $\uparrow 1$ & $\uparrow 1$ \\
+                \hline
+                P & 0 & \cellcolor{green!50}$\nwarrow 1$ & $\uparrow 1$ & $\uparrow 1$ & $\uparrow 1$ & $\uparrow 1$ \\
+                \hline
+                L & 0 & $\uparrow 1$ & \cellcolor{green!50}$\nwarrow 2$ & \cellcolor{green!25}$\leftarrow 2$ & \cellcolor{green!25}$\leftarrow 2$ & $\leftarrow 2$ \\
+                \hline
+                E & 0 & $\uparrow 1$ & $\uparrow 2$ & $\uparrow 2$ & $\uparrow 2$ & \cellcolor{green!50} $\nwarrow 3$\\
+                \hline
+            \end{tabular}\\\\
+            Longest LCS is 3, and is PLE.
         \item Briefly describe how to extend the depth first search (DFS) 
         algorithm introduced in the class to determine whether a directed 
         graph has a cycle (You may give a sketch of pseudo code and highlight 
