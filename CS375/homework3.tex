@@ -110,8 +110,9 @@ find_cycle_helper(graph, u):
         components in an undirected graph (You may give a sketch of pseudo 
         code and highlight the lines that are different from the original BFS 
         algorithm. Comment your pseudo code to make it easy to understand).
-            \begin{lstlisting}
+            \begin{lstlisting}[language=python]
 find_connected(graph, startnode):
+    # set up graph like BFS
     for u in (graph.vertices).remove(startnode):
         u.color = White
         u.dist = -1
@@ -119,9 +120,26 @@ find_connected(graph, startnode):
     startnode.color = Gray
     startnode.dist = 0
     startnode.parent = None
-    FifoQueue.add(startnone)
-    while Queue.size not 0:
-        u = Queue.pop()
+    # variable for counting number of connected subgraphs
+    count_graphs = 0
+    # goes through all vertices so it visits all vertices in the graph
+    for u in graph.vertices:
+        # skip vertex if it has been visited before
+        if u.color = White or u == startnode:
+            # add up the number of subgraphs
+            count_graphs = count_graphs + find_connected_helper(graph, u)
+    return count_graphs
+
+find_connected_helper(graph, node):
+    # add node to the queue
+    FifoQueue.add(node)
+    # variable that counts number of nodes in the subgraph
+    node_count = 0
+    # loop through the FifoQueue
+    while FifoQueue.size not 0:
+        # pop off from the queue
+        u = FifoQueue.pop()
+        # Typical BFS 
         for v in u.adjacent:
             if v.color == White:
                 v.color = Gray
@@ -129,6 +147,13 @@ find_connected(graph, startnode):
                 v.parent = u
                 FifoQueue.add(v)
         u.color = Black
+        # keep count of nodes
+        node_count = node_count + 1
+    # if the node is by itself, it is not connected
+    if node_count >= 2:
+        return 1
+    else:
+        return 0
             \end{lstlisting}
         \item Enumerate the nodes in the following graph in (a) BFS order and 
         (b) DFS order, starting from node 1. 
