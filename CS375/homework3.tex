@@ -171,10 +171,28 @@ find_connected_helper(graph, node):
         analyze the time complexity of your algorithm to justify it is 
         $O(|V|+|E|)$.
             \begin{lstlisting}[language=python]
-print_adjacent(graph):
-    for u in graph.adj:
-        print(u[0] + u.length - 1)
+print_adjacent(adj):
+    # array to hold degrees of nodes
+    degrees = []
+    # loop through all vertices in the adjacency list
+    for u in adj:
+        # temp variable to count number of adjacent nodes
+        counter = 0
+        # loop through linked list and count adjacent nodes
+        while u.next not None:
+            counter = counter + 1
+        # save to array
+        degrees.append(counter)
+    # loop through all nodes again
+    for i in range(0, adj.length):
+        sum = 0
+        # loop through linked list and add all the degrees
+        while adj[i].next not None:
+            sum = sum + degrees[u]
+        # print
+        print(sum)
             \end{lstlisting}
+
         \item Consider a modification to the activity selection problem in 
         which each activity $a_i$ has, in addition to a start and finish time, 
         a value $v_i$. The objective is no longer to maximize the number of 
