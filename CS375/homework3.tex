@@ -10,12 +10,23 @@
     \\\\
     \begin{enumerate}
         \item Suppose the capacity of the knapsack is 30 and the set of items 
-        $S = \{(item1, 5, \$50)$, $(item2, 20, \$140)$, $(item3, 10, \$60)$, 
-        $(item4, 10, \$80)\}$ where each element of set S represents (item, 
+        $S = \{(item_1, 5, \$50)$, $(item_2, 20, \$140)$, $(item_3, 10, \$60)$, 
+        $(item_4, 10, \$80)\}$ where each element of set S represents (item, 
         weight, profit). Find an optimal solution for the fractional knapsack 
         problem using the greedy algorithm introduced in class. Show both the 
         order in which the items are selected and the optimal solution you 
-        find.
+        find.\\\\
+            \begin{tabular}{| c || c | c | c | c |}
+                \hline
+                Item & $item_1$ & $item_4$ & $item_2$ & $item_3$ \\
+                \hline
+                Profit & $50$ & $80$ & $140$ & $60$ \\ 
+                \hline
+                Weight & $5$ & $10$ & $20$ & $10$ \\
+                \hline
+                Value & $10$ & $8$ & $7$ & $6$ \\
+                \hline
+            \end{tabular}
         \item Find a longest common subsequence (LCS) between two strings 
         $X = APPLE$ and $Y = PLATE$ using the dynamic programming algorithm 
         discussed in class. Provide your solution steps in a table that 
