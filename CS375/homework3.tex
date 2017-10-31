@@ -192,7 +192,12 @@ print_adjacent(adj):
         # print
         print(sum)
             \end{lstlisting}
-
+            First the function must compute the degrees of each node as they 
+            are not stored in the data structure. Once that is computed, then
+            the function can compute the $sDegree$ of each node. The function 
+            loops over each node ($O(|V|)$) and loops for every edge in order 
+            to sum all the degrees ($O(|E|)$) so then the function runs at 
+            $O(|V|+|E|)$ time.
         \item Consider a modification to the activity selection problem in 
         which each activity $a_i$ has, in addition to a start and finish time, 
         a value $v_i$. The objective is no longer to maximize the number of 
