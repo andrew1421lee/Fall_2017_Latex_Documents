@@ -206,6 +206,39 @@ print_adjacent(adj):
         weighted activity selection problem. Develop a bottom-up dynamic 
         programming solution for this problem. Your solution should have a 
         time complexity in $O(n^2)$, where n is the total number of activities 
-        in the input.
+        in the input.\\\\
+        First the schedules must be ordered by earliest finished time. For a 
+        bottom up approach, the function must find the optimal solution for 
+        $a_1$, then for $a_1$ and $a_2$ and so on. The optimal solutions will
+        be stored in an array $maxvalue[i]$ where $i$ is the corresponding 
+        activity number. $maxvalue[0]$ then will act as if no activities are 
+        selected and will have a value of 0. $maxvalue$ will also need a 
+        function called $lastfit()$ which will return the highest value 
+        activity that is compatible with the given activity start and finish
+        times. $lastfit()$ will return 0 if no compatible activity is found. 
+        When $maxvalue[i]$ is called for any given $i$, the function 
+        chooses between two possible numbers: the previous $maxvalue$ entry, 
+        or $lastfit() + activities[i]$. \\
+        With the given problem, the solution will be:
+        \begin{center}
+            \begin{tabular}{| c | c | c | c | c | c |}
+                \hline
+                0 & $a_1$ & $a_2$ & $a_3$ & $a_4$ & $a_5$\\
+                \hline
+                0 & 20 & 70 & 70 & 120 & 130\\
+                \hline
+            \end{tabular}
+        \end{center}
+        When $i=1$, the algorithm chooses between 0, the previous value, and 
+        20, the last compatible activity plus the current activity. When $i=2$,
+        the algorithm chooses between 20 and 70. When $i=3$ the algorithm 
+        chooses between 70 and $20 + 30$. When $i=4$ the algorithm chooses 
+        between 70 and $70 + 50$. Lastly when $i=5$, the algorithm chooses 
+        between 120 and $70 + 60$.\\
+        The function only needs to iterate through the list of activities once,
+        however $lastfit$ is called for every activity. As $lastfit$ iterates
+        through all previous activities to find a compatible activity, the 
+        time complexity of the function is $O(n^2)$ for $n$ is the number of 
+        activities.
     \end{enumerate}
 \end{document}
