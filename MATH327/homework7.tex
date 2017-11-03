@@ -1,5 +1,5 @@
 \documentclass{article}
-\usepackage{amsthm, amsmath, pgfplots, enumitem}
+\usepackage{amsthm, amsmath, pgfplots, pgfplotstable, enumitem}
 \usepackage[margin=0.5in]{geometry}
 \begin{document}
     \noindent\textbf{Math 327 Homework 6}\hfill Anchu A. Lee\\
@@ -199,7 +199,7 @@
     0.4, 0.5, 0.4, and 0.2. Would you agree with the claim?
     Assume a normal distribution.\\\newline
         \textbf{Mean = 0.457, Variance = 0.0336 so then $t=(0.475-0.5)/0.0645 = -0.39$.
-        $P(\bar{X} < 0.475) = P(T < -0.39) =$ 0.34}\\\newline
+        $P(\bar{X} < 0.475) = P(T < -0.39) =$ 0.34. I would not agree with the claim.}\\\newline
     \textbf{Question 8.51}: For an $F$-distribution, find
         \begin{enumerate}[label = (\alph*) ]
             \item $f_{0.05}$ with $v_1 = 7$ and $v_2 = 15$;\newline
@@ -233,6 +233,10 @@
         \end{center}
     Comment on the evidence available concerning equal-
     ity of the two population variances.\\\newline
+        \textbf{Variance of the first group is 10.441 and the variance of the second
+        group is 1.846. $f$ is then 5.66. This value is between $f_{0.05}$ and $f_{0.01}$,
+        so $P(F>5.66)$ is small and therefore the variances of the first group and the
+        second group are not equal.}\\\newline
     \textbf{Question 8.54}: Construct a quantile plot of these data, which
     represent the lifetimes, in hours, of fifty 40-watt, 110-
     volt internally frosted incandescent lamps taken from
@@ -250,6 +254,70 @@
                 702 & 923
             \end{tabular}
         \end{center}
+\pgfplotstableread{
+919
+1196
+785
+1126
+936
+918
+1156
+920
+948
+1067
+1092
+1162
+1170
+929
+950
+905
+972
+1035
+1045
+855
+1195
+1195
+1340
+1122
+938
+970
+1237
+956
+1102
+1157
+978
+832
+1009
+1157
+1151
+1009
+765
+958
+902
+1022
+1333
+811
+1217
+1085
+896
+958
+1311
+1037
+702
+923
+}\datatable
+\pgfplotstablesort{\sorted}{\datatable}
+\pgfplotstablegetrowsof{\datatable}
+\edef\numrows{\pgfplotsretval}
+
+        \begin{tikzpicture}[
+            declare function={inverf(\x)=\x/abs(\x) * sqrt( sqrt( (4.3307 + ln(1-\x^2)/2 )^2 - ln(1-\x^2)/0.147 ) - (4.3307 + ln(1-\x^2)/2);},
+            declare function={normq(\p)=1.4142 * inverf(2*\p-1);}
+        ]
+            \begin{axis}
+                \addplot [only marks, mark=*] table [x index=0, y index=0, x expr=normq(\coordindex/\numrows)] {\sorted};
+            \end{axis}
+        \end{tikzpicture}\\\newline
     \textbf{Question 8.64}: If $S^2_1$ and $S_2^2$ represent the variances of indepen-
     dent random samples of size $n_1 = 25$ and $n_2 = 31$,
     taken from normal populations with variances $\sigma^2_1 = 10$
