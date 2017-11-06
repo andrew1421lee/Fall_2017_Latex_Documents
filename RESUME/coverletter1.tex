@@ -1,0 +1,37 @@
+\documentclass[12pt]{article}
+\usepackage{enumitem, datetime}
+\usepackage[margin=1in]{geometry}
+\newdateformat{monthyear}{\monthname[\THEMONTH], \THEYEAR}
+\pagenumbering{gobble}
+\newcommand{\firstname}{Anchu}
+\newcommand{\lastname}{Lee}
+\newcommand{\middlename}{A}
+\newcommand{\addressA}{189 West End Ave.}
+\newcommand{\addressB}{Binghamton, NY 13905}
+\newcommand{\email}{alee845@binghamton.edu}
+\newcommand{\phonenumber}{(607) 297-8847}
+\newcommand{\university}{Binghamton University}
+
+\newcommand{\applyingposition}{[Position Name]}
+\newcommand{\companyname}{[Company Name]}
+\newcommand{\companyaddressA}{[Company St Address]}
+\newcommand{\companyaddressB}{[Company Address]}
+\newcommand{\companyhiringmanager}{[Hiring Manager]}
+\newcommand{\companyhiringmanageremail}{[Hiring Manager Email]}
+
+\newcommand{\name}{\firstname{ }\middlename{. }\lastname}
+
+\begin{document}
+    \begin{center}
+        {\Large\textbf{\name}}\\\addressA\\\addressB\\\email\\\phonenumber\\
+    \end{center}
+    \monthyear\today\\  
+    \companyhiringmanager\\\newline
+    \companyname\\
+    \companyaddressA\\
+    \companyaddressB\\
+    \companyhiringmanageremail\\\newline
+    Hello,\newline
+    \indent My name is \firstname{ }\lastname{ }and I am grateful for the opportunity to
+    apply for the \applyingposition{ }at \companyname. 
+\end{document}
