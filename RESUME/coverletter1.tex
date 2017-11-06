@@ -1,8 +1,9 @@
 \documentclass[12pt]{article}
-\usepackage{enumitem, datetime}
+\usepackage{enumitem, datetime, comment}
 \usepackage[margin=1in]{geometry}
 \newdateformat{monthyear}{\monthname[\THEMONTH], \THEYEAR}
 \pagenumbering{gobble}
+\excludecomment{hiringmgr}
 \newcommand{\firstname}{Anchu}
 \newcommand{\lastname}{Lee}
 \newcommand{\middlename}{A}
@@ -11,11 +12,12 @@
 \newcommand{\email}{alee845@binghamton.edu}
 \newcommand{\phonenumber}{(607) 297-8847}
 \newcommand{\university}{Binghamton University}
+\newcommand{\gpa}{3.48}
 
-\newcommand{\applyingposition}{[Position Name]}
-\newcommand{\companyname}{[Company Name]}
-\newcommand{\companyaddressA}{[Company St Address]}
-\newcommand{\companyaddressB}{[Company Address]}
+\newcommand{\applyingposition}{Summer 2018 Cyber Security Internship}
+\newcommand{\companyname}{BAE Systems}
+\newcommand{\companyaddressA}{8201 Greensboro Drive Suite 1200}
+\newcommand{\companyaddressB}{McLean, VA 22102}
 \newcommand{\companyhiringmanager}{[Hiring Manager]}
 \newcommand{\companyhiringmanageremail}{[Hiring Manager Email]}
 
@@ -25,13 +27,19 @@
     \begin{center}
         {\Large\textbf{\name}}\\\addressA\\\addressB\\\email\\\phonenumber\\
     \end{center}
-    \monthyear\today\\  
-    \companyhiringmanager\\\newline
+    \monthyear\today\\
+\begin{hiringmgr}
+    \companyhiringmanager\\
+    \companyhiringmanageremail\\\newline
+\end{hiringmgr}
     \companyname\\
     \companyaddressA\\
-    \companyaddressB\\
-    \companyhiringmanageremail\\\newline
+    \companyaddressB\\\newline
     Hello,\newline
     \indent My name is \firstname{ }\lastname{ }and I am grateful for the opportunity to
-    apply for the \applyingposition{ }at \companyname. 
+    apply for the \applyingposition{ }at \companyname. After reviewing your job listing,
+    I believe that I have the necessary skills and traits you are looking for.\newline
+    \indent I am currently a college student at \university{ }studying Computer Science with a 
+    GPA of \gpa. During my previous years at \university, I also acquired a lot of experience
+    working. 
 \end{document}
