@@ -1,32 +1,32 @@
-\documentclass[11pt]{article}
+\documentclass[10pt]{article}
 \usepackage{enumitem, datetime}
-\usepackage[margin=0.5in]{geometry}
+\usepackage[margin=0.3in]{geometry}
 \newcommand{\Hrule}{\vspace{1mm}\hrule\vspace{1mm}}
 \newcommand{\Indent}{\indent\indent}
+\newenvironment{nscenter}{\parskip=0pt\par\nopagebreak\centering}{\par\noindent\ignorespacesafterend}
 \newdateformat{monthyear}{\monthname[\THEMONTH], \THEYEAR}
 \pagenumbering{gobble} 
 \begin{document}
-    \noindent\Large\textbf{Anchu A. Lee}\hfill \small\monthyear\today\\
-    \noindent\small{189 West End Ave., Binghamton, NY 13905} \hfill \small{alee845@binghamton.edu}\\
-    \noindent\small{+1 607-297-8847}\hfill \small{github.com/andrew1421lee}\vspace{1mm}
-
+    \sffamily
+\begin{nscenter}{\Huge\textbf{Anchu A. Lee}}\end{nscenter}
+\begin{nscenter}{\small189 West End Ave., Binghamton, NY 13905 - 607-297-8847 - alee845@binghamton.edu - github.com/andrew1421lee}\end{nscenter}
     \noindent\large\textbf{Education}
     \Hrule
         \indent \small\textbf{Binghamton University (SUNY)} \hfill \small{Expected 2019}\indent\\
-            \indent\indent\small{Bachelor of Science, Compuer Science \textbar \textbf{ GPA:} 3.48}\vspace{1mm}\\
+            \indent\indent\small{Bachelor of Science, Computer Science \textbar \textbf{ GPA:} 3.48}\vspace{1mm}\\
         \indent \small\textbf{International Bilingual School at Tainan-science-park (IBST)} \hfill \small{2010-2015}\indent\\
             \indent\indent \small{High School Diploma \textbar { Bilingual education }\textbar { WASC accredited school}} \hfill \small{Tainan, Taiwan}\indent\vspace{1mm}
 
     \noindent\large\textbf{Skills}
     \Hrule
-        \indent \small\textbf{Programming Languagges: }\small{C/C++, C\# (Dotnet Core), Java, Python, Javascript, SQL, R}\vspace{0.5mm} \\
+        \indent \small\textbf{Programming Languages: }\small{C/C++, C\# (Dot-net Core), Java, Python, JavaScript, SQL, R}\vspace{0.5mm} \\
         \indent \small\textbf{Software: }\small{GNU/Linux, Microsoft Windows, Git, GDB, Visual Studio, Adobe (Photoshop, Indesign)}\vspace{0.5mm}\\
         \indent \small\textbf{Hardware: }\small{PC assembly, Arduino, Raspberry Pi, 3D printing, soldering}\vspace{0.5mm}\\
         \indent \small\textbf{Additional: }\small{LaTeX, HTML/CSS, Chinese second language}\vspace{1mm}
 
     \noindent\large\textbf{Projects}
     \Hrule
-        \indent \small\textbf{Javascript Projects}\\
+        \indent \small\textbf{JavaScript Projects}\\
             \Indent \small\textit{Reddit Image Macro Investment Game}\small{ (Meme Economy)} \hfill \small{Spring 2017}\indent\vspace{0.5mm}\\
                 \Indent\begin{minipage}{\dimexpr\textwidth-6cm}
                     \begin{itemize}[noitemsep, topsep=0pt]
@@ -36,10 +36,10 @@
                     \end{itemize}\vspace{0mm}
                 \end{minipage}\\
         \indent \small\textbf{C\# Projects}\\
-            \Indent \small\textit{DiscordApp ChatBot}\small{ (ShavisiReborn)} \hfill \small{Fall 2016-Present}\indent\\
+            \Indent \small\textit{Discord-App Chat Bot}\small{ (ShavisiReborn)} \hfill \small{Fall 2016-Present}\indent\\
                 \Indent\begin{minipage}{\dimexpr\textwidth-6cm}
                     \begin{itemize}[noitemsep, topsep=0pt]
-                        \item[-] Creating a bot which communicates with DiscordApp servers and reacts to user commands to fetch information from third-party APIs
+                        \item[-] Creating a bot which communicates with Discord-App servers and reacts to user commands to fetch information from third-party APIs
                         \item[-] APIs include YouTube, Wikipedia, Reddit, and wikiHow
                         \item[-] Uses NoSQL database solution to store user information
                         \item[-] Hosted on own Linux server hardware
@@ -52,7 +52,7 @@
                     \end{itemize}\vspace{0mm}
                 \end{minipage}\\
         \indent \small\textbf{Java Projects}\\
-            \Indent \small\textit{Multiplayer Stradegy Game}\small{ (Five)} \hfill \small{Fall 2016}\indent\vspace{0.5mm}\\
+            \Indent \small\textit{Multiplayer Strategy Game}\small{ (Five)} \hfill \small{Fall 2016}\indent\vspace{0.5mm}\\
                 \Indent\begin{minipage}{\dimexpr\textwidth-6cm}
                     \begin{itemize}[noitemsep, topsep=0pt]
                         \item[-] Designed and created Java Swing game during 36 hour hackathon: BigRedHacks
