@@ -3,6 +3,7 @@
 \usepackage[margin=0.25in]{geometry}
 \usepackage[normalem]{ulem}
 \begin{document}
+\setlength\multicolsep{0pt}
 \noindent\uline{\textbf{Chapter 1}}\newline
 \uline{Finite Automata} $(Q - $states, $\Sigma - $alphabet, $ \delta - $transitions,
 $q_0 - $start, $F\subset Q - $accept$)$. Language is \textbf{regular} if a finite 
@@ -79,4 +80,71 @@ number of b's is greater than the number of a's squared ($a^{p+1-1}b^{p^2+1}$). 
 case 2, the number of a's and b's become equal ($ab$), which is not what the language 
 wants. For case 3, the number of a's squared will be greater than the number of b's.
 ($a^{p+1}b^{p^2+1+1}$). With all options exhausted, the language cannot be context-free.
+\newline
+\uline{Convert the following CFG to Chomsky normal form.} (S is already new start state)
+\newline
+\begin{minipage}[t]{.3\textwidth}
+$S\rightarrow aAA\mid aBC \mid abc$\newline
+$A\rightarrow AA\mid Aa\mid ab$\newline
+$B\rightarrow aaBC\mid BC$\newline
+$C\rightarrow a\mid bc$
+\end{minipage}% <---------------- Note the use of "%"
+\begin{minipage}[t]{.3\textwidth}
+$S\rightarrow DAA\mid DBC \mid DEF$\newline
+$A\rightarrow AA\mid AD\mid DE$\newline
+$B\rightarrow DDBC\mid BC$\newline
+$C\rightarrow a\mid EF$\newline
+$D\rightarrow a$\newline
+$E\rightarrow b$\newline
+$F\rightarrow c$
+\end{minipage}%
+\begin{minipage}[t]{.3\textwidth}
+$S\rightarrow DI\mid DH \mid DJ$\newline
+$A\rightarrow AA\mid AD\mid DE$\newline
+$B\rightarrow GH\mid BC$\newline
+$C\rightarrow a\mid EF$\newline
+$D\rightarrow a$\newline
+$E\rightarrow b$\newline
+$F\rightarrow c$\newline
+$G\rightarrow DD$\newline
+$H\rightarrow BC$\newline
+$I\rightarrow AA$\newline
+$J\rightarrow EF$
+\end{minipage}\newline
+\uline{Removing $\epsilon$ rules from CFGs}\newline
+\begin{minipage}[t]{.20\textwidth}
+$A\rightarrow B\mid C$\newline
+$B\rightarrow aCa\mid \epsilon$\newline
+$C\rightarrow bAb\mid \epsilon$
+\end{minipage}%
+\begin{minipage}[t]{.20\textwidth}
+$S\rightarrow A$\newline
+$A\rightarrow B\mid C$\newline
+$B\rightarrow aCa\mid \epsilon$\newline
+$C\rightarrow bAb\mid \epsilon$
+\end{minipage}%
+\begin{minipage}[t]{.20\textwidth}
+$S\rightarrow A \mid \epsilon$\newline
+$A\rightarrow B\mid C$\newline
+$B\rightarrow aCa\mid aa$\newline
+$C\rightarrow bAb\mid bb$
+\end{minipage}%
+\begin{minipage}[t]{.20\textwidth}
+$S\rightarrow A \mid \epsilon$\newline
+$A\rightarrow B\mid C$\newline
+$B\rightarrow DCD\mid DD$\newline
+$C\rightarrow EAE\mid EE$\newline
+$D\rightarrow a$\newline
+$E\rightarrow b$
+\end{minipage}%
+\begin{minipage}[t]{.20\textwidth}
+$S\rightarrow A \mid \epsilon$\newline
+$A\rightarrow B\mid C$\newline
+$B\rightarrow DF\mid DD$\newline
+$C\rightarrow GE\mid EE$\newline
+$D\rightarrow a$\newline
+$E\rightarrow b$\newline
+$F\rightarrow CD$\newline
+$G\rightarrow EA$
+\end{minipage}
 \end{document}
