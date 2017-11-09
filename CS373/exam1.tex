@@ -64,4 +64,19 @@ context-free.\newline
 \uline{Pumping Lemma for CFL} If L is a CFL, then there is a pumping-length where if
 a string in L is at least pumping-length then the string can be broken up into $uvxyz$
 where (1) $uv^ixy^iz \in L$ for all $i\geq 0$. (2) $|xy|>0$ (3) $|vxy|\geq p$\newline
+\uline{\textbf{Examples}}\newline
+\uline{Prove $\{0^n1^m0^n \mid m,n \geq 0\}$ is not regular.} Assume this language 
+($A$) is regular, so then there must exist a variable $p$, the pumping length. Choose 
+$w = 0^p10^p$ as the test word. $|w|>p$ and $w\in A$. As $|xy|\leq p$, $x$ and $y$ must 
+be composed of only zeros. Additionally, as $|y|>0$, $y$ would then have to equal $0^k$ 
+for some $k>0$. For $xy^iz$, choose $i=0$ and the resulting word should still be in $A$. 
+However $xy^0z=xz = 0^{p-k}10^p$. This resulting word is not in $A$ therefore our 
+assumption was incorrect.\newline
+\uline{Prove $\{a^nb^m \mid m \leq n^2\}$ is not context-free.} Choose $S = a^{p+1}
+b^{p^2+1}$ There are then three cases for $vxy$. (1) $a^{p+1}$, (2) $a^pb^{p^2}$, (3) 
+$b^{p^2+1}$. We pump down on case 1 and 2, and pump up for case 3. For case 1, the 
+number of b's is greater than the number of a's squared ($a^{p+1-1}b^{p^2+1}$). For 
+case 2, the number of a's and b's become equal ($ab$), which is not what the language 
+wants. For case 3, the number of a's squared will be greater than the number of b's.
+($a^{p+1}b^{p^2+1+1}$). With all options exhausted, the language cannot be context-free.
 \end{document}
