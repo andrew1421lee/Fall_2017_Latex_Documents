@@ -26,7 +26,7 @@ language.
     state. Repeat.
 \end{itemize}
 \uline{Regular Languages} are closed under \textbf{union, intersection, complement, 
-concatenation, star (*)}.\newline
+concatenation, star (*)}. All finite languages are Regular Languages. \newline
 \uline{Power Set} is the set of all subsets of a language. Size of $P(A) = 2^{|A|}$. 
 \newline
 \uline{Regular Expression}. R is a RE if it is (1) a character in the alphabet 
@@ -50,7 +50,8 @@ the string. Any language made by a CFG is a \textbf{context-free} language. A CF
 A CFL is \textbf{inherently ambiguous} if all grammars for the language are ambiguous. 
 \textbf{Leftmost} deviation means the leftmost remaining variable is the one replaced; 
 same for rightmost.\newline
-\uline{Context-free Languages} are closed under \textbf{union, concatenation, star (*)}. \newline
+\uline{Context-free Languages} are closed under \textbf{union, concatenation, star (*)}. 
+All Regular languages are context-free.\newline
 \uline{Chomsky Normal Form} if every rule is of the form $A\rightarrow BC$ or 
 $A\rightarrow a$. The start variable can have a $\epsilon$. (1) Add new start variable 
 with rule to old start variable. (2) Eliminate all $\epsilon$ rules. (3) Eliminate all
