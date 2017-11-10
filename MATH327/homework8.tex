@@ -247,12 +247,12 @@ normally distributed and assume $\sigma_A = \sigma_B$
         \item $95=100(1-\alpha)$, $\alpha=0.05$, $t_{0.025}\approx 2.021$\\
         $(32.91-30.47)-(2.021)(1.66)\sqrt{\frac{1}{20}+\frac{1}{20}} < \mu_A-\mu_B <
         (32.91-30.47)+(2.021)(1.66)\sqrt{\frac{1}{20}+\frac{1}{20}}$\\
-        $1.38 < \mu_A-\mu_B < 3.5$
+        \boldmath$1.38 < \mu_A-\mu_B < 3.5$
     \end{description}
     \item Draw a conclusion from (a) that provides insight
     into whether A or B should be adopted.
     \begin{description}
-        \item A should be adopted because it has a longer battery life.
+        \item \textbf{A should be adopted because it has a longer battery life.}
     \end{description}
 \end{enumerate}
 \textbf{Question 9.50:}
@@ -292,28 +292,33 @@ calcium levels were analyzed from the same plots. These
 values, in kilograms per plot, are presented in the 
 following table:
 \begin{center}
-\begin{tabular}{c c c}
+\begin{tabular}{c c c c}
     & \multicolumn{2}{c}{Calcium Level (kg/plot)}\\
     \hline
-    Plot & Preburn & Postburn \\
+    Plot & Preburn & Postburn & $d_i$\\
     \hline
-    1  & 50 & 9  \\
-    2  & 50 & 18 \\
-    3  & 82 & 45 \\
-    4  & 64 & 18 \\
-    5  & 82 & 18 \\
-    6  & 73 & 9  \\
-    7  & 77 & 32 \\
-    8  & 54 & 9  \\
-    9  & 23 & 18 \\
-    10 & 45 & 9  \\
-    11 & 36 & 9  \\
-    12 & 54 & 9  \\
+    1  & 50 & 9  & 41\\
+    2  & 50 & 18 & 32\\
+    3  & 82 & 45 & 37\\
+    4  & 64 & 18 & 46\\
+    5  & 82 & 18 & 64\\
+    6  & 73 & 9  & 64\\
+    7  & 77 & 32 & 45\\
+    8  & 54 & 9  & 45\\
+    9  & 23 & 18 & 5 \\
+    10 & 45 & 9  & 36\\
+    11 & 36 & 9  & 27\\
+    12 & 54 & 9  & 45\\
 \end{tabular}
 \end{center}
 Construct a 95\% confidence interval for the mean 
 difference in calcium levels in the soil prior to and 
 after the prescribed burn. Assume the distribution of 
 differences in calcium levels to be approximately normal.
-\\\newline
+\begin{description}
+    \item $n=12$, $\bar{d}=40.58$, $\sigma=15.79$, $95=100(1-\alpha)$, $\alpha=0.05$,
+    $t_{0.025}=2.201$\\
+    $40.58-(2.201)\frac{15.79}{\sqrt{12}} < \mu_D < 40.58+(2.201)\frac{15.79}{\sqrt{12}}$\\
+    \boldmath$30.55 < \mu_D < 50.61$
+\end{description}
 \end{document}
