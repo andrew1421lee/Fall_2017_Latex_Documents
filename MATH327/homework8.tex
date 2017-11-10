@@ -219,7 +219,16 @@ Compute a 90\% confidence interval for the difference
 between the average running times of films produced by
 the two companies. Assume that the running-time 
 differences are approximately normally distributed with
-unequal variances.\\\newline
+unequal variances.
+\begin{description}
+    \item $n_1=5$, $\bar{x}_1=98.4$, $\sigma_1=8.74$, $n_2=7$, $\bar{x}_2=110.71$, 
+    $\sigma_2=32.19$, $90=100(1-\alpha)$, $\alpha=0.1$, 
+    $v=\frac{(8.74^2/5 + 32.19^2/7)^2}{(8.74^2/5)^2/(5-1)+(32.19^2/7)^2/(7-1)}\approx 7$
+    so $t_{0.05}=1.895$.\\
+    $(110.71-98.4)-(1.895)\sqrt{\frac{8.74^2}{5}+\frac{32.19^2}{7}} < \mu_1-\mu_2 < 
+    (110.71-98.4)+(1.895)\sqrt{\frac{8.74^2}{5}+\frac{32.19^2}{7}}$\\
+    \boldmath$-11.9 < \mu_1-\mu_2 < 36.53$
+\end{description}
 \textbf{Question 9.48:}
 An automotive company is considering two
 types of batteries for its automobile. Sample information 
