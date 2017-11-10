@@ -236,7 +236,25 @@ on battery life is collected for 20 batteries of
 type A and 20 batteries of type B. The summary
 statistics are $\bar{x}_A = 32.91$, $\bar{x}_B = 30.47$, $s_A = 1.57$,
 and $s_B = 1.74$. Assume the data on each battery are
-normally distributed and assume $\sigma_A = \sigma_B$\\\newline
+normally distributed and assume $\sigma_A = \sigma_B$
+\begin{description}
+    \item $n_A=20$, $\bar{x}_A=32.91$, $\sigma_A=1.57$, $n_B=20$, $\bar{x}_B=30.47$, 
+    $\sigma_B=1.74$, $s_p=\sqrt{\frac{(20-1)1.57^2+(20-1)1.74^2}{20+20-2}}=1.66$
+\end{description}
+\begin{enumerate}[label = (\alph*) ]
+    \item Find a 95\% confidence interval on $\mu_A-\mu_B$.
+    \begin{description}
+        \item $95=100(1-\alpha)$, $\alpha=0.05$, $t_{0.025}\approx 2.021$\\
+        $(32.91-30.47)-(2.021)(1.66)\sqrt{\frac{1}{20}+\frac{1}{20}} < \mu_A-\mu_B <
+        (32.91-30.47)+(2.021)(1.66)\sqrt{\frac{1}{20}+\frac{1}{20}}$\\
+        $1.38 < \mu_A-\mu_B < 3.5$
+    \end{description}
+    \item Draw a conclusion from (a) that provides insight
+    into whether A or B should be adopted.
+    \begin{description}
+        \item A should be adopted because it has a longer battery life.
+    \end{description}
+\end{enumerate}
 \textbf{Question 9.50:}
 Two levels (low and high) of insulin doses are
 given to two groups of diabetic rats to check the 
