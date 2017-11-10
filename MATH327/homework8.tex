@@ -101,7 +101,15 @@ yield of 81 and a sample standard deviation of 5.
 Find a 90\% confidence interval for the difference 
 between the population means, assuming that the 
 populations are approximately normally distributed with
-equal variances.\\\newline
+equal variances.
+\begin{description}
+    \item $n_1 = 12$, $\bar{x}_1=85$, $\sigma_1=4$, $n_2=10$, $\bar{x}_2=81$,
+    $\sigma_2=5$, $s_p=\frac{(12-1)4^2+(10-1)5^2}{12+10-2}=4.47$, $90=100(1-\alpha)$, 
+    $\alpha=0.1$, $t_{1,0.05}=1.725$\\
+    $(85-81)-(1.725)(4.47)(\sqrt{\frac{1}{12}+\frac{1}{10}}) < \mu_1 - \mu_2 <
+    (85-81)+(1.725)(4.47)(\sqrt{\frac{1}{12}+\frac{1}{10}}) $\\
+    \boldmath$0.7 < \mu_1 - \mu_2 < 7.3$
+\end{description}
 \textbf{Question 9.40:}
 In a study conducted at Virginia Tech on the
 development of ectomycorrhizal, a symbiotic relationship 
