@@ -1,0 +1,219 @@
+\documentclass{article}
+\usepackage{amsthm, amsmath, pgfplots, pgfplotstable, enumitem}
+\usepackage[margin=0.5in]{geometry}
+\setlength\parindent{0pt}
+\begin{document}
+\noindent\textbf{Math 327 Homework 8}\hfill Anchu A. Lee\\
+\noindent\today\\\newline
+\textbf{Question 9.2:}
+An electrical firm manufactures light bulbs that
+have a length of life that is approximately normally
+distributed with a standard deviation of 40 hours. If
+a sample of 30 bulbs has an average life of 780 hours,
+find a 96\% confidence interval for the population mean
+of all bulbs produced by this firm.\\\newline
+\textbf{Question 9.4:}
+The heights of a random sample of 50 college students 
+showed a mean of 174.5 centimeters and a standard 
+deviation of 6.9 centimeters.
+\begin{enumerate}[label = (\alph*) ]
+    \item Construct a 98\% confidence interval for the mean
+    height of all college students.
+    \item  What can we assert with 98\% confidence about the
+    possible size of our error if we estimate the mean
+    height of all college students to be 174.5 centimeters?
+\end{enumerate}
+\textbf{Question 9.6:}
+How large a sample is needed in Exercise 9.2 if we
+wish to be 96\% confident that our sample mean will be
+within 10 hours of the true mean?\\\newline
+\textbf{Question 9.10:}
+A random sample of 12 graduates of a certain
+secretarial school typed an average of 79.3 words per
+minute with a standard deviation of 7.8 words per
+minute. Assuming a normal distribution for the number 
+of words typed per minute, find a 95\% confidence
+interval for the average number of words typed by all
+graduates of this school.\\\newline
+\textbf{Question 9.12:}
+A random sample of 10 chocolate energy bars of
+a certain brand has, on average, 230 calories per bar,
+with a standard deviation of 15 calories. Construct a
+99\% confidence interval for the true mean calorie 
+content of this brand of energy bar. Assume that the 
+distribution of the calorie content is approximately 
+normal.\\\newline
+\textbf{Question 9.36:}
+Two kinds of thread are being compared for
+strength. Fifty pieces of each type of thread are tested
+under similar conditions. Brand A has an average 
+tensile strength of 78.3 kilograms with a standard 
+deviation of 5.6 kilograms, while brand B has an average
+tensile strength of 87.2 kilograms with a standard 
+deviation of 6.3 kilograms. Construct a 95\% confidence
+interval for the difference of the population means.\\\newline
+\textbf{Question 9.38:}
+Two catalysts in a batch chemical process, are
+being compared for their effect on the output of the
+process reaction. A sample of 12 batches was prepared
+using catalyst 1, and a sample of 10 batches was 
+prepared using catalyst 2. The 12 batches for which 
+catalyst 1 was used in the reaction gave an average yield
+of 85 with a sample standard deviation of 4, and the
+10 batches for which catalyst 2 was used gave an average 
+yield of 81 and a sample standard deviation of 5.
+Find a 90\% confidence interval for the difference 
+between the population means, assuming that the 
+populations are approximately normally distributed with
+equal variances.\\\newline
+\textbf{Question 9.40:}
+In a study conducted at Virginia Tech on the
+development of ectomycorrhizal, a symbiotic relationship 
+between the roots of trees and a fungus, in which
+minerals are transferred from the fungus to the trees
+and sugars from the trees to the fungus, 20 northern
+red oak seedlings exposed to the fungus $Pisolithus$ $tinctorus$ 
+were grown in a greenhouse. All seedlings were planted in 
+the same type of soil and received the same amount of 
+sunshine and water. Half received no nitrogen at planting 
+time, to serve as a control, and the other half received 
+368 ppm of nitrogen in the form NaNO$_3$ . The stem weights, 
+in grams, at the end of 140 days were recorded as follows:
+\begin{center}
+\begin{tabular}{ c  c }
+    No Nitrogen & Nitrogen\\
+    \hline
+    0.32 & 0.26 \\ 
+    0.53 & 0.43 \\
+    0.28 & 0.47 \\
+    0.37 & 0.49 \\
+    0.47 & 0.52 \\
+    0.43 & 0.75 \\
+    0.36 & 0.79 \\
+    0.42 & 0.86 \\
+    0.38 & 0.62 \\
+    0.43 & 0.46 \\
+    \hline
+\end{tabular}
+\end{center}
+Construct a 95\% confidence interval for the difference
+in the mean stem weight between seedlings that receive 
+no nitrogen and those that receive 368 ppm of nitrogen. 
+Assume the populations to be normally distributed with 
+equal variances.\\\newline
+\textbf{Qustion 9.42:}
+An experiment reported in Popular Science
+compared fuel economies for two types of similarly
+equipped diesel mini-trucks. Let us suppose that 12
+Volkswagen and 10 Toyota trucks were tested in 90 
+kilometer-per-hour steady-paced trials. If the 12 
+Volkswagen trucks averaged 16 kilometers per liter with a
+standard deviation of 1.0 kilometer per liter and the 10
+Toyota trucks averaged 11 kilometers per liter with a
+standard deviation of 0.8 kilometer per liter, construct
+a 90\% confidence interval for the difference between the
+average kilometers per liter for these two mini-trucks.
+Assume that the distances per liter for the truck models 
+are approximately normally distributed with equal
+variances.\\\newline
+\textbf{Question 9.44:}
+Referring to Exercise 9.43, find a 99\% confidence
+interval for $\mu_1 - \mu_2$ if tires of the two brands are 
+assigned at random to the left and right rear wheels of
+8 taxis and the following distances, in kilometers, are
+recorded
+\begin{center}
+    \begin{tabular}{c c c}
+        Taxi  & Brand A & Brand B\\
+        \hline
+        1 & 34,400 & 36,700 \\
+        2 & 45,500 & 46,800 \\
+        3 & 36,700 & 37,700 \\
+        4 & 32,000 & 31,100 \\
+        5 & 48,400 & 47,800 \\
+        6 & 32,800 & 36,400 \\
+        7 & 38,100 & 38,900 \\
+        8 & 30,100 & 31,500 \\
+    \end{tabular}
+\end{center}
+Assume that the differences of the distances are 
+approximately normally distributed.\\\newline
+\textbf{Question 9.46:}
+The following data represent the running times
+of films produced by two motion-picture companies.
+\begin{center}
+\begin{tabular}{c | l}
+    Company & Time (minutes)\\
+    \hline
+    I & 103 94 110 87 98 \\
+    II & 97 82 123 92 175 88 118
+\end{tabular}
+\end{center}
+Compute a 90\% confidence interval for the difference
+between the average running times of films produced by
+the two companies. Assume that the running-time 
+differences are approximately normally distributed with
+unequal variances.\\\newline
+\textbf{Question 9.48:}
+An automotive company is considering two
+types of batteries for its automobile. Sample information 
+on battery life is collected for 20 batteries of
+type A and 20 batteries of type B. The summary
+statistics are $\bar{x}_A = 32.91$, $\bar{x}_B = 30.47$, $s_A = 1.57$,
+and $s_B = 1.74$. Assume the data on each battery are
+normally distributed and assume $\sigma_A = \sigma_B$\\\newline
+\textbf{Question 9.50:}
+Two levels (low and high) of insulin doses are
+given to two groups of diabetic rats to check the 
+insulinbinding capacity, yielding the following data:
+\begin{center}
+\begin{tabular}{c c c c}
+    Low dose: & $n_1 = 8$ & $\bar{x}_1 = 1.98$ & $s_1 = 0.51$ \\
+    High dose: & $n_2 = 13$ & $\bar{x}_2 = 1.30$ & $s_2 = 0.35$
+\end{tabular}
+\end{center}
+Assume that the variances are equal. Give a 95\% 
+confidence interval for the difference in the true average
+insulin-binding capacity between the two samples.\\\newline
+\textbf{Question 9.92:}
+A study was undertaken at Virginia Tech to determine if 
+fire can be used as a viable management tool to increase 
+the amount of forage available to deer during the critical 
+months in late winter and early spring. Calcium is a 
+required element for plants and animals. The amount taken 
+up and stored in plants is closely correlated to the amount 
+present in the soil. It was hypothesized that a fire may 
+change the calcium levels present in the soil and thus 
+affect the amount available to deer. A large tract of land 
+in the Fishburn Forest was selected for a prescribed burn. 
+Soil samples were taken from 12 plots of equal area just 
+prior to the burn and analyzed for calcium. Postburn 
+calcium levels were analyzed from the same plots. These 
+values, in kilograms per plot, are presented in the 
+following table:
+\begin{center}
+\begin{tabular}{c c c}
+    & \multicolumn{2}{c}{Calcium Level (kg/plot)}\\
+    \hline
+    Plot & Preburn & Postburn \\
+    \hline
+    1  & 50 & 9  \\
+    2  & 50 & 18 \\
+    3  & 82 & 45 \\
+    4  & 64 & 18 \\
+    5  & 82 & 18 \\
+    6  & 73 & 9  \\
+    7  & 77 & 32 \\
+    8  & 54 & 9  \\
+    9  & 23 & 18 \\
+    10 & 45 & 9  \\
+    11 & 36 & 9  \\
+    12 & 54 & 9  \\
+\end{tabular}
+\end{center}
+Construct a 95\% confidence interval for the mean 
+difference in calcium levels in the soil prior to and 
+after the prescribed burn. Assume the distribution of 
+differences in calcium levels to be approximately normal.
+\\\newline
+\end{document}
