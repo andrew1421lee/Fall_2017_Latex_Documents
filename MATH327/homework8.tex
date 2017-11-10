@@ -167,7 +167,15 @@ a 90\% confidence interval for the difference between the
 average kilometers per liter for these two mini-trucks.
 Assume that the distances per liter for the truck models 
 are approximately normally distributed with equal
-variances.\\\newline
+variances.
+\begin{description}
+    \item $n_V=12$, $\bar{x}_V=16$, $\sigma_V=1$, $n_T=10$, $\bar{x}_T=11$, $\sigma_T=0.8$,
+    $s_p=\sqrt{\frac{(12-1)1^2+(10-1)0.8^2}{12+10-2}}=0.92$, $90=100(1-\alpha)$, $\alpha=0.1$,
+    $t_{0.05}=1.725$\\
+    $(16-11)-(1.725)(0.92)(\sqrt{\frac{1}{12}+\frac{1}{10}}) < \mu_V-\mu_T < 
+    (16-11)+(1.725)(0.92)(\sqrt{\frac{1}{12}+\frac{1}{10}})$\\
+    \boldmath$4.3 < \mu_V-\mu_T < 5.68$
+\end{description}
 \textbf{Question 9.44:}
 Referring to Exercise 9.43, find a 99\% confidence
 interval for $\mu_1 - \mu_2$ if tires of the two brands are 
