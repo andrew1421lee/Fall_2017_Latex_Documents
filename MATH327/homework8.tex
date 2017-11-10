@@ -104,7 +104,7 @@ populations are approximately normally distributed with
 equal variances.
 \begin{description}
     \item $n_1 = 12$, $\bar{x}_1=85$, $\sigma_1=4$, $n_2=10$, $\bar{x}_2=81$,
-    $\sigma_2=5$, $s_p=\frac{(12-1)4^2+(10-1)5^2}{12+10-2}=4.47$, $90=100(1-\alpha)$, 
+    $\sigma_2=5$, $s_p=\sqrt{\frac{(12-1)4^2+(10-1)5^2}{12+10-2}}=4.47$, $90=100(1-\alpha)$, 
     $\alpha=0.1$, $t_{1,0.05}=1.725$\\
     $(85-81)-(1.725)(4.47)(\sqrt{\frac{1}{12}+\frac{1}{10}}) < \mu_1 - \mu_2 <
     (85-81)+(1.725)(4.47)(\sqrt{\frac{1}{12}+\frac{1}{10}}) $\\
@@ -144,7 +144,15 @@ Construct a 95\% confidence interval for the difference
 in the mean stem weight between seedlings that receive 
 no nitrogen and those that receive 368 ppm of nitrogen. 
 Assume the populations to be normally distributed with 
-equal variances.\\\newline
+equal variances.
+\begin{description}
+    \item $n_1=10$, $\bar{x}_1=0.399$, $\sigma_1=0.073$, $n_2=10$, $\bar{x}_2=0.565$, 
+    $\sigma_2=0.187$, $s_p=\sqrt{\frac{(10-1)0.073^2+(10-1)0.187^2}{10+10-2}}=0.142$, 
+    $95=100(1-\alpha)$, $\alpha=0.05$, $t_{0.025}=2.101$\\
+    $(0.565-0.399)-(2.101)(0.142)(\sqrt{\frac{1}{10}+\frac{1}{10}}) < \mu_1-\mu_2 <
+    (0.565-0.399)+(2.101)(0.142)(\sqrt{\frac{1}{10}+\frac{1}{10}})$\\
+    \boldmath$0.033 < \mu_1 - \mu_2 < 0.299$
+\end{description}
 \textbf{Qustion 9.42:}
 An experiment reported in Popular Science
 compared fuel economies for two types of similarly
