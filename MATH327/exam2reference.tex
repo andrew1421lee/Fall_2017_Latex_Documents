@@ -1,0 +1,57 @@
+\documentclass[9pt]{article}
+\usepackage{amsthm, amsmath, extsizes, multicol, amsfonts}
+\usepackage[normalem]{ulem}
+\usepackage[margin=0.25in]{geometry}
+\newcommand*\mean[1]{\bar{#1}}
+\setlength{\multicolsep}{2pt}
+\begin{document}
+    \noindent\textbf{Chapter 5} Some Discrete Probability Distributions
+    \begin{multicols}{2}
+        \noindent\uline{Binomial:} Two possible outcomes from each trial.\\
+        \uline{Binomial Distribution:} $b(x;n,p)=\binom{n}{x}p^xq^{n-x}$ 
+        x: num of successes. n: num of indep. trials. p: prob. of success.
+        q: prob. of failure. $\mu=np$, $\sigma^2=npq$\\
+        \uline{Multinomial:} $f(x_1,x_2,...x_k;p_1,p_2,...p_k,n)=\binom{n}{x_1,x_2...x_k}
+        p_1^{x_1}p_2^{x_2}...p_k^{x_k}$. $n=\sum_{i=1}^{k}x_i$, and $\sum_{i=1}^{k}p_i=1$\\
+        \uline{Hypergeometric:} Choosing successful items.\\
+        \uline{Hypergeometric Distribution:} $h(x;N,n,k)=\frac{\binom{k}{x}\binom{N-k}{n-x}}
+        {\binom{N}{n}}$. $max(0,n-(N-k))\leq x \leq min(n,k)$. x: num of successes. 
+        N: num of items. n: num of selection. k: num of total successes. $\mu=\frac{nk}{N}$,
+        $\sigma^2=\frac{N-n}{N-1}n\frac{k}{N}(1-\frac{k}{N})$\\
+        \uline{Estimating Hypergeometric using Binomial:} If $n$ is small compared to $N$:
+        $(n/N)\leq 0.05$.\\
+        \uline{Multivariate:} $f(x_1,x_2,...x_k;a_1,a_2,...a_k,N,n)=\frac{\binom{a_1}{x_1}\binom{a_2}{x_2}
+        ...\binom{a_k}{x_k}}{\binom{N}{n}}$. $n=\sum_{i=1}^{k}x_i$, $N=\sum_{i=1}^{k}a_i$.\\
+        \uline{Negative Binomial Distribution:} Prob. the kth success will happen by the xth trial.
+        $b^*(x;k,p)=\binom{x-1}{k-1}p^kq^{x-k}$. x: trial number. k: success number. p: prob. success.
+        q: prob. failure.\\
+        \uline{Geometric Distribution:} Prob. the xth trial is the first success. $g(x;p)=pq^{x-1}$.
+        x: trial number. p: prob. success. q: prob. failure. $\mu=\frac{1}{p}$. $\sigma^2=\frac{1-p}{p^2}$.\\
+        \uline{Poisson Distribution:} Prob. something happens x times in t time. $p(x;\lambda t)=\frac{e^{-\lambda t}(\lambda t)^x}{x!}$.
+        x: num of times. $\lambda$: average number of outcomes per time period. t: time interval.\\
+        newline
+    \end{multicols}
+    \noindent\textbf{Chapter 6} Some Continuous Probability Distributions
+    \begin{multicols}{2}
+        \noindent\uline{Uniform Distribution:} Equal Probability throughout interval. $f(x; A,B)=\frac{1}{B-A}$ if $A\leq x \leq B$,
+        0 otherwise. $\mu=\frac{A+B}{2}$, $\sigma^2=\frac{(B-A)^2}{12}$.\\
+        \uline{Normal Distribution:} Bell curve. $n(x;\mu,\sigma)=\frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{1}{2\sigma^2}(x-\mu)^2}$.
+        x: select time. $\mu$: mean. $\sigma$: standard deviation.\\
+        \uline{Standard Normal:} A normal distribution where mean is 0 and variance is 1.
+        $Z=\frac{X-\mu}{\sigma}$\\
+        \uline{Estimating Binomial with Normal:} For large $n$. $P(X\leq x) \approx P(Z\leq \frac{x+0.5-np}{\sqrt{npq}})$\\
+        \uline{Gamma Function:} $\Gamma(n) = (n-1)!$. $\Gamma(1)=1$. $\Gamma(1/2)=\sqrt{\pi}$.\\
+        \uline{Gamma Distribution:} Wait time, reliability. $f(x;\alpha,\beta)=\frac{1}{\beta^{\alpha}\Gamma(\alpha)}x^{\alpha-1}e^{-\frac{x}{\beta}}$, $x>0$.
+        or 0 otherwise. $\mu=\alpha\beta$, $\sigma^2=\alpha\beta^2$.\\
+        \uline{Exponential Distribution:} Special case of Gamma where $\alpha=1$. $f(x;\beta)=\frac{1}{\beta}e^{-\frac{x}{\beta}}$ where $x>0$. 0 elsewhere. $\beta$: 
+        mean time between failures. $\alpha$: number of events. $\mu=\beta$, $\sigma^2=\beta^2$.\\
+        \uline{Chi-Squared Distribution:} Special case of Gamma where $\alpha=v/2$ and $\beta=2$.
+        $f(x;v)=\frac{1}{2^{v/2}\Gamma(v/2)}x^{v/2-1}e^{-x/2}$, $x>0$. 0 elsewhere. v: degrees of freedom. $\mu=v$,
+        $\sigma^2=2v$.\\
+        \uline{Beta Function:} $B(\alpha,\beta)=\frac{\Gamma(\alpha)\Gamma(\beta)}{\Gamma(\alpha+\beta)}$, $\alpha,\beta >0$.\\
+        \uline{Beta Distribution:} $f(x)=\frac{1}{B(\alpha,\beta)}x^{\alpha-1}(1-x)^{\beta-1}$, $0<x<1$. 0 elsewhere.
+        $\mu=\frac{\alpha}{\alpha+\beta}$, $\sigma^2=\frac{\alpha\beta}{(\alpha+\beta)^2(\alpha+\beta+1)}$.
+    \end{multicols}
+    \noindent\textbf{Chapter 8} Fundamental Sampling Distributions and Data Descriptions
+    \noindent\textbf{Chapter 9} One- and Two-Sample Estimation Problems
+\end{document}
