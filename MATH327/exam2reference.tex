@@ -50,8 +50,27 @@
         $\sigma^2=2v$.\\
         \uline{Beta Function:} $B(\alpha,\beta)=\frac{\Gamma(\alpha)\Gamma(\beta)}{\Gamma(\alpha+\beta)}$, $\alpha,\beta >0$.\\
         \uline{Beta Distribution:} $f(x)=\frac{1}{B(\alpha,\beta)}x^{\alpha-1}(1-x)^{\beta-1}$, $0<x<1$. 0 elsewhere.
-        $\mu=\frac{\alpha}{\alpha+\beta}$, $\sigma^2=\frac{\alpha\beta}{(\alpha+\beta)^2(\alpha+\beta+1)}$.
-    \end{multicols}
+        $\mu=\frac{\alpha}{\alpha+\beta}$, $\sigma^2=\frac{\alpha\beta}{(\alpha+\beta)^2(\alpha+\beta+1)}$.\\
+        \uline{Lognormal Distribution:} if $ln(X)$ is a normal distribution. $f(x;\mu,\sigma)=\frac{1}{x\sigma\sqrt{2\pi}}e^{-1/2\sigma^2(ln(x)-\mu)^2}$, $x\geq 0$.
+        0 if $x<0$. mean $ =e^{\mu+\sigma^2/2}$, variance $=e^{2\mu+\sigma^2}(e^{\sigma^2}-1)$.    \end{multicols}
     \noindent\textbf{Chapter 8} Fundamental Sampling Distributions and Data Descriptions
+    \begin{multicols}{2}
+        \noindent\uline{Central Limit Theorem:} $Z=\frac{\bar{X}-\mu}{\sigma/\sqrt{n}}$ as $n\rightarrow\infty$ is a standard normal distribution.
+        $\bar{X}$: mean of random sample size. $\mu$: mean of population. $\sigma$: standard deviation of population.
+        n: sample size.\\
+        \uline{Difference of Means:} Two populations, samples, means, and variances. $Z=\frac{(\bar{X}_1-\bar{X}_2)-(\mu_1-\mu_2)}{\sqrt{(\sigma^2_1/n_1)+ (\sigma^2_2/n_2)}}$.
+        is approx. a standard normal variable.
+        $\mu_{\bar{x}_{1}-\bar{x}_{2}}=\mu_1-\mu_2$. $\sigma_{\bar{x}_{1}-\bar{x}_{2}}^{2}=\frac{\sigma_1^2}{n_1}+\frac{\sigma_2^2}{n_2}$\\
+        \uline{Finding Chi-Squared from Variance:} $\chi^2=\frac{(n-1)S^2}{\sigma^2}=\sum_{i=1}^{n}\frac{(x_1-\bar{x})^2}{\sigma^2}$. Degrees of
+        freedom is $v=n-1$, $n$ is sample size.\\
+        \uline{t-Distribution:} $T=\frac{Z}{\sqrt{V/v}}$ or $T=\frac{\bar{x}-\mu}{S/\sqrt{n}}$.
+        then $h(t)=\frac{\Gamma((v+1)/2)}{\Gamma(v/2)\sqrt{\pi v}}(1+\frac{t^2}{v})$ from $-\infty<t<\infty$.
+        Z: standard normal RV. V: chi2 RV. v: degrees of freedom.\\
+        \uline{F-Distribution:} $h(f)=\frac{\Gamma((v_1+v_2)/2)(v_1/v_2)^{v_1/2}}{\Gamma(v_1/2)\Gamma(v_2/2)}\cdot
+        \frac{f^{(v_1/2)-1}}{(1+v_1f/v_2)^{(v_1+v_2)/2}}$. for $f>0$, 0 if $f\leq 0$. $F=\frac{U/v_1}{V/v_2}$. V,U: indep. RV with chi2 distribution.
+        $v_1$, $v_2$: degrees of freedom. $f_{1-\alpha}(v_1,v_2)=\frac{1}{f_{\alpha}(v_2,v_1)}$. $F=\frac{S_1^2/\sigma_1^2}{S_2^2/\sigma_2^2}=\frac{\sigma_2^2S_1^2}{\sigma_1^2S_2^2}$\\
+        \uline{Normal Q-Q Plot:} Set of observations for normal distribution, will be straight if normal. 1) order data ascending. 2) split normal distribution
+        to $n+1$ parts. 3) match the data to the distribution x=data, y=normal. Match smallest with smallest.
+    \end{multicols}
     \noindent\textbf{Chapter 9} One- and Two-Sample Estimation Problems
 \end{document}
