@@ -1,0 +1,47 @@
+\documentclass{article}
+\usepackage{amsthm, amsmath, graphicx, enumitem, tikz-qtree}
+\usepackage[margin=0.5in]{geometry}
+\begin{document}
+    \noindent\textbf{CS 373 Homework 8}\hfill Anchu A. Lee\\
+    \noindent\today\\
+    \begin{enumerate}
+        \item This exercise concerns TM $M_2$ , whose description and state diagram appear in 
+        Example 3.7. In each of the parts, give the sequence of configurations that $M_2$ 
+        enters when started on the indicated input string.
+        \begin{enumerate}[label = (\alph*) ]
+            \item 0.
+            \item 000.
+        \end{enumerate}
+        \item  This exercise concerns TM $M_1$ , whose description and state diagram appear in 
+        Example 3.9. In each of the parts, give the sequence of configurations that $M_1$ 
+        enters when started on the indicated input string.
+        \begin{enumerate}[label = (\alph*) ]
+            \item 1\#1. 
+            \item 1\#\#1.
+        \end{enumerate}
+        \item Describe a Turing machine, sequence of steps, that recognizes 
+        $\{ w \mid w $ is an element of $ \{a, b, 
+        c\}* $ such that the number of $a$'s in $w <$ the number of $b$'s in $w$ and the number 
+        of $a$'s in $w =$ the number of $c$'s in $w \}$
+        \item Show the equivalent transitions for a 2-PDA for the 
+        Turing machine transitions $(q_i, X) \rightarrow (q_j, A, L)$ and $(q_i, X) \rightarrow 
+        (q_j, A, R)$ (in state $q_i$ read $X$, write $A$, and move left or right and transition to 
+        state $q_j$). The transitions for a 2-PDA are of the form $(q_i, X, S_1, S_2) \rightarrow
+        (q_j, T_1, T_2)$ (in state $q_i$, read $X$, pop $S_1$ from stack 1, pop $S_2$ from stack 2, 
+        transition to state $q_j$, push $T_1$ onto stack 1 and push $T_2$ onto stack 2). You don't 
+        have to prove the transitions are equivalent, just tell me what they are.
+        \item Give implementation-level descriptions of Turing machines that decide the following 
+        languages over the alphabet $\{0,1\}$. $\{w\mid w $ does not contain twice as many 0's as 
+        1's$\}$
+        \item Prove the class of Turing recognizable languages is closed under the union operation 
+        (construction and proof)
+        \item Prove the class of decidable languages is closed under concatenation (construction 
+        and proof)
+        \item Prove the class of decidable languages is closed under intersection (construction 
+        and proof)
+        \item Prove the class of Turing recognizable languages is closed under the star operation 
+        (construction and proof)
+        \item Show that a language is decidable iff some enumerator enumerates the language in
+        the standard string order.
+    \end{enumerate}
+\end{document}
