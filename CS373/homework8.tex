@@ -65,6 +65,18 @@
         \item Give implementation-level descriptions of Turing machines that decide the following 
         languages over the alphabet $\{0,1\}$. $\{w\mid w $ does not contain twice as many 0's as 
         1's$\}$
+        \begin{enumerate}[label=(\arabic*)]
+            \item Place symbol at left side of tape
+            \item Rewind            
+            \item Scan right for 1, if found: mark it, else: go to step 9
+            \item Rewind
+            \item Scan right for 0, if found: mark it, else: Halt and Accept
+            \item Rewind
+            \item Scan right for 0, if found: mark it, else: Halt and Accept
+            \item Go to step 2.
+            \item Rewind
+            \item Scan right for $0'$, if found: Halt and Reject, else: Halt and Accept
+        \end{enumerate}
         \item Prove the class of Turing recognizable languages is closed under the union operation 
         (construction and proof)
         \item Prove the class of decidable languages is closed under concatenation (construction 
