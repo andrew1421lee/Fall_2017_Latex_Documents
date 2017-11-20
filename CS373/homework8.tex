@@ -79,6 +79,16 @@
         \end{enumerate}
         \item Prove the class of Turing recognizable languages is closed under the union operation 
         (construction and proof)
+        \begin{proof}
+            Let $M_1$ and $M_2$ be two Turing machines that recognize languages $L_1$ and $L_2$
+            respectfully. Then let $M_3$ be a machine that will run input $w$ alternately between 
+            machines $M_1$ and $M_2$. If a machine accepts, $M_3$ accepts. If both 
+            machines reject then $M_3$ rejects. As $w\in L_1\cup L_2$, the string can be $w\in L_1$,
+            then the $M_1$ portions of $M_3$ will accept it. If the string is $w\in L_2$, then the
+            $M_2$ portions of $M_3$ will accept it. If the string is $w\not\in L_1\cup L_2$ then 
+            $w\not\in L_1$ and $w\not\in L_2$ and so $M_3$ will not accept $w$. Therefore $M_3$ 
+            recognizes $L_1\cup L_2$.
+        \end{proof}
         \item Prove the class of decidable languages is closed under concatenation (construction 
         and proof)
         \item Prove the class of decidable languages is closed under intersection (construction 
