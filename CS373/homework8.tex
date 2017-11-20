@@ -40,9 +40,21 @@
             \end{tabular}
         \end{enumerate}
         \item Describe a Turing machine, sequence of steps, that recognizes 
-        $\{ w \mid w $ is an element of $ \{a, b, 
-        c\}* $ such that the number of $a$'s in $w <$ the number of $b$'s in $w$ and the number 
-        of $a$'s in $w =$ the number of $c$'s in $w \}$
+        $\{ w \mid w $ is an element of $ \{a, b, c\}^* $ such that the number of $a$'s in $w <$ 
+        the number of $b$'s in $w$ and the number of $a$'s in $w =$ the number of $c$'s in $w \}$
+        \begin{enumerate}[label = (\arabic*)]
+            \item Place symbol at the left side of tape
+            \item Scan right for $a$, if found: mark it, else: go to step 6
+            \item Rewind
+            \item Scan right for $b$, if found: mark it, else: Halt and Reject ($a$ must be $< b$)
+            \item Rewind and go to step 2.
+            \item Rewind
+            \item Scan right for $a'$, if found: mark it, else: go to step 11
+            \item Rewind
+            \item Scan right for $c$, if found: mark it, else: Halt and Reject ($a$ must be $= c$)
+            \item go to step 6.
+            \item Scan right for $c$, if found: Halt and Reject, else: Halt and Accept.
+        \end{enumerate}
         \item Show the equivalent transitions for a 2-PDA for the 
         Turing machine transitions $(q_i, X) \rightarrow (q_j, A, L)$ and $(q_i, X) \rightarrow 
         (q_j, A, R)$ (in state $q_i$ read $X$, write $A$, and move left or right and transition to 
