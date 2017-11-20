@@ -27,8 +27,17 @@
         Example 3.9. In each of the parts, give the sequence of configurations that $M_1$ 
         enters when started on the indicated input string.
         \begin{enumerate}[label = (\alph*) ]
-            \item 1\#1. 
-            \item 1\#\#1.
+            \item 1\#1.\newline
+            \begin{tabular}{c c c c c c c c c}
+                $q_1 1\#1$\textvisiblespace & x$q_3\#1$\textvisiblespace & x\#$q_51$\textvisiblespace
+                & x$q_6$\#x\textvisiblespace & $q_7$x\#x\textvisiblespace & x$q_1$\#x\textvisiblespace 
+                & x\#$q_8$x\textvisiblespace & x\#x$q_8$\textvisiblespace & x\#x\textvisiblespace$q_{accept}$
+            \end{tabular}
+            \item 1\#\#1.\newline
+            \begin{tabular}{c c c c c c c c c}
+                $q_1 1\#\#1$\textvisiblespace & x$q_3$\#\#1\textvisiblespace 
+                & x\#$q_5$\#1\textvisiblespace & x\#\#$q_{reject}$1\textvisiblespace
+            \end{tabular}
         \end{enumerate}
         \item Describe a Turing machine, sequence of steps, that recognizes 
         $\{ w \mid w $ is an element of $ \{a, b, 
