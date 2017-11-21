@@ -122,5 +122,24 @@
         \end{proof}
         \item Show that a language is decidable iff some enumerator enumerates the language in
         the standard string order.
+        \begin{proof}
+            $(\Rightarrow)$ There must exist a TM $M$ that decides $L$, a decidable language. $M$
+            can reconstruct the enumerator $E$. Define a TM $D$ that: (ignores input)
+            \begin{enumerate}
+                \item Set an iterator $i$ to one of $1, 2, 3,...$
+                \item Get the $i$th string of the languages $L$, $w_i$
+                \item Run machine $M$ with string $w_i$. Write $w_i$ to tape if $M$ accepts.
+            \end{enumerate}
+            $D$ outputs all strings in $L$ in standard string order.\newline
+            $(\Leftarrow)$ For a language $L$ with enumerator $E$, constructor a TM $M$ for $L$
+            which decides the language. $M$ then can be run with input $w$:
+            \begin{enumerate}
+                \item Run through $E$ and save the strings outputted to tape as $w_1,w_2,w_3...$
+                \item Check the tape against the input string $w$. If $w = w_i$ for some $i$, then
+                halt and accept.
+                \item If the machine encounters a string $w_i$ from the $E$ that comes after the input
+                string $w$ in standard string order, then halt and reject.
+            \end{enumerate}
+        \end{proof}
     \end{enumerate}
 \end{document}
