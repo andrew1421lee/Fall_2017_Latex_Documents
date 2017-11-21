@@ -91,6 +91,16 @@
         \end{proof}
         \item Prove the class of decidable languages is closed under concatenation (construction 
         and proof)
+        \begin{proof}
+            Let $M_1$ and $M_2$ be two Turing machines that recognize languages $L_1$ and $L_2$
+            respectfully. Then let $M_3$ be a machine that will run input $w$ on $M_1$ and $M_2$
+            by splitting $w$ into every possible two parts. If both machines accept then $M_3$ 
+            accepts. If not, then the $M_3$ continues to the next two substrings.That means every 
+            possible combination of two substrings of the string $w$ will be run through $M_1$ 
+            and $M_2$. When all substrings are tried and did not reach an accepting state, then 
+            reject $w$. That way the $w$ must be $L_1\circ L_2$ as the first substring is in 
+            $M_1$ and the second substring will be accepted by $M_2$. Otherwise $w$ will be rejected.
+        \end{proof}
         \item Prove the class of decidable languages is closed under intersection (construction 
         and proof)
         \item Prove the class of Turing recognizable languages is closed under the star operation 
