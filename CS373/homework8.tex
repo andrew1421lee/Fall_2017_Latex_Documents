@@ -103,8 +103,23 @@
         \end{proof}
         \item Prove the class of decidable languages is closed under intersection (construction 
         and proof)
+        \begin{proof}
+            Let $M_1$ and $M_2$ be two Turing machines that recognize languages $L_1$ and $L_2$
+            respectfully. Then let $M_3$ be a machine that will run input $w$ on $M_1$ then $M_2$.
+            If both machines reject, then $w$ is not in the languages of $L_1\cap L_2$. If one or
+            more machines accepts then $w$ is in the language.
+        \end{proof}
         \item Prove the class of Turing recognizable languages is closed under the star operation 
         (construction and proof)
+        \begin{proof}
+            Let $M_1$ be a Turing machine that recognizes the language $L_1$ and $w$ be a string 
+            of the form $L_1^*$. Then have $M_2$ be a machine that splits the input into individual 
+            cuts of the input. e.g. $s = s_1s_2s_3...s_n$ for $n$ can be from 0 to the length of 
+            $s$. $M_2$ then runs each substring into $M_1$. If it rejects then $M_2$ tries the next
+            cuts of the string. If $M_2$ accepts for all cuts of a string, then the language is 
+            accepted. As $M_2$ tries every possible split for the input, it will eventually find
+            the right match for $L_1$ and therefore recognizes $L_1^*$.
+        \end{proof}
         \item Show that a language is decidable iff some enumerator enumerates the language in
         the standard string order.
     \end{enumerate}
