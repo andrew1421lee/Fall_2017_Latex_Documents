@@ -124,9 +124,11 @@ confidence interval for $\sigma^2$.
 Construct a 90\% confidence interval for $\sigma^2_1 / \sigma^2_2$ 
 in Exercise 9.43 on page 295. Were we justified in assuming that 
 $\sigma^2_1 \not= \sigma^2_2$ when we constructed the confidence
-interval for $\mu_1 − \mu_2$?
+interval for $\mu_1 - \mu_2$?
 \begin{description}
-    \item \textbf{Answer:} 
+    \item \textbf{Answer:} $s_1^2=5000^2$, $s_2^2=6100^2$, $f_{0.05}(11,11)=2.82$.\newline
+    $(\frac{5000}{6100})^2\cdot \frac{1}{2.82} < \frac{\sigma_1^2}{\sigma_2^2} < (\frac{5000}{6100})^2\cdot(2.82)$\newline
+    \boldmath$0.238<\frac{\sigma_1^2}{\sigma_2^2}<1.895$. The interval contains 1 so it was not reasonable to assume $\sigma_1^2\not=\sigma_2^2$
 \end{description}
 
 \textbf{Question 9.90:}
@@ -137,7 +139,9 @@ being from McDonald’s. Use material in Section 9.10
 to determine if this information supports the claim in
 the \textit{Roanoke Times}.
 \begin{description}
-    \item \textbf{Answer:} 
+    \item \textbf{Answer:} $n=75$, $x=28$, $\hat{p}=28/75=0.3733$, $z_{0.025}=1.96$\newline
+    $0.3733\pm (1.96)\sqrt{\frac{0.3733\cdot 0.6267}{75}} = 0.3733\pm 0.1095$\newline
+    \boldmath$0.2638<p<0.4828$. Interval contains 0.421 so claim is reasonable.
 \end{description}
 
 \textbf{Question 9.96:}
