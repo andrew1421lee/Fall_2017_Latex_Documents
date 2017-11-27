@@ -48,7 +48,8 @@ be at least 95\% confident that the estimate is within
 0.04 of the true proportion of residents who favor the
 construction of the nuclear power plant?
 \begin{description}
-    \item \textbf{Answer:} 
+    \item \textbf{Answer:} $e=0.04$, $z_{0.025}=1.96$\newline
+    $n=\frac{(1.96)^2}{(4\cdot 0.04)^2} \approx $ \boldmath$601$
 \end{description}
 
 \textbf{Question 9.66:}
@@ -60,7 +61,11 @@ the difference between the proportions of women in
 these two fields of engineering. Is there a significant
 difference between the two proportions?
 \begin{description}
-    \item \textbf{Answer:} 
+    \item \textbf{Answer:} $n_1=250$, $\hat{p}_1=80/250=0.32$, $n_2=175$, $\hat{p}_2=40/175=0.2286$, $z_{0.05}=1.645$\newline
+    $(0.32-0.2286)\pm(1.645)\sqrt{\frac{0.32\cdot 0.68}{250}+\frac{0.2286\cdot 0.7714}{175}}$\newline
+    $0.0914\pm 0.713$, \newline
+    \boldmath$0.0201 < p_1 - p_2 < 0.1627$. Yes, there are significantly more women
+    in electrical engineering than in chemical engineering.
 \end{description}
 
 \textbf{Question 9.68:}
@@ -73,7 +78,11 @@ for the difference between the proportions of germination
 at the two different temperatures and decide if there is a 
 significant difference.
 \begin{description}
-    \item \textbf{Answer:} 
+    \item \textbf{Answer:} $n_1=20$, $\hat{p}_1=0.50$, $n_2=20$, $\hat{p}_2=0.75$, $z_{0.025}=1.96$\newline
+    $(0.5-0.75)\pm (1.96)\sqrt{\frac{0.5\cdot 0.5}{20} + \frac{0.75\cdot 0.25}{20}}$\newline
+    $-0.25\pm 0.2899$\newline
+    \boldmath$-0.5399 < p_1 - p_2 < 0.0399$, The interval includes 0 so 
+    significance cannot be shown.
 \end{description}
 
 \textbf{Question 9.70:}
@@ -90,7 +99,13 @@ staff.
     editorial staff was higher in 1994 than in 1990.
 \end{enumerate}
 \begin{description}
-    \item \textbf{Answer:} 
+    \item \textbf{Answer:} $n_1=20$, $\hat{p}_1=0.337$, $n_2=20$, $\hat{p}_2=0.361$\newline
+    (a) $n_1\hat{p}_1=20\cdot 0.337 \approx 7$, $n_2\hat{p}_2=20\cdot 0.362\approx 7$.\newline
+    (b) $z_{0.025}=1.96$\newline
+    $(0.337-0.362)\pm(1.96)\sqrt{\frac{0.337\cdot 0.663}{20}+\frac{0.362\cdot 0.638}{20}}$\newline
+    $-0.025\pm 0.295$\newline
+    \boldmath$-0.320<p_1-p_2<0.270$. No evidence that the proportion of women hired was higher in 1994.
+    Includes 0.
 \end{description}
 
 \textbf{Question 9.72:}
