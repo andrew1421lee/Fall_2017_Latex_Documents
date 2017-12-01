@@ -67,17 +67,101 @@
     the following graph. In your solution, show edges picked in order and the 
     total weight of the final minimum spanning tree.\newline
     \includegraphics[scale=0.75]{p5_graph}\newline
+    ef, cd, ae, be, df, eg, fg $= 46$
 
     \item Using Dijkstra’s algorithm, find the shortest path to visit each 
     vertex starting from vertex s in the following graph. In your solution, 
     order the vertexes in terms of their shortest path distances to the vertex 
     s, and show the shortest path and its distance for each vertex. \newline
-    \includegraphics[scale=0.75]{p6_graph}\newline
+    \includegraphics[scale=0.75]{p6_graph}
+    \begin{tabular}{|c|c|c|}
+    \hline
+    Node & Distance & Path \\
+    \hline
+    $s$ & 0 & nil \\
+    \hline
+    $s_1$ & 5 & $s$\\
+    \hline
+    $s_2$ & 6 & $s-s_1$\\
+    \hline
+    $s_3$ & 8 & $s-s_1-s_2$\\
+    \hline
+    $s_4$ & 14 & $s-s_1-s_2$\\
+    \hline
+    \end{tabular}
 
     \item Apply Floyd-Warshall algorithm to the following directed graph with 
     the initial distance matrix representing the direct distance between every 
     pair of vertices, and produce the updated distance matrices for every 
     iteration of the algorithm. \newline
     \includegraphics[scale=0.75]{p7_graph}\newline
+    \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    $k=0$ & 1 & 2 & 3 & 4 \\
+    \hline
+    1 & 0 & 8 & ? & 1 \\
+    \hline
+    2 & ? & 0 & 1 & ? \\
+    \hline
+    3 & 4 & ? & 0 & ? \\
+    \hline
+    4 & ? & 2 & 9 & 0 \\
+    \hline
+    \end{tabular}
+    \quad
+    \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    $k=1$ & 1 & 2 & 3 & 4 \\
+    \hline
+    1 & 0 & 8 & ? & 1 \\
+    \hline
+    2 & ? & 0 & 1 & ? \\
+    \hline
+    3 & 4 & \textbf{7} & 0 & \textbf{5} \\
+    \hline
+    4 & ? & 2 & 9 & 0 \\
+    \hline
+    \end{tabular}
+    \quad
+    \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    $k=2$ & 1 & 2 & 3 & 4 \\
+    \hline
+    1 & 0 & 8 & \textbf{9} & 1 \\
+    \hline
+    2 & ? & 0 & 1 & ? \\
+    \hline
+    3 & 4 & 7 & 0 & 5 \\
+    \hline
+    4 & \textbf{7} & 2 & \textbf{3} & 0 \\
+    \hline
+    \end{tabular}
+    \quad
+    \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    $k=3$ & 1 & 2 & 3 & 4 \\
+    \hline
+    1 & 0 & 8 & 9 & 1 \\
+    \hline
+    2 & \textbf{5} & 0 & 1 & \textbf{6} \\
+    \hline
+    3 & 4 & 7 & 0 & 5 \\
+    \hline
+    4 & 7 & 2 & 3 & 0 \\
+    \hline
+    \end{tabular}\vspace{4mm}\newline
+    \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    $k=4$ & 1 & 2 & 3 & 4 \\
+    \hline
+    1 & 0 & \textbf{3} & \textbf{4} & 1 \\
+    \hline
+    2 & 5 & 0 & 1 & 6 \\
+    \hline
+    3 & 4 & 7 & 0 & 5 \\
+    \hline
+    4 & 7 & 2 & 3 & 0 \\
+    \hline
+    \end{tabular}
 \end{enumerate}
 \end{document}
