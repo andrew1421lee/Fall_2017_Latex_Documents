@@ -1,0 +1,72 @@
+\documentclass{article}
+\usepackage{amsthm, amsmath, graphicx, enumitem, tikz-qtree}
+\usepackage[margin=0.5in]{geometry}
+\begin{document}
+    \noindent\textbf{CS 373 Homework 8}\hfill Anchu A. Lee\\
+    \noindent\today\\
+    \begin{enumerate}
+        \item Let $Some_{DFA} = $\{ $\langle A \rangle \mid $ $A$ is a DFA and $L(A)$ is 
+        not empty and $L(A)$ is not equal to $\Sigma^*$ \}. Show that 
+        $Some_{DFA}$ is decidable.
+        
+        \item Let $Alot_{RE} = $\{ $\langle A \rangle \mid $ $A$ is a regular expression 
+        and $L(A)$ is infinite \}. Show that $Alot_{RE}$ is decidable.
+
+        \item Let $Complimentary_{RE,DFA} = $\{ $\langle A, B \rangle \mid $ $A$ is a 
+        regular expression and $B$ is a DFA such that $L(A) \cup L(B) = \Sigma^*$ and 
+        $L(A) \cap L(B) = $\O \}. Show that $Complimentary_{RE,DFA}$ is decidable.
+
+        \item Let $ALL_{DFA} = $\{ $\langle A \rangle \mid A$ is a DFA and $L(A) = 
+        \Sigma^* $\}. Show that $ALL_{DFA}$ is decidable.
+
+        \item Let $N_{\varepsilon CFG} = $\{ $\langle G \rangle \mid G$ is a CFG and $G$ 
+        does not generate the empty string \}. Show that $N_{\varepsilon CFG}$ is 
+        decidable.
+
+        \item Let $X$ be the set \{1, 2, 3, 4, 5\} and $Y$ be the set \{6, 7, 8, 9, 10\}. 
+        We describe the functions $f : X\rightarrow Y$ and $g : X \rightarrow Y$ in the 
+        following tables. Answer each part and give a reason for each negative answer.
+        \begin{center}
+            \begin{tabular}{c|c}
+                $n$ & $f(n)$\\
+                \hline
+                1 & 6\\
+                2 & 7\\
+                3 & 6\\
+                4 & 7\\
+                5 & 6
+            \end{tabular}
+            \quad
+            \begin{tabular}{c | c}
+                $n$ & $g(n)$\\
+                \hline
+                1 & 10\\
+                2 & 9\\
+                3 & 8\\
+                4 & 7\\
+                5 & 6
+            \end{tabular}
+        \end{center}
+        \begin{enumerate}
+            \item Is $f$ onto?
+            \item Is $f$ a correspondence?
+            \item Is $g$ onto?
+            \item Is $g$ a correspondence?
+        \end{enumerate}
+
+        \item Let $U = $\{ $\langle A, B, C \rangle \mid A, B, C$ are DFA's and $|L(A)| = 
+        |L(B)| + |L(C)|$ \}. Show that $U$ is decidable.
+
+        \item Let $A = $\{ $\langle R \rangle \mid R$ is a regular expression describing a 
+        language containing at least one string $w$ that has 111 as a substring (i.e., 
+        $w = x111y$ for some $x$ and $y$)\}. Show that $A$ is decidable.
+        
+        \item Let $E_{PDA} = $\{ $\langle P \rangle \mid P$ is a pushdown automata and 
+        $L(P)$ is empty \}. Show $E_{PDA}$ is decidable.
+
+        \item A \textbf{\textit{useless state}} in a pushdown automaton is never entered 
+        on any input string. Consider the problem of determining whether a pushdown 
+        automaton has any useless states. Formulate this problem as a language and show 
+        that it is decidable.
+    \end{enumerate}
+\end{document}
