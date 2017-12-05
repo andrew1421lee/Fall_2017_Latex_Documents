@@ -1,0 +1,92 @@
+\documentclass{article}
+\usepackage{amsthm, amsmath, graphicx, enumitem, tikz-qtree}
+\usepackage[margin=0.5in]{geometry}
+\begin{document}
+    \noindent\textbf{CS 373 Homework 8}\hfill Anchu A. Lee\\
+    \noindent\today\\
+    \begin{enumerate}
+        \item Show that $EQ_{CFG}$ is undecidable.\newline
+
+        was in class
+        \item Show that $EQ_{CFG}$ is co-Turing-recognizable.\newline
+
+        was in class
+        \item Find a match in the following instance of the Post
+        Correspondence Problem.
+        \begin{center}
+            $\{[\frac{ab}{abab}], [\frac{b}{a}], [\frac{aba}{b}],
+            [\frac{aa}{a}]\}$
+        \end{center}
+        was in class
+        \item Show that the Post Correspondence Problem is decidable 
+        over the unary alphabet $\Sigma = \{1\}$.\newline
+
+        was in class
+        \item  In the \textit{silly Post Correspondence Problem, SPCP}, 
+        the top string in each pair has the same length as the bottom 
+        string. Show that the \textit{SPCP} is decidable.\newline
+
+        was in class
+        \item Show that $A$ is Turing-recognizable iff $A\leq_{m} A_{TM}$\newline
+
+        was in class
+        \item \textbf{Rice’s theorem}. Let P be any nontrivial property of the language of a Turing
+        machine. Prove that the problem of determining whether a given Turing machine’s
+        language has property $P$ is undecidable.\newline
+        In more formal terms, let $P$ be a language consisting of Turing machine descriptions 
+        where $P$ fulfills two conditions. First, $P$ is nontrivial - it contains some, but
+        not all, TM descriptions. Second, $P$ is a property of the TM’s language—whenever
+        $L(M_1) = L(M_2)$, we have $\langle M_1 \rangle \in P $ iff $ \langle M_2 \rangle \in P$. 
+        Here, $M_1 and M_2$ are any TMs. Prove that $P$ is an undecidable language.\newline
+
+        Assume for the sake of contradiction that $P$ is a decidable language satisfying the
+        properties and let $R_P$ be a TM that decides $P$. We show how to decide $A_{TM}$ using
+        $R_P$ by constructing TM $S$. First, let $T_{\emptyset}$ be a TM that always rejects, 
+        so $L(T_{\emptyset})=\emptyset$.
+        You may assume that $\langle T_{\emptyset} \rangle \not\in P$ without loss of generality 
+        because you could proceed with $P$ instead of $P$ if $\langle T_{\emptyset} \rangle \in P$. 
+        Because $P$ is not trivial, there exists a TM $T$ with $\langle T \rangle \in P$. Design $S$ 
+        to decide $A_{TM}$ using $R_P$’s ability to distinguish between $T_{\emptyset}$ and $T$.\newline
+
+        $S=$"On input $\langle M,w\rangle$:
+        \begin{enumerate}[label = \arabic*., topsep=0pt]
+            \item Use $M$ and $w$ to construct the following TM $M_w$.\newline
+            $M_w=$ "On input x:
+            \begin{enumerate}[label = \arabic*., topsep=0pt]
+                \item Simulate $M$ on $w$. If it halts and rejects, reject. If it accepts, proceed to
+                stage 2.
+                \item Simulate $T$ on $x$. If it accepts, accept."
+            \end{enumerate}
+            \item Use TM $R_P$ to determine whether $\langle M_w \rangle\in P$. If YES, accept. if NO,
+            reject."
+        \end{enumerate}
+        TM $M_w$ simulates $T$ if $M$ accept $w$. Hence $L(M_w)$ equals $L(T)$ if $M$ accepts $w$ and 
+        $\emptyset$ otherwise. Therefore $\langle M_w \rangle \in P$ iff $M$ accepts $w$
+
+        \item Let
+        \begin{center}
+            $f(x) = 
+            \begin{cases} 
+                3x+1 & \text{for odd x}\\
+                x/2 & \text{for even x}
+            \end{cases}$
+        \end{center}
+        for any natural number $x$. If you start with an integer $x$ and iterate $f$, you obtain a
+        sequence, $x,f(x),f(f(x)),...$. Stop if you ever hit 1. For example, if $x = 17$, you
+        get the sequence 17, 52, 26, 13, 40, 20, 10, 5, 16, 8, 4, 2, 1. Extensive computer
+        tests have shown that every starting point between 1 and a large positive integer
+        gives a sequence that ends in 1. But the question of whether all positive starting
+        points end up at 1 is unsolved; it is called the $3x + 1$ problem.
+        Suppose that $A_{TM}$ were decidable by a TM $H$. Use $H$ to describe a TM that is
+        guaranteed to state the answer to the $3x + 1$ problem.\newline
+
+        was in class
+        \item Let $T = \{(i,j,k) \mid i,j,k \in N\}$. Show that $T$ is countable.\newline
+
+        was in class
+        \item Review the way that we define sets to be the same size in Definition 4.12 (page 203).
+        Show that “is the same size” is an equivalence relation.\newline
+
+        was in class
+    \end{enumerate}
+\end{document}
