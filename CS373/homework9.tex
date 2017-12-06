@@ -10,9 +10,8 @@
         Some$_{DFA}$ is decidable.
         \begin{description}
             \item Construct a Turing machine $M$ to decide the Some$_{DFA}$ problem.
-            \item On input $d$:
+            \item On input $d$ that is a DFA:
             \begin{enumerate}[label=\arabic*.]
-                \item Check if $d$ is a DFA, if not reject.
                 \item Run $\langle d\rangle$ on a Turing machine $T$ that decides E$_{DFA}$, 
                 if $T$ rejects then continue, if $T$ accepts, then reject.
                 \item Construct a DFA d$^{C}$ that is the compliment of $d$.
@@ -20,14 +19,30 @@
                 then accept $d$, if $T$ accepts then reject $d$.
             \end{enumerate}
             \item If $d$ is not a DFA, then $M$ rejects. If $L(d)$ is empty, then $M$ rejects. 
-            If the compliment of $d$ is empty, meaning 
-            \item $L(d)=\Sigma^*$, then $M$ rejects. Otherwise $M$ accepts. All conditions are 
-            handled in $M$ so $M=$ Some$_{DFA}$.
+            If the compliment of $d$ is empty, meaning  $L(d)=\Sigma^*$, then $M$ rejects. 
+            Otherwise $M$ accepts. All conditions are handled in $M$ so $M=$ Some$_{DFA}$.
         \end{description}
         
-        \item Let $Alot_{RE} = $\{ $\langle A \rangle \mid $ $A$ is a regular expression 
-        and $L(A)$ is infinite \}. Show that $Alot_{RE}$ is decidable.
-
+        \item Let Alot$_{RE} = $\{ $\langle A \rangle \mid $ $A$ is a regular expression 
+        and $L(A)$ is infinite \}. Show that Alot$_{RE}$ is decidable.
+        \begin{description}
+            \item Construct a Turing machine $M$ to decide the Alot$_{RE}$ problem.
+            \item On input $r$ that is a RE:
+            \begin{enumerate}[label=\arabic*.]
+                \item Construct a DFA $A$ that is equivalent to $r$.
+                \item For $s$ that is the number of states in $A$, construct DFA $B$ that accepts
+                all strings over the alphabet in $A$ that are at least length $s$.
+                \item Construct a DFA $C$ so that $L(C) = L(A) \cap L(B)$.
+                \item Run $\langle C \rangle$ on a turing machine $T$ that decides E$_{DFA}$.
+                \item If $T$ accepts then reject $r$, if $T$ rejects then accept $r$.
+            \end{enumerate}
+            \item In order for a DFA to accept an infinite language, it must contain a loop. If
+            a DFA contains a string with a length greater than the number of states, then it contains
+            a loop and therefore accepts an infinite language. The Turing machine $M$ checks if a RE
+            accepts an infinite language by intersecting the language accepted by $r$ to the language
+            of strings with length greater than the number of states of the DFA for $r$. $M$ accepts if
+            the intersection is non-empty and rejects otherwise. Therefore $M=$ Alot$_{RE}$.
+        \end{description}
         \item Let $Complimentary_{RE,DFA} = $\{ $\langle A, B \rangle \mid $ $A$ is a 
         regular expression and $B$ is a DFA such that $L(A) \cup L(B) = \Sigma^*$ and 
         $L(A) \cap L(B) = $\O \}. Show that $Complimentary_{RE,DFA}$ is decidable.
