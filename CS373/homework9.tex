@@ -2,12 +2,28 @@
 \usepackage{amsthm, amsmath, graphicx, enumitem, tikz-qtree}
 \usepackage[margin=0.5in]{geometry}
 \begin{document}
-    \noindent\textbf{CS 373 Homework 8}\hfill Anchu A. Lee\\
+    \noindent\textbf{CS 373 Homework 9}\hfill Anchu A. Lee\\
     \noindent\today\\
     \begin{enumerate}
-        \item Let $Some_{DFA} = $\{ $\langle A \rangle \mid $ $A$ is a DFA and $L(A)$ is 
+        \item Let Some$_{DFA} = $\{ $\langle A \rangle \mid $ $A$ is a DFA and $L(A)$ is 
         not empty and $L(A)$ is not equal to $\Sigma^*$ \}. Show that 
-        $Some_{DFA}$ is decidable.
+        Some$_{DFA}$ is decidable.
+        \begin{description}
+            \item Construct a Turing machine $M$ to decide the Some$_{DFA}$ problem.
+            \item On input $d$:
+            \begin{enumerate}[label=\arabic*.]
+                \item Check if $d$ is a DFA, if not reject.
+                \item Run $\langle d\rangle$ on a Turing machine $T$ that decides E$_{DFA}$, 
+                if $T$ rejects then continue, if $T$ accepts, then reject.
+                \item Construct a DFA d$^{C}$ that is the compliment of $d$.
+                \item Run $\langle$d$^{C}\rangle$ on a turing machine $T$, if $T$ rejects
+                then accept $d$, if $T$ accepts then reject $d$.
+            \end{enumerate}
+            \item If $d$ is not a DFA, then $M$ rejects. If $L(d)$ is empty, then $M$ rejects. 
+            If the compliment of $d$ is empty, meaning 
+            \item $L(d)=\Sigma^*$, then $M$ rejects. Otherwise $M$ accepts. All conditions are 
+            handled in $M$ so $M=$ Some$_{DFA}$.
+        \end{description}
         
         \item Let $Alot_{RE} = $\{ $\langle A \rangle \mid $ $A$ is a regular expression 
         and $L(A)$ is infinite \}. Show that $Alot_{RE}$ is decidable.
