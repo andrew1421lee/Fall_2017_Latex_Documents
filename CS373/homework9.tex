@@ -43,12 +43,36 @@
             of strings with length greater than the number of states of the DFA for $r$. $M$ accepts if
             the intersection is non-empty and rejects otherwise. Therefore $M=$ Alot$_{RE}$.
         \end{description}
-        \item Let $Complimentary_{RE,DFA} = $\{ $\langle A, B \rangle \mid $ $A$ is a 
-        regular expression and $B$ is a DFA such that $L(A) \cup L(B) = \Sigma^*$ and 
-        $L(A) \cap L(B) = $\O \}. Show that $Complimentary_{RE,DFA}$ is decidable.
 
-        \item Let $ALL_{DFA} = $\{ $\langle A \rangle \mid A$ is a DFA and $L(A) = 
-        \Sigma^* $\}. Show that $ALL_{DFA}$ is decidable.
+        \item Let Complimentary$_{RE,DFA} = $\{ $\langle A, B \rangle \mid $ $A$ is a 
+        regular expression and $B$ is a DFA such that $L(A) \cup L(B) = \Sigma^*$ and 
+        $L(A) \cap L(B) = $\O \}. Show that Complimentary$_{RE,DFA}$ is decidable.
+        \begin{description}
+            \item Construct a Turing machine $M$ to decide the Complimentary$_{RE, DFA}$ problem.
+            \item On input $r$ that is a RE and $d$ that is a DFA:
+            \begin{enumerate}[label=\arabic*.]
+                \item Create a DFA A that is equivalent to $r$.
+                \item Construct a DFA $B$ so that $L(B)=L(A)\cup L(d)$.
+                \item Cosntruct a DFA $B^C$ that is the compliment of $B$.
+                \item Run $\langle B^C \rangle$ on a Turing machine $T$ that decides E$_{DFA}$.
+                \item If $T$ accepts, then continue, if $T$ rejects then reject $r$, $d$.
+                \item Construct a DFA $C$ so that $L(C)=L(A)\cap L(d)$.
+                \item Run $\langle C\rangle$ on turing machine $T$.
+                \item If $T$ accepts, then accept $r$, $d$. Otherwise reject.
+            \end{enumerate}
+            \item $M$ rejects if $L(A)\cup L(B)\not= \Sigma^*$. $M$ rejects if $L(A)\cap L(B)\not=\emptyset$.
+            $M$ only accepts if both conditions are met, therefore $M=$ Complimentary$_{RE,DFA}$.
+        \end{description}
+
+        \item Let ALL$_{DFA} = $\{ $\langle A \rangle \mid A$ is a DFA and $L(A) = 
+        \Sigma^* $\}. Show that ALL$_{DFA}$ is decidable.
+        \begin{description}
+            \item Construct a Turing machine $M$ to decide the ALL$_{DFA}$ problem.
+            \item On input $d$ that is a DFA:
+            \begin{enumerate}[label=\arabic*.]
+                \item asdf
+            \end{enumerate}
+        \end{description}
 
         \item Let $N_{\varepsilon CFG} = $\{ $\langle G \rangle \mid G$ is a CFG and $G$ 
         does not generate the empty string \}. Show that $N_{\varepsilon CFG}$ is 
