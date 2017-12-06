@@ -70,8 +70,14 @@
             \item Construct a Turing machine $M$ to decide the ALL$_{DFA}$ problem.
             \item On input $d$ that is a DFA:
             \begin{enumerate}[label=\arabic*.]
-                \item asdf
+                \item Create a DFA $d^C$ that is the compliment of $d$.
+                \item Run $\langle d^C \rangle$ on a Turing macine $T$ that decides E$_{DFA}$.
+                \item If $T$ rejects, then reject $d$. If $T$ accepts, then accept $d$.
             \end{enumerate}
+            \item $M$ only accepts if the language of the compliment of the input DFA is an 
+            empty language. For a DFA to equal $\Sigma^*$, it must accept all possible strings 
+            over the alphabet and therefore the compliment of such a DFA must be empty. This shows
+            that $M=$ ALL$_{DFA}$.
         \end{description}
 
         \item Let $N_{\varepsilon CFG} = $\{ $\langle G \rangle \mid G$ is a CFG and $G$ 
