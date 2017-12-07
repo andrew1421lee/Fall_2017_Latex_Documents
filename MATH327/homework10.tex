@@ -14,13 +14,13 @@ to use seat belts in automobiles.
     type I error by erroneously concluding that the
     training course is ineffective?
     \begin{description}
-        \item \textbf{The training course is effective.}
+        \item The training course is effective.
     \end{description}
     \item What hypothesis is she testing if she commits a
     type II error by erroneously concluding that the
     training course is effective?
     \begin{description}
-        \item \textbf{The training course is effective.}
+        \item The training course is effective.
     \end{description}
 \end{enumerate}
 
@@ -35,14 +35,14 @@ binomial distribution.
     \item Find the probability of committing a type I error
     if the true proportion is $p = 0.6$
     \begin{description}
-        \item \boldmath$\alpha = P(X\leq 24 \mid p =0.6) = 0.0548$
+        \item $\alpha = P(X\leq 24 \mid p =0.6) = 0.0548$
     \end{description}
     \item Find the probability of committing a type II error
     for the alternatives $p = 0.3$, $p = 0.4$, and $p = 0.5$.
     \begin{description}
-        \item \textbf{For }\boldmath$p=0.3$\textbf{: }\boldmath$\beta=P(X>3 \mid p=0.3)=1 - 0.6496 = 0.3504$.
-        \item \textbf{For }\boldmath$p=0.4$\textbf{: }\boldmath$\beta=P(X>3 \mid p=0.4)=1 - 0.3823 = 0.6177$.
-        \item \textbf{For }\boldmath$p=0.5$\textbf{: }\boldmath$\beta=P(X>3 \mid p=0.5)=1 - 0.1719 = 0.8281$.        
+        \item For $p=0.3$ : $\beta=P(X>3 \mid p=0.3)=1 - 0.6496 = 0.3504$.
+        \item For $p=0.4$ : $\beta=P(X>3 \mid p=0.4)=1 - 0.3823 = 0.6177$.
+        \item For $p=0.5$ : $\beta=P(X>3 \mid p=0.5)=1 - 0.1719 = 0.8281$.        
     \end{description}
 \end{enumerate}
 
@@ -57,9 +57,19 @@ conclude that $p \not= 0.6$.
 \begin{enumerate}[label=(\alph*)]
     \item Evaluate $\alpha$ assuming that $p = 0.6$. Use the 
     binomial distribution.
+    \begin{description}
+        \item $\alpha=P(X\leq 5 \mid p=0.6) + P(X\geq 13 \mid p =0.6) \\ 0.0338 + (1-0.9729) \\ 0.0338 + 0.0271=0.0609$
+    \end{description}
     \item Evaluate $\beta$ for the alternatives $p = 0.5$ and 
     $p = 0.7$.
+    \begin{description}
+        \item For $p=0.5$ : $\beta=P(6\leq X \leq 12 \mid p=0.5)\\ 0.9963 - 0.1509 = 0.8454$.
+        \item For $p=0.7$ : $\beta=P(6\leq X \leq 12 \mid p=0.7)\\ 0.8732 - 0.0037 = 0.8695$.        
+    \end{description}
     \item Is this a good test procedure?
+    \begin{description}
+        \item No, it is not a good test procedure for finding differences in p of size 0.1.
+    \end{description}
 \end{enumerate}
 
 \textbf{Question 10.8:}
@@ -75,7 +85,13 @@ hypothesis that $p = 0.4$; otherwise, we conclude that
 $p < 0.4$.
 \begin{enumerate}[label=(\alph*)]
     \item Evaluate $\alpha$, assuming that $p = 0.4$.
+    \begin{description}
+        \item $n=7, p = 0.4, \alpha=P(X\leq 2)\\ = 0.4199.$
+    \end{description}
     \item Evaluate $\beta$ for the alternative $p = 0.3$.
+    \begin{description}
+        \item $n=5, p=0.3, \beta=P(X\geq 3)\\ = 1 - P(X\leq 2)\\ = 1-0.6471 = 0.3529$
+    \end{description}
 \end{enumerate}
 
 \textbf{Question 10.14:}
@@ -89,8 +105,16 @@ region is defined to be $\bar{x} < 14.9$.
 \begin{enumerate}[label=(\alph*)]
     \item Find the probability of committing a type I error
     when $H_0$ is true.
+    \begin{description}
+        \item $n = 50, \mu=15, \sigma=0.5, \sigma_{\bar{X}}=0.5/\sqrt{50}=0.071, z = 14.9-15/0.071=-1.41\\
+        \alpha = P(Z < -1.41) = 0.0793$
+    \end{description}
     \item Evaluate $\beta$ for the alternatives $\mu = 14.8$ and $\mu =
     14.9$ kilograms.
+    \begin{description}
+        \item For $\mu=14.8$, $z=14.9-14.8/0.071=1.41 \\ \beta=P(Z>1.41)=0.0793$
+        \item For $\mu=14.9$, $z=0$ and $\beta=P(Z>0)=0.5$.
+    \end{description}
 \end{enumerate}
 
 \textbf{Question 10.20:}
@@ -99,7 +123,10 @@ popcorn weighed, on average, 5.23 ounces with a
 standard deviation of 0.24 ounce. Test the hypothesis
 that $\mu = 5.5$ ounces against the alternative hypothesis,
 $\mu < 5.5$ ounces, at the 0.05 level of significance.
-\newline
+\begin{description}
+    \item $z = \frac{5.23-5.5}{0.24/\sqrt{64}}=-9$, $P$-value = $P(Z<-9)\approx 0$
+    \item Popcorn, on average, weigh less than 5.5 ounces.
+\end{description}
 
 \textbf{Question 10.22:}
 In the American Heart Association journal 
@@ -111,7 +138,11 @@ with a standard deviation of 2.25 hours, does that suggest
 that, on average, men who use TM meditate more
 than 8 hours per week? Quote a $P$-value in your 
 conclusion.
-\newline
+\begin{description}
+    \item $z = \frac{8.5-8}{2.25/\sqrt{225}}=3.33$. $P$-value = $P(Z>3.33)=0.0004$.
+    \item Reject hypothesis $\mu=8$, conclude that men who use TM meditate more than 
+    8 hours a week.
+\end{description}
 
 \textbf{Question 10.24:}
 The average height of females in the freshman
@@ -122,7 +153,10 @@ in the average height if a random sample of 50 females
 in the present freshman class has an average height of
 165.2 centimeters? Use a $P$-value in your conclusion.
 Assume the standard deviation remains the same.
-\newline
+\begin{description}
+    \item $z=\frac{165.2-162.5}{6.9/\sqrt{50}}=2.77$. $P$-value = $2P(Z>2.77)=2\cdot 0.0028 = 0.0056$
+    \item Reject $\mu=162.5$ and conclude $\mu\not= 162.5$.
+\end{description}
 
 \textbf{Question 10.26:}
 According to a dietary study, high sodium intake 
@@ -137,7 +171,11 @@ suggest at the 0.05 level of significance that the average
 sodium content for a single serving of such cereal is
 greater than 220 milligrams? Assume the distribution
 of sodium contents to be normal.
-\newline
+\begin{description}
+    \item $\alpha = 0.05$, $df = 19$, Crit: $t > 1.729$.
+    \item $t = \frac{244-220}{24.5/\sqrt{20}} = 4.38$
+    \item Reject $\mu=220$ milligrams and conclude $\mu>220$ milligrams.
+\end{description}
 
 \textbf{Question 10.30:}
 A random sample of size $n_1 = 25$, taken from a
@@ -147,7 +185,11 @@ $n_2 = 36$, taken from a different normal population with
 a standard deviation $\sigma_2 = 3.4$, has a mean $\bar{x}_2 = 76$.
 Test the hypothesis that $\mu_1 = \mu_2$ against the alternative, 
 $\mu_1 \not= \mu_2$. Quote a $P$-value in your conclusion.
-\newline
+\begin{description}
+    \item $z=\frac{81-76}{\sqrt{\frac{5.2^2}{25}+\frac{3.4^2}{36}}} = 4.22$
+    \item $P$-value$\approx 0$
+    \item Conclude $\mu_1 \not= \mu_2$.
+\end{description}
 
 \textbf{Question 10.32:}
 \textit{Amstat News} (December 2004) lists median
@@ -163,7 +205,13 @@ of \$5000. Test the hypothesis that the mean salary
 for associate professors in research institutions is \$2000
 higher than for those in other institutions. Use a 0.01
 level of significance.
-\newline
+\begin{description}
+    \item $\alpha=0.01$, Crit: $z > 2.33$
+    \item $z = \frac{(70750-65200)-2000}{\sqrt{\frac{6000^2}{200}+\frac{5000^2}{200}}} = 6.43$
+    \item $P$-value $= P(Z>6.43)\approx 0$.
+    \item Reject $\mu_1-\mu_2=\$2000$ and conclude mean salary for associate professors is higher than
+    in other institutions by \$2000.
+\end{description}
 
 \textbf{Question 10.36:}
 Engineers at a large automobile manufacturing 
