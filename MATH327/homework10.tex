@@ -262,7 +262,6 @@ with equal variances. Use a $P$-value.
     \item Conclude that length of storage affects concentrations.
 \end{description}
 
-
 \textbf{Question 10.52:}
 For testing
 \begin{align*}
@@ -274,7 +273,11 @@ sample size is necessary in order for the probability to be
 0.1 of falsely failing to reject $H_0$ when the true 
 population mean differs from 14 by 0.5? From a preliminary
 sample we estimate σ to be 1.25.
-\newline
+\begin{description}
+    \item $\sigma=1.25$, $\beta=0.1$, $\delta=0.5$
+    \item $\Delta=\frac{0.5}{1.25} = 0.4$
+    \item From Table A.8: $n=68$.
+\end{description}
 
 \textbf{Question 10.56:}
 Suppose that, in the past, 40\% of all adults
@@ -283,7 +286,12 @@ believe that the proportion of adults favoring capital
 punishment has increased if, in a random sample of 15
 adults, 8 favor capital punishment? Use a 0.05 level of
 significance.
-\newline
+\begin{description}
+    \item Binomial: $p=0.4$, $n=15$, $x=8$, $np_0=15\cdot 0.4 = 6$
+    \item From Table A.1: $P$-value $=P(X\geq 8 \mid p=0.4) = 1 - P(X\leq 7 \mid p=0.4)$
+    \item $ = 0.2131$, which is larger than $\alpha =0.05$, so we do not have a reason to
+    believe that the portion of adults favoring capital punishment has increased.
+\end{description}
 
 \textbf{Question 10.58:}
 It is believed that at least 60\% of the residents
