@@ -1,0 +1,256 @@
+\documentclass{article}
+\usepackage{amsthm, amsmath, pgfplots, pgfplotstable, enumitem, textcomp}
+\usepackage[margin=0.5in]{geometry}
+\setlength\parindent{0pt}
+\begin{document}
+\noindent\textbf{Math 327 Homework 10}\hfill Anchu A. Lee\\
+\noindent\today\\\newline
+\textbf{Question 10.2:}
+A sociologist is concerned about the effectiveness 
+of a training course designed to get more drivers
+to use seat belts in automobiles.
+\begin{enumerate}[label=(\alph*)]
+    \item What hypothesis is she testing if she commits a
+    type I error by erroneously concluding that the
+    training course is ineffective?
+    \item What hypothesis is she testing if she commits a
+    type II error by erroneously concluding that the
+    training course is effective?
+\end{enumerate}
+
+\textbf{Question 10.4:}
+A fabric manufacturer believes that the proportion 
+of orders for raw material arriving late is $p = 0.6$.
+If a random sample of 10 orders shows that 3 or fewer
+arrived late, the hypothesis that $p = 0.6$ should be
+rejected in favor of the alternative $p < 0.6$. Use the
+binomial distribution.
+\begin{enumerate}[label=(\alph*)]
+    \item Find the probability of committing a type I error
+    if the true proportion is $p = 0.6$
+    \item Find the probability of committing a type II error
+    for the alternatives $p = 0.3$, $p = 0.4$, and $p = 0.5$.
+\end{enumerate}
+
+\textbf{Question 10.6:}
+The proportion of adults living in a small town
+who are college graduates is estimated to be $p = 0.6$.
+To test this hypothesis, a random sample of 15 adults
+is selected. If the number of college graduates in the
+sample is anywhere from 6 to 12, we shall not reject
+the null hypothesis that $p = 0.6$; otherwise, we shall
+conclude that $p \not= 0.6$.
+\begin{enumerate}[label=(\alph*)]
+    \item Evaluate $\alpha$ assuming that $p = 0.6$. Use the 
+    binomial distribution.
+    \item Evaluate $\beta$ for the alternatives $p = 0.5$ and 
+    $p = 0.7$.
+    \item Is this a good test procedure?
+\end{enumerate}
+
+\textbf{Question 10.8:}
+In \textit{Relief from Arthritis} published by Thorsons
+Publishers, Ltd., John E. Croft claims that over 40\%
+of those who suffer from osteoarthritis receive 
+measurable relief from an ingredient produced by a particular
+species of mussel found off the coast of New Zealand.
+To test this claim, the mussel extract is to be given to
+a group of 7 osteoarthritic patients. If 3 or more of
+the patients receive relief, we shall not reject the null
+hypothesis that $p = 0.4$; otherwise, we conclude that
+$p < 0.4$.
+\begin{enumerate}[label=(\alph*)]
+    \item Evaluate $\alpha$, assuming that $p = 0.4$.
+    \item Evaluate $\beta$ for the alternative $p = 0.3$.
+\end{enumerate}
+
+\textbf{Question 10.14:}
+A manufacturer has developed a new fishing
+line, which the company claims has a mean breaking
+strength of 15 kilograms with a standard deviation of
+0.5 kilogram. To test the hypothesis that $\mu = 15$ 
+kilograms against the alternative that $\mu < 15$ kilograms, a
+random sample of 50 lines will be tested. The critical
+region is defined to be $\bar{x} < 14.9$.
+\begin{enumerate}[label=(\alph*)]
+    \item Find the probability of committing a type I error
+    when $H_0$ is true.
+    \item Evaluate $\beta$ for the alternatives $\mu = 14.8$ and $\mu =
+    14.9$ kilograms.
+\end{enumerate}
+
+\textbf{Question 10.20:}
+A random sample of 64 bags of white cheddar 
+popcorn weighed, on average, 5.23 ounces with a
+standard deviation of 0.24 ounce. Test the hypothesis
+that $\mu = 5.5$ ounces against the alternative hypothesis,
+$\mu < 5.5$ ounces, at the 0.05 level of significance.
+\newline
+
+\textbf{Question 10.22:}
+In the American Heart Association journal 
+\textit{Hypertension}, researchers report that individuals who
+practice Transcendental Meditation (TM) lower their
+blood pressure significantly. If a random sample of 225
+male TM practitioners meditate for 8.5 hours per week
+with a standard deviation of 2.25 hours, does that suggest 
+that, on average, men who use TM meditate more
+than 8 hours per week? Quote a $P$-value in your 
+conclusion.
+\newline
+
+\textbf{Question 10.24:}
+The average height of females in the freshman
+class of a certain college has historically been 162.5 
+centimeters with a standard deviation of 6.9 centimeters.
+Is there reason to believe that there has been a change
+in the average height if a random sample of 50 females
+in the present freshman class has an average height of
+165.2 centimeters? Use a $P$-value in your conclusion.
+Assume the standard deviation remains the same.
+\newline
+
+\textbf{Question 10.26:}
+According to a dietary study, high sodium intake 
+may be related to ulcers, stomach cancer, and
+migraine headaches. The human requirement for salt
+is only 220 milligrams per day, which is surpassed in
+most single servings of ready-to-eat cereals. If a 
+random sample of 20 similar servings of a certain cereal
+has a mean sodium content of 244 milligrams and a
+standard deviation of 24.5 milligrams, does this 
+suggest at the 0.05 level of significance that the average
+sodium content for a single serving of such cereal is
+greater than 220 milligrams? Assume the distribution
+of sodium contents to be normal.
+\newline
+
+\textbf{Question 10.30:}
+A random sample of size $n_1 = 25$, taken from a
+normal population with a standard deviation $\sigma_1 = 5.2$,
+has a mean $\bar{x}_1 = 81$. A second random sample of size
+$n_2 = 36$, taken from a different normal population with
+a standard deviation $\sigma_2 = 3.4$, has a mean $\bar{x}_2 = 76$.
+Test the hypothesis that $\mu_1 = \mu_2$ against the alternative, 
+$\mu_1 \not= \mu_2$. Quote a $P$-value in your conclusion.
+\newline
+
+\textbf{Question 10.32:}
+\textit{Amstat News} (December 2004) lists median
+salaries for associate professors of statistics at research
+institutions and at liberal arts and other institutions
+in the United States. Assume that a sample of 200
+associate professors from research institutions has an
+average salary of \$70,750 per year with a standard 
+deviation of \$6000. Assume also that a sample of 200 
+associate professors from other types of institutions has
+an average salary of \$65,200 with a standard deviation
+of \$5000. Test the hypothesis that the mean salary
+for associate professors in research institutions is \$2000
+higher than for those in other institutions. Use a 0.01
+level of significance.
+\newline
+
+\textbf{Question 10.36:}
+Engineers at a large automobile manufacturing 
+company are trying to decide whether to purchase
+brand A or brand B tires for the company’s new models. 
+To help them arrive at a decision, an experiment
+is conducted using 12 of each brand. The tires are run
+until they wear out. The results are as follows:
+\begin{align*}
+    \text{Brand }A \text{: }& \bar{x}_1 = 37,900 \text{ kilometers,}\\
+    &s_1 = 5100 \text{ kilometers.}\\
+    \text{Brand }B \text{: }& \bar{x}_1 = 39,800 \text{ kilometers,}\\
+    &s 2 = 5900 \text{ kilometers.}
+\end{align*}
+Test the hypothesis that there is no difference in the
+average wear of the two brands of tires. Assume the
+populations to be approximately normally distributed
+with equal variances. Use a $P$-value.
+\newline
+
+\textbf{Question 10.40:}
+\\
+\textbf{Question 10.42:}
+\\
+\textbf{Question 10.44:}
+\\
+\textbf{Question 10.52:}
+For testing
+\begin{align*}
+    H_0 &: \mu = 14,\\
+    H_1 &: \mu \not= 14,
+\end{align*}
+an $\alpha = 0.05$ level $t$-test is being considered. What 
+sample size is necessary in order for the probability to be
+0.1 of falsely failing to reject $H_0$ when the true 
+population mean differs from 14 by 0.5? From a preliminary
+sample we estimate σ to be 1.25.
+\newline
+
+\textbf{Question 10.56:}
+Suppose that, in the past, 40\% of all adults
+favored capital punishment. Do we have reason to
+believe that the proportion of adults favoring capital
+punishment has increased if, in a random sample of 15
+adults, 8 favor capital punishment? Use a 0.05 level of
+significance.
+\newline
+
+\textbf{Question 10.58:}
+It is believed that at least 60\% of the residents
+in a certain area favor an annexation suit by a 
+neighboring city. What conclusion would you draw if only
+110 in a sample of 200 voters favored the suit? Use a
+0.05 level of significance.
+\newline
+
+\textbf{Question 10.64:}
+In a study on the fertility of married women
+conducted by Martin O’Connell and Carolyn C. Rogers
+for the Census Bureau in 1979, two groups of childless
+wives aged 25 to 29 were selected at random, and each
+was asked if she eventually planned to have a child.
+One group was selected from among wives married
+less than two years and the other from among wives
+married five years. Suppose that 240 of the 300 wives
+married less than two years planned to have children
+some day compared to 288 of the 400 wives married
+five years. Can we conclude that the proportion of
+wives married less than two years who planned to have
+children is significantly higher than the proportion of
+wives married five years? Make use of a $P$-value.
+\newline
+
+\textbf{Question 10.68:}
+Past experience indicates that the time required 
+for high school seniors to complete a standardized 
+test is a normal random variable with a standard
+deviation of 6 minutes. Test the hypothesis that $\sigma = 6$
+against the alternative that $\sigma < 6$ if a random sample of
+the test times of 20 high school seniors has a standard
+deviation $s = 4.51$. Use a 0.05 level of significance.
+\newline
+
+\textbf{Question 10.70:}
+Past data indicate that the amount of money
+contributed by the working residents of a large city to
+a volunteer rescue squad is a normal random variable
+with a standard deviation of \$1.40. It has been 
+suggested that the contributions to the rescue squad from
+just the employees of the sanitation department are
+much more variable. If the contributions of a random
+sample of 12 employees from the sanitation department
+have a standard deviation of \$1.75, can we conclude at
+the 0.01 level of significance that the standard 
+deviation of the contributions of all sanitation workers is
+greater than that of all workers living in the city?
+\newline
+
+\textbf{Question 10.76:}
+\\
+
+\textbf{Question 10.78:}
+
+\end{document}
