@@ -141,7 +141,14 @@
         \item Let $U = $\{ $\langle A, B, C \rangle \mid A, B, C$ are DFA's and $|L(A)| = 
         |L(B)| + |L(C)|$ \}. Show that $U$ is decidable.
         \begin{description}
-            \item asdf
+            \item Construct a Turing machine $M$ to decide $U$.
+            \item On input $a,b,c$ which are DFAs:
+            \begin{enumerate}[label=\arabic*.]
+                \item Run each DFA on ALL$_{DFA}$, if any accept then reject. Otherwise continue.
+                \item Let $l$ be the number of states in $b$ added with the number of states in $c$.
+                \item Construct a DFA $A$ which accepts all strings over $\Sigma$ of length $l$.
+                \item Construct a Time Machine to go to the future and figure out how to solve this problem.
+            \end{enumerate}
         \end{description}
 
         \item Let $A = $\{ $\langle R \rangle \mid R$ is a regular expression describing a 
