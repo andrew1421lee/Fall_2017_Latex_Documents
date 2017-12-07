@@ -128,7 +128,7 @@
             \begin{description}
                 \item No, $f$ is not one-to-one as $f(1)=f(3)$ and is not onto.
             \end{description}
-            \item Is $g$ onto?
+            \item Is $g$ onto? 
             \begin{description}
                 \item Yes
             \end{description}
@@ -140,17 +140,39 @@
 
         \item Let $U = $\{ $\langle A, B, C \rangle \mid A, B, C$ are DFA's and $|L(A)| = 
         |L(B)| + |L(C)|$ \}. Show that $U$ is decidable.
+        \begin{description}
+            \item asdf
+        \end{description}
 
         \item Let $A = $\{ $\langle R \rangle \mid R$ is a regular expression describing a 
         language containing at least one string $w$ that has 111 as a substring (i.e., 
         $w = x111y$ for some $x$ and $y$)\}. Show that $A$ is decidable.
+        \begin{description}
+            \item asdf
+        \end{description}
         
-        \item Let $E_{PDA} = $\{ $\langle P \rangle \mid P$ is a pushdown automata and 
-        $L(P)$ is empty \}. Show $E_{PDA}$ is decidable.
+        \item Let E$_{PDA} = $\{ $\langle P \rangle \mid P$ is a pushdown automata and 
+        $L(P)$ is empty \}. Show E$_{PDA}$ is decidable.
+        \begin{description}
+            \item Construct a Turing machine $M$ to decide E$_{PDA}$.
+            \item On input $p$ which is a PDA:
+            \begin{enumerate}[label=\arabic*.]
+                \item Construct a CFG $A$ that is equivalent to $p$.
+                \item Run $A$ on a Turing machine $T$ that decides E$_{CFG}$
+                \item If $T$ accepts then accept $p$, otherwise reject.
+            \end{enumerate}
+            $M$ accepts only if the CFG equivalent to $p$, which has the same language as $p$,
+            is the empty language. We] know checking if a CFG is empty is decidable so $M$ must
+            be able to decide E$_{PDA}$ as well.
+        \end{description}
 
         \item A \textbf{\textit{useless state}} in a pushdown automaton is never entered 
         on any input string. Consider the problem of determining whether a pushdown 
         automaton has any useless states. Formulate this problem as a language and show 
         that it is decidable.
+        \begin{description}
+            \item asdf
+        \end{description}
+
     \end{enumerate}
 \end{document}
