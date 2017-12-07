@@ -299,7 +299,11 @@ in a certain area favor an annexation suit by a
 neighboring city. What conclusion would you draw if only
 110 in a sample of 200 voters favored the suit? Use a
 0.05 level of significance.
-\newline
+\begin{description}
+    \item $P$-value $\approx P(Z < \frac{110-200\cdot 0.6}{\sqrt{200 \cdot 0.6 \cdot 0.4}})$
+    \item $= P(Z < -1.44) = 0.0749$ which is greater than $\alpha=0.05$, so at least 60\% of the 
+    residents are in favor of annexation.
+\end{description}
 
 \textbf{Question 10.64:}
 In a study on the fertility of married women
@@ -316,7 +320,15 @@ five years. Can we conclude that the proportion of
 wives married less than two years who planned to have
 children is significantly higher than the proportion of
 wives married five years? Make use of a $P$-value.
-\newline
+\begin{description}
+    \item $\hat{p}=\frac{240+288}{300+400}=0.7543$
+    \item $z = \frac{\frac{240}{300} - \frac{288}{400}}{\sqrt{0.7543\cdot 0.2457\cdot (\frac{1}{300} + \frac{1}{400})}} = 2.44$
+    \item $P$-value $= P(Z > 2.44) = 0.0073$
+    \item Conclude that the proportion of
+    wives married less than two years who planned to have
+    children is significantly higher than the proportion of
+    wives married five years.
+\end{description}
 
 \textbf{Question 10.68:}
 Past experience indicates that the time required 
