@@ -338,7 +338,12 @@ deviation of 6 minutes. Test the hypothesis that $\sigma = 6$
 against the alternative that $\sigma < 6$ if a random sample of
 the test times of 20 high school seniors has a standard
 deviation $s = 4.51$. Use a 0.05 level of significance.
-\newline
+\begin{description}
+    \item $\chi^2 = \frac{19\cdot (4.51)^2}{36}=10.74$
+    \item $1 - 0.95 < P(\chi^2 < 10.74) < 0.1$ with 19 degrees of freedom.
+    \item $= 0.05 < P$-value $< 0.1$, which is greater than 0.05
+    \item Reject hypothesis that $\sigma < 6$.
+\end{description}
 
 \textbf{Question 10.70:}
 Past data indicate that the amount of money
@@ -353,11 +358,26 @@ have a standard deviation of \$1.75, can we conclude at
 the 0.01 level of significance that the standard 
 deviation of the contributions of all sanitation workers is
 greater than that of all workers living in the city?
-\newline
+\begin{description}
+    \item $\chi^2 = \frac{11 \cdot (1.75)^2}{1.4} = 17.19$
+    \item $0.1 < P(\chi^2 > 17.19) < 0.2$ with 11 degrees of freedom.
+    \item $= 0.1 < P$-value $< 0.2$ which is greater than $0.01$.
+    \item Reject hypothesis that $\sigma > 1.40$.
+\end{description}
 
 \textbf{Question 10.76:}
-\\
+\begin{description}
+    \item $f = \frac{0.0125}{0.0108}=1.15$
+    \item $P$-value $ = 2P(f > 1.15) = 2 \cdot 0.424 = 0.848$ for 8 and 8 degrees of freedom
+    \item Conclude that the two instruments have similar variablility.
+\end{description}
 
 \textbf{Question 10.78:}
+\begin{description}
+    \item $s_1 = 291.0667$ and $s_2 = 119.3946$
+    \item $f = \frac{291.0667^2}{119.3946^2}=5.54$
+    \item $P$-value $= 2P(f > 5.54) = 2\cdot 0.0002 = 0.0004$ for 19 degrees of freedom for both.
+    \item Conclude that hydrocarbon emissions are more consistent in cars from 1990. 
+\end{description}
 
 \end{document}
