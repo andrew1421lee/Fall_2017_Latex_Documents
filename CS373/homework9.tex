@@ -189,7 +189,18 @@
         automaton has any useless states. Formulate this problem as a language and show 
         that it is decidable.
         \begin{description}
-            \item asdf
+            \item Let $P$ be the set of all pushdown automatas. Let the language $U=\{p\in P 
+            \mid p$ has a useless state$\}$.
+            \item Construct a Turing machine $M$ to decide $U$.
+            \item On input $p$ which is a pushdown automata:
+            \begin{enumerate}[label=\arabic*.]
+                \item For each state in $p$:
+                \item - Change the accept state to $p$.
+                \item - Run $p$ on a Turing machine $T$ that decides E$_{DFA}$.
+                \item - If $T$ accepts, then accept $p$, otherwise reject.
+            \end{enumerate}
+            \item $M$ accepts if there is a state that is never reached, a useless state.
+            Otherwise $M$ rejects. $M$ then decides $U$.
         \end{description}
 
     \end{enumerate}
