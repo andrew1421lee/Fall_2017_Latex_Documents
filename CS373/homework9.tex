@@ -80,9 +80,20 @@
             that $M=$ ALL$_{DFA}$.
         \end{description}
 
-        \item Let $N_{\varepsilon CFG} = $\{ $\langle G \rangle \mid G$ is a CFG and $G$ 
-        does not generate the empty string \}. Show that $N_{\varepsilon CFG}$ is 
+        \item Let N$_{\varepsilon CFG} = $\{ $\langle G \rangle \mid G$ is a CFG and $G$ 
+        does not generate the empty string \}. Show that N$_{\varepsilon CFG}$ is 
         decidable.
+        \begin{description}
+            \item Construct a Turing machine $M$ to decide the N$_{\varepsilon CFG}$ problem.
+            \item On input $g$ that is a CFG:
+            \begin{enumerate}[label=\arabic*.]
+                \item Construct $A$ that is a equivalent CFG to $g$ except in Chomsky normal
+                form.
+                \item If $A$ contains the rule $S\rightarrow \epsilon$ reject, otherwise accept.
+            \end{enumerate}
+            \item The CFG $A$ can only generate the empty string if there exists a rule $S\rightarrow\epsilon$,
+            so if $A$ does not include the rule then $\epsilon\not\in L(A)$. So $M=$ N$_{\varepsilon CFG}$.
+        \end{description}
 
         \item Let $X$ be the set \{1, 2, 3, 4, 5\} and $Y$ be the set \{6, 7, 8, 9, 10\}. 
         We describe the functions $f : X\rightarrow Y$ and $g : X \rightarrow Y$ in the 
