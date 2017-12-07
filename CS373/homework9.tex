@@ -155,7 +155,18 @@
         language containing at least one string $w$ that has 111 as a substring (i.e., 
         $w = x111y$ for some $x$ and $y$)\}. Show that $A$ is decidable.
         \begin{description}
-            \item asdf
+            \item Define the language $B=\{w\in\Sigma^* \mid w $ has 111 as a substring$ \}$
+            \item Construct a Turing machine $M$ to decide $A$.
+            \item On input $r$ which is a RE:
+            \begin{enumerate}[label=\arabic*.]
+                \item Construct a DFA $C$ that is equivalent to $r$.
+                \item Construct a DFA $D$ that accepts the language $L(D)=B\cup L(C)$.
+                \item Run $D$ on a Turing machine $T$ that decides E$_{DFA}$.
+                \item If $T$ accepts, reject. If $T$ rejects, accept $r$.
+            \end{enumerate}
+            \item $M$ accepts only if the input RE shares a word with the language that contains
+            all $w$ that contain 111 as a substring. $M$ rejects otherwise. Thus $M$ decides 
+            $A$.
         \end{description}
         
         \item Let E$_{PDA} = $\{ $\langle P \rangle \mid P$ is a pushdown automata and 
@@ -168,7 +179,7 @@
                 \item Run $A$ on a Turing machine $T$ that decides E$_{CFG}$
                 \item If $T$ accepts then accept $p$, otherwise reject.
             \end{enumerate}
-            $M$ accepts only if the CFG equivalent to $p$, which has the same language as $p$,
+            \item $M$ accepts only if the CFG equivalent to $p$, which has the same language as $p$,
             is the empty language. We] know checking if a CFG is empty is decidable so $M$ must
             be able to decide E$_{PDA}$ as well.
         \end{description}
