@@ -39,7 +39,7 @@
     \rule{0.5\textwidth}{0.4pt}
     \noindent $X$ number of cash registers being used for location 1, 
     $Y$ the number used at the same time for location 2.
-    \begin{wraptable}{l}{3.7cm}
+    \begin{wraptable}{l}{3.8cm}
         \begin{tabular}{c | c | c c c}
             \multicolumn{2}{c|}{} & \multicolumn{3}{c}{$y$}\\
             \multicolumn{2}{c|}{$f(x,y)$} & 0 & 1 & 2\\
@@ -50,7 +50,7 @@
             $h(y)$ & & 0.25 & 0.35 & 0.40
         \end{tabular}
     \end{wraptable}
-    (a) Marginal probability mass functions, add the rows for $X$; columns for $Y$.\newline
+    (a) Marginal probability mass functions, add the rows for $X$; columns for $Y$. $h(y)$ example. \newline
     (b) Cumulative distribution function of $X$: $0$ if $x < 0$, $0.2$ if $0\leq x < 1$.
     $0.55$ if $1\leq x < 2$. $1$ if $x \geq 2$. So $F(1.5) = 0.55$.\newline
     (c) Conditional distribution of $Y$ given $X=2$, $f(y\mid X=2)$: $\frac{0.05}{0.45}$ 
@@ -74,6 +74,10 @@
     (e) $g(X) = 4X-3$. $\mu_{g(X)} = \int_{-2}^{1}g(x)f(x)dx = \int_{-2}^{1}(4X-3)(\frac{1}{3}x^2) = -8$. $ 
     \sigma_{g(X)}^{2}=E(g(X)^2)-\mu_{g(X)}^2 = \int_{-2}^{1}(4X-3)^2(\frac{1}{3}x^2)-64 = 10.2$
     \rule{0.5\textwidth}{0.4pt}
+    \uline{Combinations} Different order is still same set. $\binom{n}{r} = \frac{n!}{r!(n-r)!}$
+    \uline{Permutations} Different order is different set. ($_nP_r$) $=\frac{n!}{(n-r)!}$\newline
+    \uline{Chebyshev's Theorem} The probability that a random variable $X$ will be within $k$ standard deviations of the mean is $P(\mu - k\sigma<X<\mu +k\sigma)\geq 1 - \frac{1}{k^2y}$.
+    
 \end{multicols*}
 
 \end{document}
