@@ -1,5 +1,5 @@
 \documentclass[9pt]{article}
-\usepackage{amsthm, amsmath, extsizes, multicol, amsfonts, enumitem, tabularx}
+\usepackage{amsthm, amsmath, extsizes, multicol, amsfonts, enumitem, tabularx, wrapfig}
 \usepackage[normalem]{ulem}
 \usepackage[margin=0.25in]{geometry}
 \newcommand*\mean[1]{\bar{#1}}
@@ -26,6 +26,53 @@
     (d) Set decimal point to $\mid$.\newline
     (e) Away from Q1 and Q3 by $1.5\cdot$IQR are outliers. Left dot is minimum, start of
     box is Q1, middle line is median, end of box is Q3, last dot is maximum.
+    \rule{0.5\textwidth}{0.4pt}
+    \noindent A: polluted, B: test detects pollution, $P(A)=0.2$, $P(B\mid A)=0.60$, 
+    $P(B\mid A')=0.3$\newline
+    (a) $P(A\cap B)=P(A)P(B\mid A) = 0.2\cdot 0.6=0.12$\newline
+    (b) $P(B) = P(B\cap A) + P(B\cap A') = 0.12 + P(A')P(B\mid A') = 0.12 + 0.8 
+    \cdot 0.3 = 0.36$\newline
+    (c) $P(A\cup B) = P(A)+P(B) - P(A\cap B) = 0.2 + 0.36 - 0.12 = 0.44$\newline
+    (d) $P(A'\mid B')=\frac{P(A'\cap B')}{P(B')} = \frac{1 - 0.44}{0.64} = 0.875$
+    (e) $P(P(A\cap B) \not= 0)$ so are not mutually exclusive.
+    $P(A\cap B) \not= P(A)P(B)$ so are not independent.
+    \rule{0.5\textwidth}{0.4pt}
+    \noindent $X$ number of cash registers being used for location 1, 
+    $Y$ the number used at the same time for location 2.
+    \begin{wraptable}{l}{3.7cm}
+        \begin{tabular}{c | c | c c c}
+            \multicolumn{2}{c|}{} & \multicolumn{3}{c}{$y$}\\
+            \multicolumn{2}{c|}{$f(x,y)$} & 0 & 1 & 2\\
+            \hline
+            & 0 & 0.10 & 0.05 & 0.05\\
+            $x$ & 1 & 0.10 & 0.20 & 0.05\\
+            & 2 & 0.05 & 0.10 & 0.30\\
+            $h(y)$ & & 0.25 & 0.35 & 0.40
+        \end{tabular}
+    \end{wraptable}
+    (a) Marginal probability mass functions, add the rows for $X$; columns for $Y$.\newline
+    (b) Cumulative distribution function of $X$: $0$ if $x < 0$, $0.2$ if $0\leq x < 1$.
+    $0.55$ if $1\leq x < 2$. $1$ if $x \geq 2$. So $F(1.5) = 0.55$.\newline
+    (c) Conditional distribution of $Y$ given $X=2$, $f(y\mid X=2)$: $\frac{0.05}{0.45}$ 
+    when $y=0$, $\frac{0.10}{0.45}$ when $y=1$, $\frac{0.30}{0.45}$ when $y=2$.\newline
+    (d) Mean of $X$: $\mu_X=E(x) = \Sigma_{x=0}^{2}xg(x) = 0.35 + 2\cdot 0.45 = 1.25$
+    Variance of $X$: $\sigma^{2}_{X}=E(X^2)-\mu_{X}^{2} = \Sigma_{x=0}^{2}x^2g(x)-\mu_{X}^{2}
+    = 0.35 + 4 \cdot 0.45 - 1.25^2 = 0.5875$\newline
+    (e) $\sigma_{XY}=E(XY)-\mu_X\mu_Y = (0.20\cdot 1\cdot 1 + 0.10 \cdot 2\cdot 1 + 0.05 
+    \cdot 1 \cdot 2 + 0.30 \cdot 2 \cdot 2) - 1.25\cdot 1.15 = 0.2625 \not=0$ so $X$ and $Y$ are
+    not independent.
+    \rule{0.5\textwidth}{0.4pt}
+    \noindent $X$ be a continuous random variable with probability density function $f(x)=Cx^2$ if 
+    $-2<x<1$ and zero otherwise.\newline
+    (a) Find $C$, it must make the function equal to 1 for the interval. 
+    $1=\int_{-2}^{1}Cx^2dx$, $C = \frac{1}{3}$\newline
+    (b) $\mu = E[X] = \int_{-2}^{1}x(\frac{1}{3}x^2)dx = -\frac{5}{4}$. $\sigma^2 = E[X^2]-\mu^2 = 
+    \int_{-2}^{1}x^2(\frac{1}{3}x^2)dx - (-\frac{5}{4})^2 = 0.6375$\newline
+    (c) $P[X < -1] = P(-2 < x < -1) = \int_{-2}^{-1}\frac{1}{3}x^2dx = \frac{7}{9}$\newline
+    (d) $P[-1 < X \leq 3] = P(-1 < X < 1) + P(1 < X < 3) = 
+    \int_{-1}^{1}\frac{1}{3}x^2 + \int_{1}^{3}\frac{1}{3}x^2 = \frac{2}{9} + 0 = \frac{2}{9}$\newline
+    (e) $g(X) = 4X-3$. $\mu_{g(X)} = \int_{-2}^{1}g(x)f(x)dx = \int_{-2}^{1}(4X-3)(\frac{1}{3}x^2) = -8$. $ 
+    \sigma_{g(X)}^{2}=E(g(X)^2)-\mu_{g(X)}^2 = \int_{-2}^{1}(4X-3)^2(\frac{1}{3}x^2)-64 = 10.2$
 \end{multicols*}
 
 \end{document}
