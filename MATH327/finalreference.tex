@@ -102,9 +102,35 @@
     $Y \sim b(10, 0.5 )$, $P(Y=3) = \binom{10}{3}0.5^3\cdot 0.5^7 = 0.117$\newline
     (e) If 100 switches are installed what is the probability that at least 40 but less than 55 fail within the first year?
     $Y\sim b(100, 0.5)$, $\mu_Y = n\cdot p = 50$, $\sigma_Y = n\cdot p\cdot q = 25$. Because $np=nq = 50 >\sqrt{npq} = 5 $, use Normal distribution to approximate. 
-    $Y\approx Normal(50,5)$. $P(40 \leq Y < 55) = P(39.5 \leq Y < 54.5) = P(\frac{39.5-50}{5} \leq \frac{Y-50}{5} < \frac{54.5-50}{5})
+    $Y\approx Normal(50,5)$. $P(40 \leq Y < 55) = P(39.5 \leq Y < 54.5) $ to standard normal $Z=\frac{X-\mu}{\sigma}$,  $= P(\frac{39.5-50}{5} \leq \frac{Y-50}{5} < \frac{54.5-50}{5})
     = P(-2.1 \leq Z < 0.9) $ Check table values. $= 0.8159 - 0.0179 = 0.798$.
     \rule{0.5\textwidth}{0.4pt}
+    Approximately normally distributed with a mean of 175cm and a standard deviation of 6cm. $X\sim N(175, 6)$\newline
+    (a) Probability that a randomly selected student is at least 170 cm.
+    $P(X\geq 170) = P(\frac{X-175}{6} \geq \frac{170-175}{6}) = P(Z\geq -0.83) = 1 - 0.2033 = 0.7967$\newline
+    (b) Probability the student's height is between 170 and 180.
+    $P(170 < X < 180) = P(-0.83 < Z < 0.83) = 1 - P(Z < -0.83) - P(Z > 0.83) = 1 - 0.2033 - (1 - 0.7967) = 0.59$\newline
+    (c) Probability sample of 16 students have an average height is less than 170.
+    Using CLT, $Z = \frac{\mean{X}-\mu}{\sigma/\sqrt{n}}$ is a standard normal distribution.
+    $\frac{170 - 175}{6/\sqrt{16}} = -3.3\bar{3}$. $P(Z < -3.3\bar{3}) = 0.0004$\newline
+    (d) Continuing from (c), would the probability the average height is between 170 and 180 be bigger, smaller, or the same as (b)?
+    The larger the sample size, the smaller the variance of sample mean. So it will be bigger.\newline
+    (e) Calcualte a 95\% confidence interval of the mean height. $n=25$, $\mean{x} = 170$, $s = 5$. $\mu$ known, $\sigma^2$ unknown.
+    CI = $\mean{x}-t_{\alpha/2}\frac{s}{\sqrt{n}} < \mu < \mean{x}+t_{\alpha/2}\frac{s}{\sqrt{n}}$. Calculate $\alpha$: $95 = 100(1-\alpha)$, $\alpha = 0.05$.
+    $170\pm t_{0.025,24}\frac{5}{\sqrt{25}} = 167.9 < \mu < 172.1$. CI does not include 175, it is likely the average height has changed in the last 10 years.
+    \rule{0.5\textwidth}{0.4pt}
+    16 batteries for both type 1 and type 2. $\mean{x}_1=37.3$, $\mean{x}_2=40.5$, $s_1=1.9$, $s_2=2.1$. Assume batteries are normally distributed and assum $\sigma_1 = \sigma_2$.\newline
+    (a) Find 95\% confidence interval for $\mu_1$. $\mu$ known, $\sigma$ unknown. 
+    $37.3 - 2.131\frac{1.9}{\sqrt{16}} < \mu_1 < 37.3 + 2.131\frac{1.9}{\sqrt{16}} = 36.3 < \mu_1 < 38.3$.\newline
+    (b) Find 90\% confidence interval for $\mu_2$. $\mu$ known, $\sigma$ unknown.
+    $40.5 -1.753 \frac{2.1}{\sqrt{16}} < \mu_2 < 40.5 + 1.753 \frac{2.1}{\sqrt{16}} = 39.6 < \mu_2 < 41.4$\newline
+    (c) From (a) and (b), which CI has a higher probability of containing the true mean?
+    Since we don't know what the true mean is, it is impossible to tell which CI it is in.\newline
+    (d) Find a 95\% confidence interval for $\mu_1-\mu_2$. $s_p^2=\frac{(n_1-1)s_1^2 + (n_2-1)s^2_2}{n_1+n_2-2} = 4.01$
+    $(\mean{x}_1 - \mean{x}_2)-t_{0.025,30}s_p\sqrt{\frac{1}{n_1}+\frac{1}{n_2}} < \mu_1 - \mu_2 < (\mean{x}_1 - \mean{x}_2)+t_{0.025,30}s_p\sqrt{\frac{1}{n_1}+\frac{1}{n_2}}
+    = -4.6 < \mu_1 - \mu_2 < -1.8$.\newline
+    (e) From (d), what conclusions can you draw for the two types of batteries?.
+    The CI only contains negative values, which suggests that battery type 2 might be better.
 \end{multicols*}
 
 \end{document}
