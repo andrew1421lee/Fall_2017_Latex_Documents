@@ -78,6 +78,7 @@
     \uline{Combinations} Different order is still same set. $\binom{n}{r} = \frac{n!}{r!(n-r)!}$
     \uline{Permutations} Different order is different set. ($_nP_r$) $=\frac{n!}{(n-r)!}$\newline
     \uline{Chebyshev's Theorem} The probability that a random variable $X$ will be within $k$ standard deviations of the mean is $P(\mu - k\sigma<X<\mu +k\sigma)\geq 1 - \frac{1}{k^2y}$.\newline
+    \rule{0.5\textwidth}{0.4pt}
     \noindent\textbf{Midterm 2: Chapters 5 to 9}\newline
     There are on average, 3 potholes in a section of 1 mile. Over time, so use Poisson Distribution $\frac{e^{-\lambda t}(\lambda t)^x}{x!}$, $\lambda = 3$\newline
     (a) Probability at least 2 potholes appear in a section of 1 mile. 
@@ -144,7 +145,52 @@
     \uline{CI on $\mu$, $\sigma^2$ known:} $\bar{x}-z_{\alpha/2}\frac{\sigma}{\sqrt{n}} < \mu < \bar{x}+z_{\alpha/2}\frac{\sigma}{\sqrt{n}}$.\newline
     \uline{CI for $\mu_1-\mu_2$, $\sigma_1^2$ and $\sigma_2^2$ known:} $(\bar{x}_1-\bar{x}_2)-z_{\alpha/2}\sqrt{\frac{\sigma_1^2}{n_1}+\frac{\sigma_2^2}{n_2}} < \mu_1-\mu_2 < (\bar{x}_1-\bar{x}_2)+z_{\alpha/2}\sqrt{\frac{\sigma_1^2}{n_1}+\frac{\sigma_2^2}{n_2}}$.\newline
     \uline{CI for $\mu_1-\mu_2$, $\sigma_1^2\not=\sigma_2^2$ and both unknown:} \\$(\bar{x}_1-\bar{x}_2)-t_{\alpha/2}\sqrt{\frac{s_1^2}{n_1}+\frac{s_2^2}{n_2}} < \mu_1-\mu_2 < (\bar{x}_1-\bar{x}_2)+t_{\alpha/2}\sqrt{\frac{s_1^2}{n_1}+\frac{s_2^2}{n_2}}$\newline
-    
+    \rule{0.5\textwidth}{0.4pt}
+    \noindent\textbf{Final Practice: Chapters 1 to 10}\newline
+    \noindent\begin{tabular*}{0.5\textwidth}{c | c c c c c c c c c c}
+        \hline
+        Student & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10\\
+        Test Score $x$ & 65 & 50 & 55 & 65 & 55 & 70 & 65 & 70 & 55 & 70\\
+        Chemistry Grade $y$ & 85 & 74 & 76 & 90 & 85 & 87 & 94 & 98 & 81 & 91\\
+        \hline
+    \end{tabular*}
+    $\mean{x}=62$, $s_x^2=56.7$, $\Sigma_{i=1}^{10}=y_i^2 = 74653$.\newline
+    (e) The Test Score ($x$) is linearly related to IQ score ($w$) and the relationship is $w_i=\frac{27}{22}x_i+40$. Calculate 
+    the sample mean and the sample variance of IQ score.
+    $\mean{w}=\frac{27}{22}\mean{x}+40 = \frac{27}{22}\cdot 62 + 40 = 116.1$. $s_w^2=(\frac{27}{22})^2\cdot s_x^2 = (\frac{27}{22})^2\cdot 56.7 = 85.4$\newline
+    (f) Construct the 95\% two-sided confidence interval for the mean Chemistry Grade ($\mu_Y$).
+    $\mean{y}-t_{0.025,9}\frac{s_y}{\sqrt{10}} < \mu_y < \mean{y}+t_{0.025,9}\frac{s_y}{\sqrt{10}} = 
+    86.1-2.262\sqrt{\frac{57.9}{10}} < \mu_y < 86.1+2.262\sqrt{\frac{57.9}{10}} = 80.7 < \mu_y < 91.5$.
+    \rule{0.5\textwidth}{0.4pt}
+    $P(B_1) = 0.3$, $P(B_2) = 0.45$, $P(B_3)=0.25$. $P(D\mid B_1) = 0.02$, $P(D\mid B_2) = 0.03$, $P(D\mid B_3) = 0.02$.\newline
+    (a) What is the probability a randomly selected product is defective?
+    $P(D) = P(D\cap B_1) + P(D\cap B_2) + P(D\cap B_3) = P(D\mid B_1)P(B_1)+P(D\mid B_2)P(B_2) + P(D\mid B_3)P(B_3) = 0.02\cdot 0.3 + 0.03\cdot 0.45 + 0.02\cdot 0.25 = 0.0245$\newline
+    (b) What is the probability a randomly selected defective product was made by machine $B_3$? Is defectiveness independent from the machine produced?
+    $P(B_3\mid D) = \frac{P(B_3\cap D)}{P(D)} = \frac{P(D\mid B_3)P(B_3)}{P(D)} = \frac{0.02\cdot 0.25}{0.0245} = 0.204 \not= 0.25 = P(B_3)$ Defective status is not 
+    independent of which machine it was produced.\newline
+    (c) What is the probability a randomly selected product is made by machine $B_3$ or defective, or both?
+    $P(D\cup B_3) = P(D) + P(B_3)-P(D\cap B_3) = 0.0245 + 0.25 - 0.02 \cdot 0.25 = 0.2695$.\newline
+    (d) From a sample of 35 products, what is the exact probability that exactly 3 are defective?
+    $X\sim b(3; 35, 0.0245) = \binom{35}{3}0.0245^3(1-0.0245)^32 = 0.0435$\newline
+    (e) From (d), What is the approximated probability that exactly 3 of them are defective? Is it a good approximation?
+    $n=35$ is large and $p=0.0245$ is very small. Can use Poisson with $\lambda = np = 35\cdot 0.0245 = 0.8575$. $X\approx p(3;0.8575) = \frac{e^{-0.8575}\cdot 0.8575^3}{3!} = 0.0446$
+    Very close approximation.\newline
+    (f) Machines have been modified. From a sample of 500, 21 were defective. Does the data suggest the defective rate increased? Calculate the approximate P-value.
+    $H_0$: $p\leq 0.0245$ versus $H_1$: $p>0.0245$. $np_0=500\cdot 0.0245=12.25$ and $n(1-p_0)=500\cdot 0.9755=487.75$. Large enough for Normal approximation.
+    Check $H_0$, $X\sim b(500,0.0245) \approx N(12.25,\sqrt{11.95}), x = 21$. P-value $= P(X\geq 21) \approx P( \frac{X-12.25} { \sqrt{11.95}} \geq \frac{20.5-12.25} { \sqrt{11.95} } ) = P(Z\geq 2.39) = 1-0.9916=0.084$
+    P-value is very small, reject $H_0$ and conclude that modifications may have increased defective rate.
+    \rule{0.5\textwidth}{0.4pt}
+    $X$ is a random variable from a population with probability mass functions $P(X=0)=0.2$, $P(X=1)=0.4$, $P(X=2)=0.3$, $P(X=4)=0.1$ and 0 otherwise\newline
+    (a) $\mu_X = E(X) = 0\cdot 0.2 + 1\cdot 0.4 + 2\cdot 0.3 + 4 \cdot 0.1 = 1.4$. $\sigma^2_X = 0^2\cdot 0.2+1^2\cdot 0.4 + 2^2\cdot 0.3 + 4^2\cdot 0.1 - 1.4^2 = 3.2-1.4^2=1.24$\newline
+    (b) Derive the cumulative distribution functions of $X$. $F(x) = P(X\leq x) = 0$ if $x<0$, $0.2$ if $0\leq x < 1$, $0.6$ if $1\leq x < 2$, $0.9$ if $2\leq x < 4$, $1$ if $4\leq x$.\newline
+    (c) Calculate $P(X>1.9)$
+    $P(X>1.9) = 1-P(X\leq 1.9) = 0.4$\newline
+    (d) Let $X_1$ and $X_2$ be two independent random variables with the same probability mass function above. Derive the probability mass function of $\mean{X}_2=\frac{X_1+X_2}{2}$.
+    $0.04$ if $x=0$, $0.16$ if $x=0.5$, $0.28$ if $x=1$, $0.24$ if $x=1.5$, $0.13$ if $x=2$, $0.08$ if $x=2.5$, $0.06$ if $x=3$, $0.01$ if $x=4$, 0 otherwise.\newline
+    (e) $E(\mean{X}_2=E(X_i)=1.4$, $Var(\mean{X}_2)=\frac{Var(X_i)}{2}=\frac{1.24}{2}=0.62$\newline
+    (f) Suppose a random sample size 100 is selected from the above population, let $\mean{X}=\frac{X_1+...+X_100}{100}$.
+    Based on the CLT, what is the approximate probability that $\mean{X}$ is less than 1.3?
+    $Var(\mean{X})=\frac{1.24}{100}$, $\mean{X}\approx N(1.4,\sqrt{\frac{1.24}{100}})$. $P(\mean{X} < 1.3) \approx P(\frac{\mean{X}-1.4}{\sqrt{\frac{1.24}{100}}} < \frac{1.3-1.4}{\sqrt{\frac{1.24}{100}}}) = P(Z<-0.90) = 1-P(Z>-0.90) = 1-0.8159=0.1841$
 \end{multicols*}
 
 \end{document}
