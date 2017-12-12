@@ -131,6 +131,20 @@
     = -4.6 < \mu_1 - \mu_2 < -1.8$.\newline
     (e) From (d), what conclusions can you draw for the two types of batteries?.
     The CI only contains negative values, which suggests that battery type 2 might be better.
+    \rule{0.5\textwidth}{0.4pt}
+    \uline{Hypergeometric Distribution:} Choosing successful items. $h(x;N,n,k)=\frac{\binom{k}{x}\binom{N-k}{n-x}}
+    {\binom{N}{n}}$. $max(0,n-(N-k))\leq x \leq min(n,k)$. x: num of successes. 
+    N: num of items. n: num of selection. k: num of total successes. $\mu=\frac{nk}{N}$,
+    $\sigma^2=\frac{N-n}{N-1}n\frac{k}{N}(1-\frac{k}{N})$\newline
+    \uline{Negative Binomial Distribution:} Prob. the kth success will happen by the xth trial.
+    $b^*(x;k,p)=\binom{x-1}{k-1}p^kq^{x-k}$. x: trial number. k: success number. p: prob. success.
+    q: prob. failure.\newline
+    \uline{Normal Distribution:} Bell curve. $n(x;\mu,\sigma)=\frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{1}{2\sigma^2}(x-\mu)^2}$.
+    x: select time. $\mu$: mean. $\sigma$: standard deviation.\newline
+    \uline{CI on $\mu$, $\sigma^2$ known:} $\bar{x}-z_{\alpha/2}\frac{\sigma}{\sqrt{n}} < \mu < \bar{x}+z_{\alpha/2}\frac{\sigma}{\sqrt{n}}$.\newline
+    \uline{CI for $\mu_1-\mu_2$, $\sigma_1^2$ and $\sigma_2^2$ known:} $(\bar{x}_1-\bar{x}_2)-z_{\alpha/2}\sqrt{\frac{\sigma_1^2}{n_1}+\frac{\sigma_2^2}{n_2}} < \mu_1-\mu_2 < (\bar{x}_1-\bar{x}_2)+z_{\alpha/2}\sqrt{\frac{\sigma_1^2}{n_1}+\frac{\sigma_2^2}{n_2}}$.\newline
+    \uline{CI for $\mu_1-\mu_2$, $\sigma_1^2\not=\sigma_2^2$ and both unknown:} \\$(\bar{x}_1-\bar{x}_2)-t_{\alpha/2}\sqrt{\frac{s_1^2}{n_1}+\frac{s_2^2}{n_2}} < \mu_1-\mu_2 < (\bar{x}_1-\bar{x}_2)+t_{\alpha/2}\sqrt{\frac{s_1^2}{n_1}+\frac{s_2^2}{n_2}}$\newline
+    
 \end{multicols*}
 
 \end{document}
