@@ -1,0 +1,31 @@
+\documentclass[9pt]{article}
+\usepackage{amsthm, amsmath, extsizes, multicol, amsfonts, enumitem, tabularx}
+\usepackage[normalem]{ulem}
+\usepackage[margin=0.25in]{geometry}
+\newcommand*\mean[1]{\bar{#1}}
+\newcommand*\median[1]{\tilde{#1}}
+
+\setlength{\multicolsep}{2pt}
+\begin{document}
+\noindent\textbf{Midterm 1: Chapters 1 to 4}
+\addtolength{\tabcolsep}{-2pt}
+\begin{multicols*}{2}
+    \noindent\begin{tabular*}{0.5\textwidth}{c c c c c c c c c c}
+        \hline
+        1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10\\
+        22.43 & 10.25 & 23.71 & 21.77 & 22.11 & 18.71 & 19.77 & 20.33 & 20.17 & 21.12\\
+        \hline
+    \end{tabular*}
+    (a) $\mean{x}=\frac{\Sigma_{i=1}^{10}x_i}{10} = 20.037$. 
+    $\median{x}=\frac{20.33 + 21.12}{2} = 20.725$\newline
+    (b) $s_{x}^{2}=\frac{\Sigma(x_i-\mean{x})^2}{n-1} = 13.935$. 
+    Split into 4 sections, numbers seperating are quartiles. 
+    Last minus first is IQR $=22.11-19.77 = 2.34$\newline
+    (c) Trimmed mean of 10\%: remove 10\% from highest and lowest. $= 20.801$.
+    Close to median but more than mean; data is slightly skewed to the left.\newline
+    (d) Set decimal point to $\mid$.\newline
+    (e) Away from Q1 and Q3 by $1.5\cdot$IQR are outliers. Left dot is minimum, start of
+    box is Q1, middle line is median, end of box is Q3, last dot is maximum.
+\end{multicols*}
+
+\end{document}
