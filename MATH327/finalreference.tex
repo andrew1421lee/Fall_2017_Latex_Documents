@@ -7,9 +7,10 @@
 
 \setlength{\multicolsep}{2pt}
 \begin{document}
-\noindent\textbf{Midterm 1: Chapters 1 to 4}
 \addtolength{\tabcolsep}{-2pt}
 \begin{multicols*}{2}
+    \noindent\textbf{Midterm 1: Chapters 1 to 4}
+    
     \noindent\begin{tabular*}{0.5\textwidth}{c c c c c c c c c c}
         \hline
         1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10\\
@@ -76,8 +77,34 @@
     \rule{0.5\textwidth}{0.4pt}
     \uline{Combinations} Different order is still same set. $\binom{n}{r} = \frac{n!}{r!(n-r)!}$
     \uline{Permutations} Different order is different set. ($_nP_r$) $=\frac{n!}{(n-r)!}$\newline
-    \uline{Chebyshev's Theorem} The probability that a random variable $X$ will be within $k$ standard deviations of the mean is $P(\mu - k\sigma<X<\mu +k\sigma)\geq 1 - \frac{1}{k^2y}$.
-    
+    \uline{Chebyshev's Theorem} The probability that a random variable $X$ will be within $k$ standard deviations of the mean is $P(\mu - k\sigma<X<\mu +k\sigma)\geq 1 - \frac{1}{k^2y}$.\newline
+    \noindent\textbf{Midterm 2: Chapters 5 to 9}\newline
+    There are on average, 3 potholes in a section of 1 mile. Over time, so use Poisson Distribution $\frac{e^{-\lambda t}(\lambda t)^x}{x!}$, $\lambda = 3$\newline
+    (a) Probability at least 2 potholes appear in a section of 1 mile. 
+    $P(X<2) = P(X=0) + P(X=1) = \frac{e^{-3}3^{0}}{0!} + \frac{e^{-3}3^{1}}{1!} = 0.20$\newline
+    (b) Probability at least 2 but less than 4 appear in a section of 1 mile.
+    $P(2 \leq X < 4) = P(X=2) + P(X=3) = \frac{e^{-3}3^{2}}{2!} + \frac{e^{-3}3^{3}}{3!} = 0.45$\newline
+    (c) Exactly 5 potholes occur in a section of 2 miles.
+    $P(X=5) = \frac{e^{-(3\cdot 2)}\cdot (3\cdot 2)^5}{5!} = 0.161$\newline
+    (d) Probability of having less than 2 potholes in exactly 2 of the next 5 miles. Binomial, either succeed or fail.
+    $b(2; 5, 0.2) = \binom{5}{2}\cdot 0.2^2\cdot 0.8^3 = 0.20$\newline
+    (e) Probability the first section of 1 mile with less than 2 potholes is the 4th mile. Geometric, xth trial is the first success.
+    $g(4, 0.20) = (0.20)(0.8)^{4-1} = 0.1024$\newline
+    \rule{0.5\textwidth}{0.4pt}
+    Life of a electrical switch has an exponential distribution with a mean of 1.45 ($\beta = 1.45$) and parameter $\beta$ given by $f(x;\beta) = \frac{1}{\beta}e^{-x/\beta}$ when $x>0$ otherwise 0. $\beta$ is the mean time between failures.\newline
+    (a) Probability a randomly selected switch fails within a year.
+    $P(X<1) = 1 - e^{(-1/1.45) \cdot 1} = 0.50$\newline
+    (b) Switch functions more than a year but less than 2.9 years.
+    $P(1 < X < 2.9) = \int_{1}^{2.9}\frac{1}{1.45}e^{-x/1.45} = 0.37$ \newline
+    (c) Switch was functioning for 2 years, probability that it will function for another 3.48 years.
+    $P(x > 3.48 + 2 \mid X>2) = P(X > 3.48) $ memoryless $ = e^{-3.48/1.45}=0.09$\newline
+    (d) If 10 switches are installed what is the probability exactly 3 fail during the first year?
+    $Y \sim b(10, 0.5 )$, $P(Y=3) = \binom{10}{3}0.5^3\cdot 0.5^7 = 0.117$\newline
+    (e) If 100 switches are installed what is the probability that at least 40 but less than 55 fail within the first year?
+    $Y\sim b(100, 0.5)$, $\mu_Y = n\cdot p = 50$, $\sigma_Y = n\cdot p\cdot q = 25$. Because $np=nq = 50 >\sqrt{npq} = 5 $, use Normal distribution to approximate. 
+    $Y\approx Normal(50,5)$. $P(40 \leq Y < 55) = P(39.5 \leq Y < 54.5) = P(\frac{39.5-50}{5} \leq \frac{Y-50}{5} < \frac{54.5-50}{5})
+    = P(-2.1 \leq Z < 0.9) $ Check table values. $= 0.8159 - 0.0179 = 0.798$.
+    \rule{0.5\textwidth}{0.4pt}
 \end{multicols*}
 
 \end{document}
