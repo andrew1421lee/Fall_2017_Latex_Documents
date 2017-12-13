@@ -206,9 +206,15 @@
     $H_0$: $\mu_X = \mu_Y$ versus $H_1$: $\mu_X\not= \mu_Y$. $t_{obs}=\frac{3414-3173-0}{\sqrt{s_p^2(\frac{1}{11} + \frac{1}{6})}} = 1.42$. $t_{0.025,15}=2.131$. Because $-2131 < 1.42 < 2.131$ Do not reject $H_0$ at $\alpha = 0.05$. Same conclusion as in (e), since 95\% CI includes 0, data is consitent with $H_0$.
     \rule{0.5\textwidth}{0.4pt}
     \uline{Probability of Type I} $\alpha = P($Type I$) = P(X > 8$ when $p=\frac{1}{4}) = \Sigma_{x=9}^{20}b(x;20,\frac{1}{4}) = 1 - \Sigma_{x=0}^{8}b(x;20,\frac{1}{4} = 1-0.9591 = 0.0409$\newline
-    \uline{Probability of Type II} $\beta = P(X\leq 8 $ when $p=\frac{1}{2} ) = \Sigma_{x=0}^{8}b(x;20,\frac{1}{2}) = 0.2517$.\newline
+    \uline{Probability of Type II} $\beta = P(X\leq 8 $ when $p=\frac{1}{2} ) = \Sigma_{x=0}^{8}b(x;20,\frac{1}{2}) = 0.2517$.
     the probability of committing both types of error can be reduced by
     increasing the sample size.
+    \uline{Classical: } State $H_0$ and $H_1$. Choose significance $\alpha$ (given). Choose test stats and establish critical region. Reject/do not. Draw conclusion.
+    \uline{P-value: } State hypothesis. Choose test states. determine p-value. reject/do not.\newline
+    \uline{One Sided $\sigma^2$ known: } For $\mu > \mu_0$ OR $\mu < \mu_0$. C: if $Z > z_\alpha$ reject. P: $P(Z>z)$ or $P(Z<z)$ reject if P is small.
+    \uline{$\sigma^2$ unknown: } $t= \frac{\mean{x}-\mu_0}{s/\sqrt{n}}$$H_1$: $\mu<\mu_0$. C: if $t<-t_{n-1,\alpha}$. $P(t_{n-1}<t)$ if P is small. 
+    \uline{Two sided $\sigma^2$ known: } $Z=\frac{\mean{X}-\mu}{\sigma/\sqrt{n}}\sim N(0,1) P(-z_{\alpha/2} \leq Z \leq z_{\alpha/2}) = 1-\alpha$. P: $2P(Z> |z|)$. 
+    \uline{Two sided $\sigma^2$ unknown: }
 \end{multicols*}
 
 \end{document}
