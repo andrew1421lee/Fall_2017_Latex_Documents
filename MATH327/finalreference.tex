@@ -197,7 +197,13 @@
     What is the probability that $X$ is less than 3850? $X\sim N(3350, 350)$, $P(X<3850) = P(\frac{X-3350}{350} < \frac{3850-3350}{350}) = P(Z < 1.43) = 0.9236$.\newline
     (b) From (a), what is the probability that $X$ is between 2900 and 3850?
     $P(2900 < X < 3850) = P(\frac{2900-3350}{350}<\frac{X-3350}{350}<\frac{3850-3350}{350} = P(Z<1.43) - P(Z>1.29) = P(Z<1.43) - (1 - P(Z < 1.29)) = 0.9236 - (1-0.9015) = 0.8251$\newline
-    (c)
+    (c) From (a), let $Y$ be the compressive strength of randomly selected type B concrete. Assume normal distribution. $\mu_Y=3130$(psi), $\sigma_Y=130$(psi). Calculate $E(\frac{3}{2}X - 2Y + 1500)$ and Var$(\frac{3}{2}X-2Y + 1500)$. Specify the distribution of $\frac{3}{2}X-2Y+1500$. 
+    $Y\sim N(3130, 130)$, $E(\frac{3}{2}X - 2Y + 1500) = \frac{3}{2}E(X)-2E(Y)+1500 = \frac{3}{2}\cdot 3350 - 2\cdot + 1500 = 265$. Var$(\frac{3}{2}X-2Y + 1500) = (\frac{3}{2})^2Var(X)+(-2)^2Var(Y) = \frac{9}{4}\cdot 350^2 + 4 \cdot 130^2 = 343225$. $\frac{3}{2}X-2Y + 1500 \sim N(265, \sqrt{343225})$.\newline
+    (d) Supposed Type A and Type B changed. Randome samples of size 11 and 6, sample means of 3414 and 3173, sample s.d. of 394 and 159. Are the population variance for Type A and B equal? Test at $\alpha = 0.05$. $H_0$: $\sigma_X^2 = \sigma_Y^2$ versus $H_1$: $\sigma_X^2 \not= \sigma_Y^2$. $\frac{394^2}{159^2} = 6.14$. $F_{0.025,10,5}=6.62$. $F_{0.975, 10, 5} = \frac{1}{F_{0.025,5,10}} = \frac{1}{4.24} = 0.24$. Because $0.24 < 6.14 < 6.62$ do not reject $H_0$ at $\alpha=0.05$. Reasonable to assume equal variances.\newline
+    (e) From (d), suppose equal variances. Construct a 95\% two-sided confidence interval for $\mu_X - \mu_Y$. What can be concluded.
+    $s_p^2 = \frac{10\cdot 394^2+5\cdot 159^2}{15}=111918$. $95=100(1-\alpha), \alpha=0.05$. $((x-y) - t_{0.025,15}\sqrt{s_p^2(\frac{1}{11}+\frac{1}{6})}, (x-y) + t_{0.025,15}\sqrt{s_p^2(\frac{1}{11}+\frac{1}{6})}) = ((3414-3173) - 2.131\sqrt{s_p^2(\frac{1}{11}+\frac{1}{6})}, (3414-3173) + 2.131\sqrt{s_p^2(\frac{1}{11}+\frac{1}{6})}) = (-120.8, 602.8)$ There is no difference between $\mu_X$ and $\mu_Y$ based on the data (includes zero).\newline
+    (f) From (d), suppose equal variances. Do the types of concrete have equal means? Decide based on classical approach with $\alpha=0.05$. Same conclusion as (e)? Why or why not?
+    $H_0$: $\mu_X = \mu_Y$ versus $H_1$: $\mu_X\not= \mu_Y$. $t_{obs}=\frac{3414-3173-0}{\sqrt{s_p^2(\frac{1}{11} + \frac{1}{6})}} = 1.42$. $t_{0.025,15}=2.131$. Because $-2131 < 1.42 < 2.131$ Do not reject $H_0$ at $\alpha = 0.05$. Same conclusion as in (e), since 95\% CI includes 0, data is consitent with $H_0$.
 \end{multicols*}
 
 \end{document}
