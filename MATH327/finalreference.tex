@@ -204,6 +204,11 @@
     $s_p^2 = \frac{10\cdot 394^2+5\cdot 159^2}{15}=111918$. $95=100(1-\alpha), \alpha=0.05$. $((x-y) - t_{0.025,15}\sqrt{s_p^2(\frac{1}{11}+\frac{1}{6})}, (x-y) + t_{0.025,15}\sqrt{s_p^2(\frac{1}{11}+\frac{1}{6})}) = ((3414-3173) - 2.131\sqrt{s_p^2(\frac{1}{11}+\frac{1}{6})}, (3414-3173) + 2.131\sqrt{s_p^2(\frac{1}{11}+\frac{1}{6})}) = (-120.8, 602.8)$ There is no difference between $\mu_X$ and $\mu_Y$ based on the data (includes zero).\newline
     (f) From (d), suppose equal variances. Do the types of concrete have equal means? Decide based on classical approach with $\alpha=0.05$. Same conclusion as (e)? Why or why not?
     $H_0$: $\mu_X = \mu_Y$ versus $H_1$: $\mu_X\not= \mu_Y$. $t_{obs}=\frac{3414-3173-0}{\sqrt{s_p^2(\frac{1}{11} + \frac{1}{6})}} = 1.42$. $t_{0.025,15}=2.131$. Because $-2131 < 1.42 < 2.131$ Do not reject $H_0$ at $\alpha = 0.05$. Same conclusion as in (e), since 95\% CI includes 0, data is consitent with $H_0$.
+    \rule{0.5\textwidth}{0.4pt}
+    \uline{Probability of Type I} $\alpha = P($Type I$) = P(X > 8$ when $p=\frac{1}{4}) = \Sigma_{x=9}^{20}b(x;20,\frac{1}{4}) = 1 - \Sigma_{x=0}^{8}b(x;20,\frac{1}{4} = 1-0.9591 = 0.0409$\newline
+    \uline{Probability of Type II} $\beta = P(X\leq 8 $ when $p=\frac{1}{2} ) = \Sigma_{x=0}^{8}b(x;20,\frac{1}{2}) = 0.2517$.\newline
+    the probability of committing both types of error can be reduced by
+    increasing the sample size.
 \end{multicols*}
 
 \end{document}
