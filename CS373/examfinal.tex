@@ -1,8 +1,9 @@
 \documentclass[9pt]{article}
-\usepackage{amsthm, amsmath, extsizes, multicol, enumitem}
+\usepackage{amsthm, amsmath, extsizes, multicol, enumitem, graphicx, wrapfig}
 \usepackage[margin=0.25in]{geometry}
 \usepackage[normalem]{ulem}
 \begin{document}
+\graphicspath{ {final_img/} }
 \setlength{\multicolsep}{2pt}
 \noindent\uline{\textbf{Chapter 1}}\newline
 \uline{Finite Automata} $(Q - $states, $\Sigma - $alphabet, $ \delta - $transitions,
@@ -190,5 +191,54 @@ A set is countable if it is finite or has the same size as the natural numbers (
     $L\leq_mL'$ and $L$ is not TR, then $L'$ is not TR.
 \end{minipage}\newline
 $EQ_{\text{TM}}$ is neither TR or co-TR.\newline
-\uline{Rice's Theorem} Any nontrival property about TR languages is undecidable. That is any property that includes at least one language but not all languages. EX: $L(M)$ is regular, context free, finite, contains strings of only even length, contains all strings, and contains all strings of prime length.
+\uline{Rice's Theorem} Any nontrival property about TR languages is undecidable. That is any property that includes at least one language but not all languages. EX: $L(M)$ is regular, context free, finite, contains strings of only even length, contains all strings, and contains all strings of prime length.\newline
+\uline{\textbf{Quiz Solutions}}
+\begin{multicols*}{2}
+    \noindent \textbf{Construct} a NFA that recognizes all strings over $\{0,1\}$ that contain both 00 and 11 as substrings or end with 010.\newline
+    \includegraphics[scale=0.34]{q3_1}\newline
+    \textbf{Construct} a DFA that recognizes all strings over $\{0, 1\}$ that contain 010 as a substring and does not end with 11.\newline
+    \includegraphics[scale=0.4]{q4_1}\newline
+    \textbf{Construct} a CFG for $\{a^nb^md^ue^vc^k\mid v > 0; n, m, u, k\geq 0 $ and $n=m-k\}$\newline
+    Since $n=m-k$ is equivalent to $m=n+k$, re-write as $a^nb^{n+k}d^ue^vc^k$ and then $(a^nb^n)(b^{k}d^ue^vc^k)$\newline
+    $S\rightarrow AB$; $A\rightarrow aAb\mid \epsilon$; $B\rightarrow bBc\mid C$; $C\rightarrow dC\mid Ce\mid e$.\newline
+    \textbf{Let} $L=\{w\mid w$ is an element of $\{a,b\}^*$ such that the number of a's in $w<$ the number of b's in $w<$ twice the number of a's in $w\}$\newline
+    The basic idea is to mark an $a$ and then mark a corresponding $b$, if we run out of $a$s prior to $b$s we know that the number of $a$'s $<$ the number of $b$'s. We then start marking marked $a$s and corresponding $b$s. If we run out of $b$s prior to marked $a$s, then we know that the number of $b$'s $<$ twice the number of $a$'s.\newline
+    \textbf{Let} $A$ be TR, $B$ decidable, $C$ can be enumerated in three weeks, 2 days, and 18 hours. $D$ is a TM that takes a TM $M$ and input $w$ and $M$ either halts within $2w$ transitions or $M$ never halts. $E$ is a CFL and $F$ a RL.\newline
+    $C$ is context free since it is finite therefore a RL and therefor CFL.\newline
+    $A\cap B$ is not decidable since $A$ intersected with $\Sigma^*$ is just $A$ and $A$ is only TR.\newline
+    The compliment of $C$ is decidable as it is finite, it is a RL and it's compliment as well.\newline
+    $D$ is decidable\newline
+    $A\cap F$ is TR but not co-Turing recognizable.\newline
+    Not all proper subsets of $B$ is decidable, consider $\{0,1\}*$\newline
+    $E$ is a CFL, is decidable, and therefore co-Turing Recognizable.\newline
+    The strings of $E$ having prime length is decidable.\newline
+    The compliment of $F$ is decidable since $F$ is a RL.\newline
+    \textbf{Let} $A$ be a decidable language and define $A'$ to be the collection of strings that are not in $A$, but contain a substring that is in $A$. Show $A'$ is also decidable.\newline
+    Let $M$ be a TM that decides $A$. On input $w$, $X$ does:\newline
+    (1) Run $M$ on $w$, if it accepts, then halt and reject\newline
+    (2) For each substring $w'$ of $w$:\newline
+    \indent(a) Run $M$ on $w'$ if accepts, then halt and accept\newline
+    (3) Halt and Reject.\newline
+    Since $M$ is a decider and we only run $M$ on a finite number of strings, we know $X$ will halt on all inputs. Claim $L(X) = A'$.\newline
+    Let $w$ be an element of $A'$. Then $w$ is not in $A$, but $w$ has a substring that is in $A$. Step 1 verifies that $w$ is not in $A$ and step 2 verifies that $w$ contains a substring that is in $A$. By step 2, we accept $w$ thus $w$ is also an element of $L(X)$ and $A'\leq L(X)$.\newline
+    Let $w$ be an element of $L(X)$. $w$ must be accepted in step 2, which means it contains a substring that is accepted by $M$. Thus $w$ has a substring in $A$. $M$ must also reject $w$ thus $w$ is not an element of $A$. By the definition of $A'$, $w$ is an element of $A'$ and $L(X)\leq A'$.\newline
+    Therefore $L(X)=A'$ and $X$ decides $A'$ thus $A'$ is decidable.\newline
+    \textbf{Let} $A$ be decidable, $C$ TR, and $D$ not TR. $B$ is just some language.\newline
+    $A\leq_m B$ implies nothing about $B$ as $A$ is decidable.\newline
+    $B\leq_m A$ implies $B$ is decidable therefore TR.\newline
+    $B'\leq_m A$ then $B'$ is decidable and $B$ is TR.\newline
+    $B \& B' \leq_m C$ then $B \& B'$ is TR and $B$ is decidable.\newline
+    $B\leq_m C'$ implies nothing about $B$\newline
+    $A\leq_mC\&C'$ implies nothing about $C$ or $C'$\newline
+    $D\leq_m B$ implies $B$ is not decidable\newline
+    $C'\leq_m C$ implies $C'$ is TR and therefore $C$ is decidable.\newline
+    \textbf{Let} $A=\{\langle M \rangle \mid $ M is a TM and $L(M)$ contains at least two strings of odd length$\}$. Is it decidable?\newline
+    No, $A$ is not decidable. Let $M$ and $M'$ be TM such that $L(M)=\{0,000\}$ and $L(M')=\{0\}$. Then $\langle M \rangle$ is in $A$ and $\langle M' \rangle$ is not in $A$, and the property of having at least two strings of odd length is non-trivial. Thus bu Rice's theorem $A$ is not decidable.\newline
+    \textbf{Let} $A$ be a TR language, $B$ a co-TR language, $C$ a decidable language, and $D$ a language that can be enumerated in two years.\newline
+    (TRUE) If $A$ and $B$ are the same language, then $A$ is decidable.\newline
+    (FALSE) $B$ interset $C$ is decidable. If $C=\Sigma^*$ then $B\cap C = B$ so no reason to expect to be decidable.\newline
+    (TRUE) $D^*$ concatenated with $C$ is decidable. $D$ is finite, so it is a RL which means $D^*$ is a RL and therefore decidable and closed under concatenation.\newline
+    (FALSE) Any subset of $D^*$ is decidable. If $D=\{0,1\}$, then $D^*=\{0,1\}^*$ and $\{0,1\}^*$ has non TR subsets.
+\end{multicols*}
+
 \end{document}
